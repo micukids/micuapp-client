@@ -13,13 +13,13 @@ function FlipCard({id, letter, backVideo}) {
     
   return (
     <>
-        <ReactCardFlip  isFlipped={isFlipped}>
-            
-                <p className= "text-white display-1 rounded mx-auto d-block frontImage" onClick = { () => handleClick()}>{letter}</p>
-                <video key={id} src={backVideo} alt="Back face"/>
-     
-        </ReactCardFlip>
-    </>
+    <div className='m-3'>
+      <ReactCardFlip isFlipped={isFlipped}>
+        <p className= "text-white text-center p-3 font-weight-bolder display-1 rounded mx-auto d-block frontImage" onClick = { () => handleClick()}>{letter}</p> 
+        <iframe className = 'backVideo' key={id} src={backVideo} allow='autoplay' alt="Back face"/>
+      </ReactCardFlip>
+    </div>
+  </>
   )
 }
 
