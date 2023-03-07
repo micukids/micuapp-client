@@ -18,9 +18,11 @@ const FlipCardsPage = () => {
   console.log(cards);
   return (
     <>
+    <div className = 'container d-flex justify-content-between'>
     {cards.map((card, index) => (
                <FlipCard {...card} key={index} backVideo={card.video} /> 
-            ))}   
+                ))}   
+    </div>
     </>
   )
 }

@@ -12,13 +12,14 @@ function FlipCard({id, letter, backVideo}) {
         }
     
   return (
-    <div>
-    <ReactCardFlip isFlipped={isFlipped}>
-        <p className= "frontImage" onClick = { () => handleClick()}>{letter}</p>
-
-        <video key={id} src={backVideo} alt="Back face"/>
-    </ReactCardFlip>
-  </div>
+    <>
+        <ReactCardFlip  isFlipped={isFlipped}>
+            
+                <p className= "text-white display-1 rounded mx-auto d-block frontImage" onClick = { () => handleClick()}>{letter}</p>
+                <video key={id} src={backVideo} alt="Back face"/>
+     
+        </ReactCardFlip>
+    </>
   )
 }
 
