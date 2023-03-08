@@ -3,10 +3,12 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Micu_cuadrado from '../../assets/img/Logo_Micu_cuadrado.png'
-const Navbar = () => {
+import '../footer/Footer.css'
+
+const NavBar = () => {
   return (
 
-<Navbar bg="dark" fixed="bottom" >
+<Navbar bg="dark" fixed="top" >
     <Container>
       <Navbar.Brand href="#">
         <img
@@ -29,4 +31,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default NavBar
