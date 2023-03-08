@@ -1,0 +1,15 @@
+@import url(../components/mainButton/MainButton.css);
+@import url(../components/flipCard//FlipCard.css);
+
+:root{
+    --purple: #6D17F2;
+    --pink: #D157FF;
+    --purple-linear: linear-gradient(90deg, #6D17F2 26.61%, #D157FF 157.8%);
+    --purple-dark: #3D116B;
+    --orange: #FF730E;
+    --yellow: #FFB83E;
+    --orange-linear: linear-gradient(90deg, #FF730E 0%, #FFB83E 111.01%);
+    --green-dark: #048C59;
+    --green-soft: #4FB705;
+    --white-smoke: #F5F5F5;
+}
