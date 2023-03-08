@@ -17,9 +17,9 @@ function FlipCard({id, upper, backVideo}) {
     <>
     <div className='m-3'>
       <ReactCardFlip isFlipped={isFlipped}>
-        <p className= "text-white text-center p-3 font-weight-bolder display-1 rounded mx-auto d-block frontImage" onClick = { () => handleClick()}>{upper}</p> 
+        <p className= "text-white text-center p-3 font-weight-bolder display-1 mx-auto d-block frontImage" onClick = { () => handleClick()}>{upper}</p> 
 
-        <video className='backVideo' key={id} controls autoplay>
+        <video className='backVideo' key={id} controls autoplay preload="auto">
             <source src={`${backVideo}?autoplay=1`} type="video/mp4"/>
         </video>
       </ReactCardFlip>
