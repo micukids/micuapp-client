@@ -1,0 +1,8 @@
+.frontImage{
+background: linear-gradient( to right, #FF730E, #FFB83E);
+}
+
+.backVideo, .frontImage{
+    width: 170px;
+    height: 170px;
+}
