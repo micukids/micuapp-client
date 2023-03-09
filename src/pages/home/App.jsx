@@ -10,8 +10,6 @@ function App() {
     
     <div className="App">
       <Layout >
-{/*       <h1 className="mt-5">
-      Home  */}
       <VowelsContainer/>
       <Memory/>
  {/*      </h1> */}

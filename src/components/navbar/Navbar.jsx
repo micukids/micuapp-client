@@ -8,7 +8,7 @@ import '../footer/Footer.css'
 const NavBar = () => {
   return (
 
-<Navbar bg="dark" fixed="top" >
+<Navbar bg="dark">
     <Container>
       <Navbar.Brand href="#">
         <img
