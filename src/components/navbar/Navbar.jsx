@@ -8,17 +8,19 @@ import Logo from '../logo/Logo';
 const NavBar = () => {
   return (
 
-<Navbar bg="dark" >
+<Navbar bg="dark">
     <Container>
       <Navbar.Brand href="#">
        <Logo/>
       </Navbar.Brand>
-      <Nav>
+     
+      <Nav className="margin-menu">
             <Nav.Link href="#deets">REGISTER</Nav.Link>
             <Nav.Link eventKey={2} href="#memes">
               LOGIN
             </Nav.Link>
       </Nav>
+
     </Container>
   </Navbar>
     
