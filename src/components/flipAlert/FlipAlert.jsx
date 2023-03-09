@@ -9,7 +9,7 @@ function FlipAlert({backVideo}) {
         title: '<strong>HTML <u>example</u></strong>',
         icon: 'info',
         html:
-          '<iframe width="560" height="315" src={backVideo} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+          '<iframe width="560" height="315" src="{backVideo}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
         showCloseButton: true,
         showCancelButton: true,
         focusConfirm: false,

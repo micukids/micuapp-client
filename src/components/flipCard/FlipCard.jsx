@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import ReactCardFlip from 'react-card-flip';
 import '../../styles/Styles.css';
-import FlipAlert from '../flipAlert/FlipAlert';
+import ReactPlayer from 'react-player';
 
 function FlipCard({id, upper, backVideo}) {
     const [isFlipped, setIsFlipped] = useState(false);
@@ -14,18 +14,16 @@ function FlipCard({id, upper, backVideo}) {
     <>
     <div className='m-3'>
       <ReactCardFlip isFlipped={isFlipped}>
-        <p className= "text-white text-center p-3 font-weight-bolder display-1 mx-auto d-block frontImage" onClick = { () => handleClick()}>{upper}</p> 
+        <p className= "text-white text-center p-3 font-weight-bolder display-1 mx-auto d-block frontImage" onClick = { () => handleClick()}>{upper}</p>
 
-        <FlipAlert backVideo = {backVideo}/>
-
-         {/*<ReactPlayer
+        <ReactPlayer
         className='backVideo'
         width= '170px'
         height= '170px'
         url={backVideo}
         controls
-        playing
-        />*/}
+        //playing
+        />
       
         {/*<video className='backVideo' key={id} controls autoPlay preload="auto">
             <source src={`${backVideo}?autoplay=1`} type="video/mp4"/>
