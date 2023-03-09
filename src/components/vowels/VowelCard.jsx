@@ -1,25 +1,15 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import ReactCardFlip from 'react-card-flip';
-import { GetVowels } from '../../services/functions';
 
-function VowelCard() {
+
+function VowelCard({id,backVideo, upper}) {
     const [isFlipped, setIsFlipped] = useState(false);
-    const [vowels, setVowels] = useState([]);
+
 
     const handleClick = () => {
           setIsFlipped(!isFlipped);
         }
 
-        const getAllVowels = async() =>{
-            const allVowels = await GetVowels();
-            console.log(allVowels);
-            setVowels(allVowels);
-          }
-        
-          useEffect( () => {
-            getAllVowels()
-          }, [])
-        
     
   return (
      <>
