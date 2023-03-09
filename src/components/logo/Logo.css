@@ -1,0 +1,16 @@
+.logo-container{
+    width: 96px;
+    height: 96px;
+    background-color: var(--purple);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 2px;
+}
+
+.logo-container img{
+    width: 67.66px;
+    height: 72.69px;
+}
