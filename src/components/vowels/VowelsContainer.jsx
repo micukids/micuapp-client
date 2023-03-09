@@ -1,6 +1,9 @@
 import React, {useState, useEffect} from 'react'
+import { Link } from 'react-router-dom';
 import { GetVowels } from '../../services/functions';
+import MainButton from '../mainButton/MainButton';
 import VowelCard from './VowelCard';
+
 
 
 function VowelsContainer() {
@@ -16,11 +19,15 @@ function VowelsContainer() {
       }, [])
     
   return (
-    <div>
+    <div className='bg-vowels-container'>
+    <div className='vowel-cards-container'>
         {vowels.map((vowel, index) => (
         <VowelCard {...vowel} key={index} backVideo={vowel.video} />
          ))}   
     </div>
+    <Link to="/flipcard"><MainButton class='bt' text='Aprende todo el abecedario'/></Link>
+    </div>
+
   )
 }
 

@@ -1,0 +1,34 @@
+.bg-vowels-container{
+    background-image: url("../../assets/img/Bg_flip.jpg");
+    background-size:contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.vowel-cards-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  
+}
+
+
+
+@media screen and (min-width: 577px){
+    .vowel-cards-container {
+        width: 785px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width: 993px){
+	.vowel-cards-container {
+        width: 100%;
+	    flex-direction: row;
+        flex-wrap:nowrap;
+}
+}
+
