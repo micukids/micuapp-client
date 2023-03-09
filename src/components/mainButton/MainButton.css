@@ -1,0 +1,9 @@
+.bt {
+    width: 273px;
+    height: 46px;
+    left: 236px;
+    top: 552px;
+    background-image: var(--purple-linear);
+    color: var( --white-smoke);
+    border-radius: 20px;
+}
