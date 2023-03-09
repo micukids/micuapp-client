@@ -3,6 +3,7 @@ import FlipCard from '../../components/flipCard/FlipCard';
 import { GetLetters } from '../../services/functions';
 import "./FlipCardsPage.css"
 
+
 const FlipCardsPage = () => {
   const [cards, setCards] = useState([]);
 
