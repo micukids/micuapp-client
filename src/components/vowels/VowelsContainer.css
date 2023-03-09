@@ -1,0 +1,23 @@
+.vowel-cards-container{
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  
+}
+
+
+
+@media screen and (min-width: 577px){
+    .vowel-cards-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width: 993px){
+	.vowel-cards-container {
+	flex-direction: row;
+}
+}
+

@@ -3,6 +3,7 @@ import { GetVowels } from '../../services/functions';
 import VowelCard from './VowelCard';
 
 
+
 function VowelsContainer() {
     const [vowels, setVowels] = useState([]);
 
@@ -16,7 +17,7 @@ function VowelsContainer() {
       }, [])
     
   return (
-    <div>
+    <div className='vowel-cards-container'>
         {vowels.map((vowel, index) => (
         <VowelCard {...vowel} key={index} backVideo={vowel.video} />
          ))}   
