@@ -10,7 +10,7 @@ const Router = () => {
     <BrowserRouter>
         <Routes>
             <Route path="/" element={<App/>}/>
-            <Route path="/flipcard" element={<FlipCardsPage/>}/>
+            <Route path="/flipcards" element={<FlipCardsPage/>}/>
             <Route element={<Layout/>}/>
         </Routes>
     </BrowserRouter>
