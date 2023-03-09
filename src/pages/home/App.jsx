@@ -1,8 +1,8 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import MainButton from "../../components/mainButton/MainButton";
 import Layout from "../../components/layout/Layout";
 import VowelsContainer from "../../components/vowels/VowelsContainer";
+import Memory from "../../components/memory/Memory";
 
 
 function App() {
@@ -13,8 +13,7 @@ function App() {
 {/*       <h1 className="mt-5">
       Home  */}
       <VowelsContainer/>
-      <MainButton class='bt' text='Aprende todo el abecedario'/>
-      <MainButton class='bt' text='¡Vamos a jugar memory!'/>
+      <Memory/>
  {/*      </h1> */}
       </Layout>
     </div>
