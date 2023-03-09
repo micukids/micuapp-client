@@ -8,7 +8,6 @@ function VowelsContainer() {
 
     const getAllVowels = async() =>{
         const allVowels = await GetVowels();
-        console.log(allVowels);
         setVowels(allVowels);
       }
     
