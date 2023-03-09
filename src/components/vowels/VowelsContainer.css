@@ -1,4 +1,5 @@
 .bg-vowels-container{
+    margin-top: 68px;
     background-image: url("../../assets/img/Bg_flip.jpg");
     background-size:contain;
     display: flex;
@@ -14,6 +15,27 @@
   
 }
 
+.text-vowels{
+    margin-top: 2rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.text-vowels img{
+    width: 31px;
+    height: 31px;
+}
+
+.text-vowels p{
+    color: var(--purple);
+    font-weight: bold;
+    font-size: 22px;
+}
+.text-vowels p span{
+    color: var(--purple);
+    font-weight: 400;
+    font-size: 22px;
+}
 
 
 @media screen and (min-width: 577px){
