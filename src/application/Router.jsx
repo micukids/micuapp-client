@@ -12,8 +12,6 @@ const Router = () => {
             <Route path="/" element={<App/>}/>
             <Route path="/flipcard" element={<FlipCardsPage/>}/>
            {/*  <Route element={<Layout/>}/> */}
-            <Route path="/flipcard" element={<FlipCardsPage/>}/>
-            <Route element={<Layout/>}/>
         </Routes>
     </BrowserRouter>
   )
