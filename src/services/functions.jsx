@@ -6,4 +6,12 @@ const GetLetters = async()=>{
  return response.data.letters;
 }
 
-export {GetLetters};
+const GetVowels = async()=>{
+    const response = await axios.get(`${endPoint}/vowels`);
+    return response.data.vowels;
+   }
+
+export {
+    GetLetters,
+    GetVowels
+};
