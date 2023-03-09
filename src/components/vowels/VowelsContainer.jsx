@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { GetVowels } from '../../services/functions';
 import MainButton from '../mainButton/MainButton';
 import VowelCard from './VowelCard';
+import start_2 from '../../assets/img/Star_2.png'
 
 
 
@@ -20,6 +21,10 @@ function VowelsContainer() {
     
   return (
     <div className='bg-vowels-container'>
+      <div className='text-vowels'>
+        <img src={start_2} alt="Estrella de color amarillo" />
+        <p>FLIP <span>CARDS</span></p>
+      </div>
     <div className='vowel-cards-container'>
         {vowels.map((vowel, index) => (
         <VowelCard {...vowel} key={index} backVideo={vowel.video} />
