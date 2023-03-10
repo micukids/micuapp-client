@@ -22,7 +22,7 @@ const FlipCardsPage = () => {
   return (
     <>
     <Layout>
-      <div className= 'd-flex justify-content-center align-items-center m-5 bg-light' >
+      <div className= 'bg-vowels-container d-flex justify-content-center align-items-center m-5 bg-light' >
           <div className = 'd-flex flex-wrap text-center'>
           {cards.map((card, index) => (<FlipCard {...card} key={index} backVideo={card.video} /> ))}   
         </div>
