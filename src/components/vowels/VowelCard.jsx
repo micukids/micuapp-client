@@ -1,29 +1,39 @@
-import React, {useState} from 'react'
-import ReactCardFlip from 'react-card-flip';
+import React, { useState, useRef } from "react";
+import ReactCardFlip from "react-card-flip";
 
+function VowelCard({ id, backVideo, upper }) {
+  const [isFlipped, setIsFlipped] = useState(false);
+  const videoReference = useRef(null);
 
-function VowelCard({id,backVideo, upper}) {
-    const [isFlipped, setIsFlipped] = useState(false);
+  const handleClick = () => {
+    setIsFlipped(!isFlipped);
+    videoReference.current.paused ? videoReference.current.play() : videoReference.current.pause()
+  };
 
-
-    const handleClick = () => {
-          setIsFlipped(!isFlipped);
-        }
-
-    
   return (
-     <>
-    <div className='m-3'>
-      <ReactCardFlip isFlipped={isFlipped}>
-        <p className= "text-white text-center p-3 font-weight-bolder display-1 mx-auto d-block frontImage" onClick = { () => handleClick()}>{upper}</p> 
+    <>
+      <div className="m-3">
+        <ReactCardFlip isFlipped={isFlipped}>
+          <p
+            className="text-white text-center p-3 font-weight-bolder display-1 mx-auto d-block frontImage"
+            onClick={() => handleClick()}
+          >
+            {upper}
+          </p>
 
-        <video className='backVideo' key={id} controls autoPlay preload="auto">
-            <source src={backVideo} type="video/mp4"/>
-        </video>
-      </ReactCardFlip>
-    </div>
+          <video
+            className="backVideo"
+            key={id}
+            ref={videoReference}
+            loop
+            onClick={() => handleClick()}
+          >
+            <source src={backVideo} type="video/mp4" />
+          </video>
+        </ReactCardFlip>
+      </div>
     </>
-  )
+  );
 }
 
-export default VowelCard
+export default VowelCard;

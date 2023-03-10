@@ -4,7 +4,6 @@ import Layout from "../../components/layout/Layout";
 import VowelsContainer from "../../components/vowels/VowelsContainer";
 import Memory from "../../components/memory/Memory";
 
-
 function App() {
   return (
     

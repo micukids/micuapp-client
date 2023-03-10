@@ -7,8 +7,7 @@ import Logo from '../logo/Logo';
 
 const NavBar = () => {
   return (
-
-<Navbar bg="dark">
+   <Navbar bg="dark">
     <Container>
       <Navbar.Brand href="#">
        <Logo/>
