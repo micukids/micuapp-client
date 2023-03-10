@@ -1,0 +1,55 @@
+.bg-vowels-container{
+    background-image: url("../../assets/img/Bg_flip.jpg");
+    background-size:contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.vowel-cards-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  
+}
+
+.text-vowels{
+    margin-top: 2rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.text-vowels img{
+    width: 30px;
+    height: 30px;
+}
+
+.text-vowels p{
+    color: var(--purple);
+    font-weight: bold;
+    font-size: 22px;
+}
+.text-vowels p span{
+    color: var(--purple);
+    font-weight: 500;
+    font-size: 22px;
+}
+
+
+@media screen and (min-width: 577px){
+    .vowel-cards-container {
+        width: 785px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width: 993px){
+	.vowel-cards-container {
+        width: 100%;
+	    flex-direction: row;
+        flex-wrap:nowrap;
+}
+}
+

@@ -26,7 +26,7 @@ function FlipCard({id, upper, backVideo}) {
         />
       
         {/*<video className='backVideo' key={id} controls autoPlay preload="auto">
-            <source src={`${backVideo}?autoplay=1`} type="video/mp4"/>
+            // <source src={`${backVideo}?autoplay=1`} type="video/mp4"/>
           </video>*/}
 
       </ReactCardFlip>
