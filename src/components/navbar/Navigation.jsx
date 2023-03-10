@@ -5,7 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Logo from '../logo/Logo';
 
 
-const NavBar = () => {
+const Navigation = () => {
   return (
    <Navbar bg="dark">
     <Container>
@@ -24,4 +24,4 @@ const NavBar = () => {
   )
 }
 
-export default NavBar
+export default Navigation
