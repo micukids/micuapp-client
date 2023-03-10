@@ -1,5 +1,6 @@
 .bg-memory {
-    height: 84vh;
+    height: 59.5vh;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,7 +13,7 @@
 }
 
 .text-memory{
-    margin-top: 2rem;
+    margin-top: 0.5rem;
     display: flex;
     gap: 0.5rem;
 }
