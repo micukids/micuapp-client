@@ -21,8 +21,8 @@
 }
 
 .text-vowels img{
-    width: 31px;
-    height: 31px;
+    width: 30px;
+    height: 30px;
 }
 
 .text-vowels p{
@@ -32,7 +32,7 @@
 }
 .text-vowels p span{
     color: var(--purple);
-    font-weight: 400;
+    font-weight: 500;
     font-size: 22px;
 }
 
