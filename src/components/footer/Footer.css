@@ -3,9 +3,9 @@
 }
 
 .nav-link{
-    color:white;
+    color:var(--white-smoke) !important;
 }
 
 .nav-link:hover{
-    color:white;
+    color:var(--white-smoke) !important;
 }

@@ -5,12 +5,11 @@ import Navbar from 'react-bootstrap/Navbar';
 import Logo from '../logo/Logo';
 
 
-const NavBar = () => {
+const Navigation = () => {
   return (
-
-<Navbar bg="dark" >
+   <Navbar bg="dark">
     <Container>
-      <Navbar.Brand href="#">
+      <Navbar.Brand href="/">
        <Logo/>
       </Navbar.Brand>
       <Nav>
@@ -25,4 +24,4 @@ const NavBar = () => {
   )
 }
 
-export default NavBar
+export default Navigation

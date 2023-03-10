@@ -5,9 +5,9 @@ function VowelCard({ id, backVideo, upper }) {
   const [isFlipped, setIsFlipped] = useState(false);
   const videoReference = useRef(null);
 
-  const handleClick = () => {
+  const handleClick = (shouldPlay) => {
     setIsFlipped(!isFlipped);
-    videoReference.current.paused ? videoReference.current.play() : videoReference.current.pause()
+    shouldPlay ? videoReference.current.play() : videoReference.current.pause()
   };
 
   return (
@@ -16,7 +16,7 @@ function VowelCard({ id, backVideo, upper }) {
         <ReactCardFlip isFlipped={isFlipped}>
           <p
             className="text-white text-center p-3 font-weight-bolder display-1 mx-auto d-block frontImage"
-            onClick={() => handleClick()}
+            onClick={() => handleClick(true)}
           >
             {upper}
           </p>
@@ -25,8 +25,7 @@ function VowelCard({ id, backVideo, upper }) {
             className="backVideo"
             key={id}
             ref={videoReference}
-            loop
-            onClick={() => handleClick()}
+            onClick={() => handleClick(false)}
           >
             <source src={backVideo} type="video/mp4" />
           </video>
