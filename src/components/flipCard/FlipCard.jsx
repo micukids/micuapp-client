@@ -6,22 +6,22 @@ function FlipCard({id, upper, backVideo}) {
     const [isFlipped, setIsFlipped] = useState(false);
     const videoReference = useRef(null);
 
-    const handleClick = () => {
+    const handleClick = (shouldPlay) => {
           setIsFlipped(!isFlipped);
-          videoReference.current.paused ? videoReference.current.play() : videoReference.current.pause()
+          shouldPlay ? videoReference.current.play() : videoReference.current.pause()
         }
     
   return (
     <>
     <div className='m-3'>
       <ReactCardFlip isFlipped={isFlipped}>
-        <p className= "text-white text-center p-4 font-weight-bolder display-1 mx-auto d-block frontImage" onClick = { () => handleClick()}>{upper}</p>
+        <p className= "text-white text-center p-4 font-weight-bolder display-1 mx-auto d-block frontImage" onClick = { () => handleClick(true)}>{upper}</p>
 
         <video
             className="backVideo"
             key={id}
             ref={videoReference}
-            onClick={() => handleClick()}
+            onClick={() => handleClick(false)}
           >
             <source src={backVideo} type="video/mp4" />
         </video>
