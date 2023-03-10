@@ -4,6 +4,7 @@
 @import url(../components/vowels/VowelsContainer.css);
 @import url(../components/footer/Footer.css);
 @import url(../components/logo/Logo.css);
+@import url(../components//navbar/Navigation.css);
 
 :root{
     --purple: #6D17F2;
