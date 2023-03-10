@@ -1,5 +1,6 @@
 @import url(../components/mainButton/MainButton.css);
 @import url(../components/flipCard//FlipCard.css);
+@import url(../components/memory/Memory.css);
 @import url(../components/vowels/VowelsContainer.css);
 @import url(../components/footer/Footer.css);
 @import url(../components/logo/Logo.css);
@@ -14,5 +15,5 @@
     --orange-linear: linear-gradient(90deg, #FF730E 0%, #FFB83E 111.01%);
     --green-dark: #048C59;
     --green-soft: #4FB705;
-    --white-smoke: #F5F5F5;
+    --white-smoke: #ffffff;
 }

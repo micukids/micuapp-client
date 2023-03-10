@@ -1,0 +1,40 @@
+.bg-memory {
+    height: 84vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../../assets/img/Bg_memory.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-position: center;
+}
+
+.text-memory{
+    margin-top: 2rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.text-memory img{
+    width: 30px;
+    height: 30px;
+}
+
+.text-memory p{
+    color: var(--white-smoke);
+    font-weight: bold;
+    font-size: 22px;
+}
+.text-memory p span{
+    color: var(---white-smoke);
+    font-weight: 500;
+    font-size: 22px;
+}
+
+#subtitle-memory{
+    color: var(---white-smoke)!important;
+    font-weight: 400;
+    font-size: 16px;
+}
