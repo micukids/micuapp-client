@@ -1,5 +1,8 @@
 @import url(../components/mainButton/MainButton.css);
 @import url(../components/flipCard//FlipCard.css);
+@import url(../components/vowels/VowelsContainer.css);
+@import url(../components/footer/Footer.css);
+@import url(../components/logo/Logo.css);
 
 :root{
     --purple: #6D17F2;

@@ -9,7 +9,7 @@ import './Footer.css'
  
 const Footer = () => {
   return (
-    <Navbar bg="dark" fixed="bottom" >
+    <Navbar bg="dark" >
     <Container>
       <Navbar.Brand href="#">
         <img
