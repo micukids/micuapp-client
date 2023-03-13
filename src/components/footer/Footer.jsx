@@ -25,7 +25,7 @@ const Footer = () => {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">        
+            <Nav.Link href="https://www.facebook.com/micukidsclub/" target="_blank">        
               <img
                 src={facebook_logo}
                 width="41.46"
@@ -34,7 +34,7 @@ const Footer = () => {
                 alt="micuKids logo"
               />
            </Nav.Link>
-            <Nav.Link href="#action1">        
+            <Nav.Link href="https://www.instagram.com/micukids/" target="_blank">        
               <img
                 src={instagram_logo}
                 width="41.46"
@@ -45,9 +45,15 @@ const Footer = () => {
            </Nav.Link>  
           </Nav>
       <Nav>
-            <Nav.Link href="#deets">CRÉDITOS</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
+            <Nav.Link 
+            href="#deets">
+              CRÉDITOS
+              </Nav.Link>
+            <Nav.Link href="#memes">
               CONTACTO
+            </Nav.Link>
+            <Nav.Link href="#memes">
+               ACCESO
             </Nav.Link>
       </Nav>
     </Container>
