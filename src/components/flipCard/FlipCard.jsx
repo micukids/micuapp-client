@@ -2,7 +2,7 @@ import React, {useState, useRef} from 'react'
 import ReactCardFlip from 'react-card-flip';
 import '../../styles/Styles.css';
 
-function FlipCard({id, upper, backVideo}) {
+function FlipCard({id, letter, backVideo}) {
     const [isFlipped, setIsFlipped] = useState(false);
     const videoReference = useRef(null);
 
@@ -15,7 +15,7 @@ function FlipCard({id, upper, backVideo}) {
     <>
     <div className='m-3'>
       <ReactCardFlip isFlipped={isFlipped}>
-        <p className= "text-white text-center p-4 font-weight-bolder display-1 mx-auto d-block frontImage" onClick = { () => handleClick(true)}>{upper}</p>
+        <p className= "text-white text-center p-4 font-weight-bolder display-1 mx-auto d-block frontImage" onClick = { () => handleClick(true)}>{letter}</p>
 
         <video
             className="backVideo"
