@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./Memory.css";
 import LogoMarta from "../../assets/img/Logo_Marta.png";
 import start_2 from "../../assets/img/Star_2.png";
+import StickyMicu from "../stickyMicu/StickyMicu";
 
 const Memory = () => {
   return (
