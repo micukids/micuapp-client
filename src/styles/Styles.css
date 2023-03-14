@@ -5,6 +5,8 @@
 @import url(../components/footer/Footer.css);
 @import url(../components/logo/Logo.css);
 @import url(../components//navbar/Navigation.css);
+@import url(../pages/memory/MemoryBoard.css);
+@import url(../components/memory/MemoryCard.css);
 
 :root{
     --purple: #6D17F2;
