@@ -1,0 +1,20 @@
+.memory-board-container{
+    background-image: url('../../assets/img/Ambiente.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 85vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.memory-card-container{
+    height: 600px;
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
