@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Abecedario Micukids App
+![image](https://www.figma.com/file/2Pv4uqNt5yERWkZO1Y2qsj/MicuKids?node-id=65-368&t=ttLDHuf1mP8LLTJo-4)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Tabla de Contenido
 
-## Available Scripts
+1. [Información General](#información-general)
+2. [Tecnologías](#tecnologías)
+3. [Herramientas](#herramientas)
+4. [Demo](#demo)
+5. [Prototipo](#prototipo)
+6. [Instalación](#instalación)
 
-In the project directory, you can run:
+## :page_facing_up:Información General
 
-### `npm start`
+Los padres Millennials y Gen-Z que crecieron con alta exposición a Internet, están ávidos de encontrar experiencias híbridas que les permitan emplear estratégicamente la tecnología para estimular el desarrollo de sus hijo(a)s de 2 a 5 años. La oferta de contenido bilingüe de calidad para menores de 5 años integrado con experiencias educativas híbridas (físico - digital), es aún muy reducida.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+El cliente necesita desarrollar una experiencia educativa para menores de 5 años. Combinar música, video, personajes ilustrados, materiales didácticos e interacción, para estimular los sentidos y las emociones de los más pequeños. Busca aportar en el desarrollo de su percepción del mundo, a través del aprovechamiento inteligente de la tecnología a su alcance y de la conectividad global multi-cultural / multi-lenguaje propios de internet.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## :computer:Tecnologías
 
-### `npm test`
+* HTML
+* CSS
+* JavaScript
+* React
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## :hammer:Herramientas
 
-### `npm run build`
+* [Trello](https://trello.com/b/0PCr9sIS/micukids)
+* [Figma](https://www.figma.com/file/2Pv4uqNt5yERWkZO1Y2qsj/MicuKids?node-id=26-2&t=rA3yNeI7rYXOmzSG-0)
+* [GitHub]()
+* Visual Studio Code
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## :tv:Demo
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* [Demo]()
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## :loop:Prototipo
 
-### `npm run eject`
+* [Tablet]()
+* [Movil]()
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
