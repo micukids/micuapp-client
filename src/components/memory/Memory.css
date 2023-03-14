@@ -1,19 +1,19 @@
 .bg-memory {
-    height: 50vh;
-    margin-top: 30px;
+    height: 74vh;
+    margin-top: 2%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url("../../assets/img/Bg_memory.png");
+    background-image: url("../../assets/img/Bg_memory_mobile.png");
     background-size: contain;
-    background-repeat: no-repeat;
+    background-repeat: repeat-x;
     background-origin: content-box;
     background-position: center;
 }
 
 .text-memory{
-    margin-top: 0.5rem;
+    margin-top: 0.1rem;
     display: flex;
     gap: 0.5rem;
 }
@@ -38,4 +38,20 @@
     color: var(---white-smoke)!important;
     font-weight: 400;
     font-size: 16px;
+}
+
+@media screen and (min-width: 577px){
+    .bg-memory {
+        height: 58vh;
+        margin-top: 1%;
+        background-image: url("../../assets/img/Bg_memory.png");
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .bg-memory {
+        height: 50vh;
+        margin-top: 1%;
+        background-image: url("../../assets/img/Bg_memory_large.png");
+    }
 }
