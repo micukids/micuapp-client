@@ -4,9 +4,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import FlipCardsPage from '../pages/flipCards/FlipCardsPage';
 import SignInPage from '../pages/signIn/SignInPage'
 import App from '../pages/home/App'
-import axios from 'axios';
-
-axios.defaults.withCredentials = true;
 
 const Router = () => {
   return (

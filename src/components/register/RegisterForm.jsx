@@ -1,10 +1,14 @@
-import axios from 'axios';
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { useNavigate } from 'react-router-dom';
+import swal from 'sweetalert';
+import { getAxiosInstance } from '../../services/functions';
 
 function RegisterForm() {
 
+    const instance = getAxiosInstance();
+    const navigate = useNavigate();
     const [registerInput, setRegisterInput] = useState({
         name:'',
         parent:'',
@@ -28,11 +32,14 @@ function RegisterForm() {
             password: registerInput.password,
         }
 
-        axios.get('http://localhost:8000/sanctum/csrf-cookie').then(response => {
-            axios.post('http://localhost:8000/api/register', data).then(res => {
+        instance.get('/sanctum/csrf-cookie').then(response => {
+            instance.post('/api/register', data).then(res => {
                 if(res.data.status === 200)
             {
-            
+                localStorage.setItem('auth_token', res.data.token);
+                localStorage.setItem('auth_name', res.data.name);
+                swal("Success",res.data.message,"success");
+                navigate('/');
             }
             else
             {
