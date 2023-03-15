@@ -5,7 +5,7 @@ import '../../styles/Styles.css';
 const MainButton = (props) => {
   return (
     <>
-        <button className={`bt ${props.class}`} >{props.text}</button>
+        <button className={`bt border-0 ${props.class}`} >{props.text}</button>
     </>
   )
 }
