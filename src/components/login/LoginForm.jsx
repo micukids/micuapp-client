@@ -35,7 +35,7 @@ function LoginForm() {
             localStorage.setItem('auth_token', res.data.token);
             localStorage.setItem('auth_name', res.data.name);
             swal("Success",res.data.message,"success");
-            navigate('/flipcard');
+            navigate('/');
         }
         else if(res.data.status === 401)
         {

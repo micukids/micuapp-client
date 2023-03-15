@@ -6,7 +6,20 @@ import LogoMarta from "../../assets/img/Logo_Marta.png";
 import start_2 from "../../assets/img/Star_2.png";
 import { Link } from "react-router-dom";
 
+
 const Memory = () => {
+  let memoryAccess = '';
+  if (localStorage.getItem('auth_token')){
+    memoryAccess = (<Link to={"/memorycard"} >
+    <MainButton class="bt" text="¡Vamos a jugar memory!" />
+    </Link>)
+  }else{
+    memoryAccess = 
+    (<Link to={"/access"} >
+    <MainButton class="bt" text="¡Vamos a jugar memory!" />
+    </Link>)
+  }
+
   return (
     <div className="bg-memory">
       <div className="text-memory">
@@ -17,9 +30,7 @@ const Memory = () => {
         <p>con la voz de</p>
         </div>
         <img src={LogoMarta} alt="Marta Gómez" />
-        <Link to={"/memorycard"} >
-        <MainButton class="bt" text="¡Vamos a jugar memory!" />
-        </Link>
+        {memoryAccess}
     </div>
   );
 };
