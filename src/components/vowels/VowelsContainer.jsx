@@ -30,7 +30,7 @@ function VowelsContainer() {
         <VowelCard {...vowel} key={index} backVideo={vowel.video} />
          ))}   
     </div>
-    <Link to="/flipcard"><MainButton class='bt' text='Aprende todo el abecedario'/></Link>
+    <Link to="/access"><MainButton class='bt' text='Aprende todo el abecedario'/></Link>
     </div>
 
   )

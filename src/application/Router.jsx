@@ -11,7 +11,7 @@ const Router = () => {
         <Routes>
             <Route path="/" element={<App/>}/>
             <Route path="/flipcard" element={<FlipCardsPage/>}/>
-            <Route path="/register" element={<SignInPage/>}/>
+            <Route path="/access" element={<SignInPage/>}/>
             <Route path="/memorycard" element={<MemoryBoard/>}/> 
 
         </Routes>
