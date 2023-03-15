@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import ReactCardFlip from 'react-card-flip'
-import Micu_cara from '../../assets/img/Micu_mira_der.png'
+import Micu_cara from '../../assets/img/Micu_cara.png'
 
 
 function MemoryCard({letter, id, flipCard, unFlippedCards, disabledCards, number }) {

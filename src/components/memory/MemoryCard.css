@@ -7,7 +7,7 @@
 
 
 .backface-image-container{
-    background: var(--green-dark);
+    background: var(--orange-linear);
     border-radius: 20px;
     display: flex;
     justify-content: center;
