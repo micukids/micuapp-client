@@ -1,9 +1,9 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-/* import Layout from '../components/layout/Layout'; */
 import FlipCardsPage from '../pages/flipCards/FlipCardsPage';
+import SignInPage from '../pages/signIn/SignInPage'
 import App from '../pages/home/App'
-
+import MemoryBoard from '../pages/memory/MemoryBoard';
 
 const Router = () => {
   return (
@@ -11,7 +11,9 @@ const Router = () => {
         <Routes>
             <Route path="/" element={<App/>}/>
             <Route path="/flipcard" element={<FlipCardsPage/>}/>
-           {/*  <Route element={<Layout/>}/> */}
+            <Route path="/register" element={<SignInPage/>}/>
+            <Route path="/memorycard" element={<MemoryBoard/>}/> 
+
         </Routes>
     </BrowserRouter>
   )

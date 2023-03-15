@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import ReactCardFlip from "react-card-flip";
 
-function VowelCard({ id, backVideo, upper }) {
+function VowelCard({ id, backVideo, letter }) {
   const [isFlipped, setIsFlipped] = useState(false);
   const videoReference = useRef(null);
 
@@ -18,7 +18,7 @@ function VowelCard({ id, backVideo, upper }) {
             className="text-white text-center p-3 font-weight-bolder display-1 mx-auto d-block frontImage"
             onClick={() => handleClick(true)}
           >
-            {upper}
+            {letter}
           </p>
 
           <video
