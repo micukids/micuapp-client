@@ -26,6 +26,7 @@ function MemoryCard({letter, id, flipCard, unFlippedCards, disabledCards, number
 
        }
       }
+      
 
   return (
     <div className='memory-card'>
