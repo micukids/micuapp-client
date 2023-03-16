@@ -1,13 +1,12 @@
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import ReactCardFlip from "react-card-flip";
 
-function VowelCard({ id, backVideo, upper }) {
-  const [isFlipped, setIsFlipped] = useState(false);
+function VowelCard({ id, backVideo, letter, onFlipped, isFlipped }) {  
   const videoReference = useRef(null);
 
-  const handleClick = () => {
-    setIsFlipped(!isFlipped);
-    videoReference.current.paused ? videoReference.current.play() : videoReference.current.pause()
+  const handleClick = (shouldPlay) => {
+    onFlipped(id)
+    shouldPlay ? videoReference.current.play() : videoReference.current.pause()
   };
 
   return (
@@ -16,17 +15,16 @@ function VowelCard({ id, backVideo, upper }) {
         <ReactCardFlip isFlipped={isFlipped}>
           <p
             className="text-white text-center p-3 font-weight-bolder display-1 mx-auto d-block frontImage"
-            onClick={() => handleClick()}
+            onClick={() => handleClick(true)}
           >
-            {upper}
+            {letter}
           </p>
 
           <video
             className="backVideo"
             key={id}
             ref={videoReference}
-            loop
-            onClick={() => handleClick()}
+            onClick={() => handleClick(false)}
           >
             <source src={backVideo} type="video/mp4" />
           </video>

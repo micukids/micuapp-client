@@ -1,0 +1,24 @@
+.memory-card{
+    margin: 5px;
+    width: calc(262px - 10px);
+    height: calc(262px - 10px);
+    cursor: pointer;
+}
+
+
+.backface-image-container{
+    background: var(--orange-linear);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.backface-image-container img{
+    height: 203.73px;
+    width: 261.53px;
+}
+
+.padding-p{
+    padding: 100px 125px !important;
+}
