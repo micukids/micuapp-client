@@ -33,6 +33,8 @@ const logoutSubmit = (e) => {
   let LogoutButton = '';
   if (localStorage.getItem('auth_token')){
     LogoutButton = (<button className="btn  nav-link" onClick={logoutSubmit}>LOGOUT</button>)
+  }else {
+    LogoutButton = (<Nav.Link href="/login">LOGIN</Nav.Link>);
   }
 
   return (
