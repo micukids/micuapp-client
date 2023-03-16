@@ -23,7 +23,7 @@ function VowelsContainer() {
         if (localStorage.getItem('auth_token')){
           alphabetAccess = (<Link to="/flipcard"><MainButton class='bt' text='Aprende todo el abecedario'/></Link>)
         }else{
-          alphabetAccess = (<Link to="/signin"><MainButton class='bt' text='Aprende todo el abecedario'/></Link>)
+          alphabetAccess = (<Link to="/login"><MainButton class='bt' text='Aprende todo el abecedario'/></Link>)
         }
 
   return (

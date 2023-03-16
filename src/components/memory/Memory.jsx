@@ -15,7 +15,7 @@ const Memory = () => {
     </Link>)
   }else{
     memoryAccess = 
-    (<Link to={"/signin"} >
+    (<Link to={"/login"} >
     <MainButton class="bt" text="¡Vamos a jugar memory!" />
     </Link>)
   }
