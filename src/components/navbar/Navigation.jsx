@@ -38,7 +38,7 @@ const logoutSubmit = (e) => {
   }
 
   return (
-   <Navbar collapseOnSelect expand="sm" bg="dark">
+   <Navbar collapseOnSelect expand="sm" bg="dark" className='sticky-top'>
     <Container>
       <Navbar.Brand href="/">
        <Logo/>
