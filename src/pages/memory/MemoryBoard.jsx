@@ -4,6 +4,7 @@ import MemoryCard from '../../components/memory/MemoryCard';
 import { GetVowels } from '../../services/functions';
 import {shuffleArray} from '../../utils/index'
 import MainButton from '../../components/mainButton/MainButton'
+import confetti from 'canvas-confetti';
 
 function MemoryBoard() {
   const [vowels, setVowels] = useState([]);
@@ -11,12 +12,11 @@ function MemoryBoard() {
   const [secondCard, setSecondCard]= useState({})
   const [unFlippedCards, setUnFlippedCards] = useState([]);
   const [disabledCards, setDisabledCards] =useState([]);
+  const [gameOver, setGameOver] =useState([]);
 
   const getAllVowels = async() =>{
       const allVowels = await GetVowels();
       const shuffleCards = shuffleArray(allVowels);
-      console.log(allVowels);
-      console.log(shuffleCards);
       const memoryCards = shuffleCards.slice(0, 3);
       const duplicateMemoryCards = memoryCards.reduce(
         (accumulator, currentValue) => [...accumulator, currentValue, currentValue],
@@ -33,6 +33,18 @@ function MemoryBoard() {
       checkForMatch()
     }, [secondCard])
 
+    useEffect(() => {
+      if (gameOver.length === vowels.length && vowels.length > 0){
+        confetti({
+          particleCount: 200,
+          startVelocity: 30,
+          spread: 300,
+          gravity: 1.5,
+          origin: {y:0}
+        })
+      }
+    }, [gameOver])
+
     const flipCard = (letter, number)=>{
       if (firstCard.letter === letter && firstCard.number === number){
         return 0;
@@ -48,9 +60,16 @@ function MemoryBoard() {
     const checkForMatch = () => {
       if (firstCard.letter && secondCard.letter){
         const match = firstCard.letter === secondCard.letter;
-        match ? disableCards() : unFlipCards();
+        if (match) {
+          setGameOver((currentValue) => [...currentValue, firstCard.number, secondCard.number]);
+          
+          disableCards() 
+        }else{
+          unFlipCards();
+        } 
       }
     }
+    console.log(gameOver);
 
     const disableCards = () => {
       setDisabledCards([firstCard.number, secondCard.number]);
@@ -68,8 +87,11 @@ function MemoryBoard() {
       setSecondCard({});
     }
 
-    const reloadGame = () => {
-      window.location.reload(true);
+    const startNewGame = () => {
+      resetCards();
+      setUnFlippedCards([]);
+      setDisabledCards([]);
+      setTimeout(() => getAllVowels(), 1000)
     }
 
   return (
@@ -86,11 +108,12 @@ function MemoryBoard() {
               flipCard={flipCard} 
               unFlippedCards={unFlippedCards}
               disabledCards={disabledCards}
+            
               />
               ))
             }
         </div>
-        <MainButton text="Volver a jugar!" onClick={reloadGame} />
+        <MainButton text="Nuevas Cartas" onClick={() => startNewGame()} />
       </div>
     </Layout>
   )

@@ -1,7 +1,6 @@
 .memory-board-container{
-    background-image: url('../../assets/img/Ambiente.png');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url('../../assets/img/Bg_Memoryboard.jpg');
+    background-repeat: repeat;
     height: 85vh;
     width: 100vw;
     display: flex;
