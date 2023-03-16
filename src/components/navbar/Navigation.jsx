@@ -38,18 +38,22 @@ const logoutSubmit = (e) => {
   }
 
   return (
-   <Navbar bg="dark">
+   <Navbar collapseOnSelect expand="sm" bg="dark">
     <Container>
       <Navbar.Brand href="/">
        <Logo/>
       </Navbar.Brand>
-      <Nav>
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="me-auto"></Nav>
+         <Nav className='d-flex align-items-end'> 
 
             <Nav.Link href="/">INICIO</Nav.Link>
-            <Nav.Link href="#memes">PARA PADRES</Nav.Link>
+            <Nav.Link href="/parents">PARA PADRES</Nav.Link>
             {LogoutButton}
           
       </Nav>
+      </Navbar.Collapse>
     </Container>
   </Navbar>
     
