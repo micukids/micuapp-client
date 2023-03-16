@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import swal from 'sweetalert';
 import { getAxiosInstance } from '../../services/functions';
 
@@ -52,8 +52,12 @@ function RegisterForm() {
     }
 
   return (
-    <div className='d-flex flex-column align-items-center justify-items-center'>
-        <h2 className='mb-3 mt-3'>Regístrate</h2>   
+     <div className='container p-4 mt-5 main-height'>
+        <div className="row">
+          <div className="col-md-4 mx-auto">
+
+    <div className='card card-body shadow-lg d-flex flex-column justify-items-center'>
+        <h2 className='mb-3 mt-3 text-center'>Registrate</h2>   
          
         <Form onSubmit={registerSubmit}>
             <Form.Group className="mb-3" controlId="formBasicName">
@@ -97,11 +101,18 @@ function RegisterForm() {
             <span>{registerInput.error_list.password}</span>   
             </Form.Group>
 
+            <div className='d-grid col-6 mx-auto'>
+                    <Button variant="primary" type="submit" className='btn btn-dark btn-block'>
+                    Registrate
+                    </Button>
 
-        <Button variant="primary" type="submit">
-        Comenzar
-        </Button>
+            </div>
         </Form>
+         <hr width="100%" size="1px" />
+        <p className='text-center'>¿Ya tienes una cuenta? <Link to="/login"><span>Iniciar sesión</span></Link></p>
+    </div>
+    </div>
+    </div>
     </div>
   );
 }

@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import swal from 'sweetalert';
 import { getAxiosInstance } from '../../services/functions';
-//import swal from 'sweetalert';
+
 
 function LoginForm() {
     const instance = getAxiosInstance();
@@ -35,7 +35,7 @@ function LoginForm() {
             localStorage.setItem('auth_token', res.data.token);
             localStorage.setItem('auth_name', res.data.name);
             swal("Success",res.data.message,"success");
-            navigate('/flipcard');
+            navigate('/');
         }
         else if(res.data.status === 401)
         {
@@ -51,9 +51,12 @@ function LoginForm() {
     }
     
     return (
-    <div>
-        <div className='d-flex flex-column align-items-center justify-items-center'>
-            <h2 className='mb-3 mt-3'>Ingresa</h2>   
+    <div className='container p-4 mt-5 main-height'>
+        <div className="row">
+          <div className="col-md-4 mx-auto">
+
+           <div className='card card-body shadow-lg d-flex flex-column  justify-items-center'>
+            <h2 className='mb-3 mt-3 text-center'>Login</h2>   
             
             <Form onSubmit={logInSubmit}>    
                 <Form.Group className="mb-3" controlId="formBasicEmailLogin">
@@ -76,11 +79,17 @@ function LoginForm() {
                     />
                 <span>{loginInput.error_list.password}</span>     
                 </Form.Group>
+            <div className='d-grid col-6 mx-auto'> 
+                <Button variant="primary" type="submit" className='btn btn-dark btn-block'>
+                Login
+                </Button>
 
-            <Button variant="primary" type="submit">
-            Ingresar
-            </Button>
+            </div>
             </Form>
+            <hr width="100%" size="1px" />
+            <p className='text-center'>¿No tienes una cuenta? <Link to="/signin"><span>Registrate</span></Link></p>
+            </div>
+         </div>
         </div>
     </div>
   )

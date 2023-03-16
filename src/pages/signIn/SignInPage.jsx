@@ -1,15 +1,13 @@
 import React from 'react'
-import LoginForm from '../../components/login/LoginForm'
 import RegisterForm from '../../components/register/RegisterForm'
 import Layout from "../../components/layout/Layout";
 
 const SignInPage = () => {
   return (
-    <div>
+    <div className='bg-container-access'>
       <Layout>
-        <div className="d-flex flex-row-reverse justify-content-center align-content-center gap-5 customSize">
+        <div>
           <RegisterForm/>
-          <LoginForm/>
         </div>
       </Layout>
    

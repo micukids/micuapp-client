@@ -50,6 +50,13 @@ function VowelsContainer() {
     }, [vowels])
 
     
+        let alphabetAccess = '';
+        if (localStorage.getItem('auth_token')){
+          alphabetAccess = (<Link to="/flipcard"><MainButton class='bt' text='Aprende todo el abecedario'/></Link>)
+        }else{
+          alphabetAccess = (<Link to="/login"><MainButton class='bt' text='Aprende todo el abecedario'/></Link>)
+        }
+
   return (
     <div className='bg-vowels-container'>
       <div className='text-vowels'>
@@ -61,7 +68,7 @@ function VowelsContainer() {
         <VowelCard {...vowel} key={index} backVideo={vowel.video} onFlipped={onFlipped}/>
          ))}   
     </div>
-    <Link to="/access"><MainButton class='bt' text='Aprende todo el abecedario'/></Link>
+      {alphabetAccess}
     </div>
 
   )
