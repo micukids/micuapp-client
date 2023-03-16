@@ -4,6 +4,7 @@ import FlipCardsPage from '../pages/flipCards/FlipCardsPage';
 import SignInPage from '../pages/signIn/SignInPage'
 import App from '../pages/home/App'
 import MemoryBoard from '../pages/memory/MemoryBoard';
+import LoginPage from '../pages/login/LoginPage';
 
 const Router = () => {
   return (
@@ -11,7 +12,8 @@ const Router = () => {
         <Routes>
             <Route path="/" element={<App/>}/>
             <Route path="/flipcard" element={<FlipCardsPage/>}/>
-            <Route path="/register" element={<SignInPage/>}/>
+            <Route path="/signin" element={<SignInPage/>}/>
+            <Route path="/login" element={<LoginPage/>}/>
             <Route path="/memorycard" element={<MemoryBoard/>}/> 
 
         </Routes>
