@@ -1,12 +1,11 @@
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import ReactCardFlip from "react-card-flip";
 
-function VowelCard({ id, backVideo, letter }) {
-  const [isFlipped, setIsFlipped] = useState(false);
+function VowelCard({ id, backVideo, letter, onFlipped, isFlipped }) {  
   const videoReference = useRef(null);
 
   const handleClick = (shouldPlay) => {
-    setIsFlipped(!isFlipped);
+    onFlipped(id)
     shouldPlay ? videoReference.current.play() : videoReference.current.pause()
   };
 
