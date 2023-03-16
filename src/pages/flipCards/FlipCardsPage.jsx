@@ -3,6 +3,7 @@ import FlipCard from '../../components/flipCard/FlipCard';
 import { GetLetters } from '../../services/functions';
 import "./FlipCardsPage.css";
 import Layout from "../../components/layout/Layout";
+import NameContainer from '../../components/name/NameContainer';
 
 
 const FlipCardsPage = () => {
@@ -18,14 +19,18 @@ const FlipCardsPage = () => {
     getAllCards()
   }, [])
 
-  console.log(cards);
+ handleName = (e)=>{
+    console.log(e);
+  }
+
   return (
     <>
     <Layout>
       <div className= 'bg-vowels-container d-flex justify-content-center align-items-center m-5 bg-light' >
+          <NameContainer/>
           <div className = 'd-flex flex-wrap text-center'>
-          {cards.map((card, index) => (<FlipCard {...card} key={index} backVideo={card.video} /> ))}   
-        </div>
+            {cards.map((card, index) => (<FlipCard {...card} key={index} backVideo={card.video} /> ))}   
+          </div>
       </div>
     </Layout>
     </>

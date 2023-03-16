@@ -21,8 +21,14 @@ const GetVowels = async()=>{
     return response.data.vowels;
    }
 
+const getLettersName = async()=> {
+    const response = await axios.get(`${endPoint}/api/lettersName`);
+    return response.data.vowels;
+   }
+
 export {
     GetLetters,
     GetVowels,
+    getLettersName,
     getAxiosInstance
 };
