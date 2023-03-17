@@ -9,3 +9,16 @@
 .nav-link:hover{
     color:var(--white-smoke) !important;
 }
+
+.items-order{
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 577px){
+	.items-order {
+		flex-direction: row;
+  }
+}
+
+

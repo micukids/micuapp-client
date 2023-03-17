@@ -1,47 +1,47 @@
 import React, { useEffect, useState } from 'react'
 import Layout from '../../components/layout/Layout'
 import MemoryCard from '../../components/memory/MemoryCard';
-import { GetVowels } from '../../services/functions';
+import { GetLetters } from '../../services/functions';
 import {shuffleArray} from '../../utils/index'
 import MainButton from '../../components/mainButton/MainButton'
 import confetti from 'canvas-confetti';
 
 function MemoryBoard() {
-  const [vowels, setVowels] = useState([]);
+  const [cards, setCards] = useState([]);
   const [firstCard, setFirstCard]= useState({})
   const [secondCard, setSecondCard]= useState({})
   const [unFlippedCards, setUnFlippedCards] = useState([]);
   const [disabledCards, setDisabledCards] =useState([]);
   const [gameOver, setGameOver] =useState([]);
 
-  const getAllVowels = async() =>{
-      const allVowels = await GetVowels();
-      const shuffleCards = shuffleArray(allVowels);
+  const getAllLetters = async() =>{
+      const allLetters = await GetLetters();
+      const shuffleCards = shuffleArray(allLetters);
       const memoryCards = shuffleCards.slice(0, 3);
       const duplicateMemoryCards = memoryCards.reduce(
         (accumulator, currentValue) => [...accumulator, currentValue, currentValue],
         []
       );
-      setVowels(shuffleArray(duplicateMemoryCards))
+        setCards(shuffleArray(duplicateMemoryCards))
     }
 
-    useEffect( () => {  
-      getAllVowels()
-    }, [])
+  useEffect( () => {  
+      getAllLetters()
+    }, []) 
 
     useEffect( () => {  
       checkForMatch()
     }, [secondCard])
 
     useEffect(() => {
-      if (gameOver.length === vowels.length && vowels.length > 0){
+      if (gameOver.length === cards.length && cards.length > 0){
         confetti({
           particleCount: 200,
           startVelocity: 30,
           spread: 300,
           gravity: 1.5,
           origin: {y:0}
-        })
+        });
       }
     }, [gameOver])
 
@@ -88,10 +88,7 @@ function MemoryBoard() {
     }
 
     const startNewGame = () => {
-      resetCards();
-      setUnFlippedCards([]);
-      setDisabledCards([]);
-      setTimeout(() => getAllVowels(), 1000)
+     window.location = "/memorycard"
     }
 
   return (
@@ -100,9 +97,9 @@ function MemoryBoard() {
 
         <div className='memory-card-container'>
           {
-            vowels.map((vowelcard, index)=>(
+            cards.map((card, index)=>(
               <MemoryCard 
-              {...vowelcard} 
+              {...card} 
               key={index} 
               number={index}
               flipCard={flipCard} 
