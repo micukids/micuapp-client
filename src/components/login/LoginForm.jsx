@@ -56,7 +56,7 @@ function LoginForm() {
           <div className="col-md-4 mx-auto">
 
            <div className='card card-body shadow-lg d-flex flex-column  justify-items-center'>
-            <h2 className='mb-3 mt-3 text-center'>Login</h2>   
+            <h2 className='mb-3 mt-3 text-center'>LOGIN</h2>   
             
             <Form onSubmit={logInSubmit}>    
                 <Form.Group className="mb-3" controlId="formBasicEmailLogin">
