@@ -11,13 +11,15 @@ function AdminPrivateRoute({children, redirectPath= "/login"}) {
      const [loading, setLoading] = useState(true);
      
      useEffect(() => {
+      //compobar si el usuario esta logeado antes.
+      if (!localStorage.getItem('auth_token')){
        instance.get(`/api/checkingAuthenticated`).then(res => {
          if(res.status === 200){
            setUserAuthenticated(true);
    
          }
          setLoading(false);
-       });
+       })};
        return () => {
          setUserAuthenticated(false);
        }
@@ -25,7 +27,7 @@ function AdminPrivateRoute({children, redirectPath= "/login"}) {
    
        instance.interceptors.response.use(undefined, function axiosRetryInterceptor(err) {
          if(err.response.status === 401){
-           swal('Unauthorized', err.response.data.message, "warning" );
+           swal('Usuario no Autorizado', err.response.data.message, "warning" );
            navigate('/'); 
          }
          return Promise.reject(err);

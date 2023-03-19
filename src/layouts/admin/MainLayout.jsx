@@ -5,6 +5,7 @@ import Navbar from './Navbar'
 import Sidebar from './Sidebar'
 import '../../assets/admin/css/styles.css'
 import '../../assets/admin/js/scripts'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Outlet } from 'react-router-dom'
 
 

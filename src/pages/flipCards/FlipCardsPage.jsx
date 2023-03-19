@@ -7,7 +7,6 @@ import Layout from "../../components/layout/Layout";
 
 const FlipCardsPage = () => {
   const [cards, setCards] = useState([]);
-  const username = window.localStorage.getItem('auth_name');
   const getAllCards = async() =>{
     const allCards = await GetLetters();
     console.log(allCards);
@@ -23,7 +22,6 @@ const FlipCardsPage = () => {
     <>
     <Layout>
       <div className= 'bg-vowels-container d-flex justify-content-center align-items-center  bg-light' >
-            <h1>Hola:  <span>{username}</span></h1>
           <div className = 'd-flex flex-wrap justify-content-center align-items-center text-center'>
           {cards.map((card, index) => (<FlipCard {...card} key={index} backVideo={card.video} /> ))}   
         </div>

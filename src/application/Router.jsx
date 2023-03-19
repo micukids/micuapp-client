@@ -11,6 +11,7 @@ import Page404 from '../components/errors/Page404';
 import Page403 from '../components/errors/Page403';
 import AdminPrivateRoute from './AdminPrivateRoute';
 import MainLayout from '../layouts/admin/MainLayout';
+import Letters from '../components/admin/Letters';
 
 
 
@@ -25,26 +26,13 @@ const Router = () => {
             <Route path="/signin" element={localStorage.getItem('auth_token') ? <Navigate to="/" /> : <SignInPage/>} />
             <Route path="/memorycard" element={<MemoryBoard/>}/> 
 
-            <Route path="/admin/*">
-                     <Route path='' element={
-                       <AdminPrivateRoute>
-                            <MainLayout/>
-                       </AdminPrivateRoute>} />
-                      {/* <Route index element={<Dashboard />}/> */}
-                      <Route path="dashboard" element={
-                        <AdminPrivateRoute>
-                           <Dashboard />
-                        </AdminPrivateRoute>} />
-                        <Route path="profile" element={
-                        <AdminPrivateRoute>
-                           <Profile />
-                        </AdminPrivateRoute>} />
-                        <Route path="" element={
-                        <AdminPrivateRoute>
-                           <Navigate to='/admin/dashboard'/>
-                        </AdminPrivateRoute>} />                                                                     
-                        <Route path="*" element={<Page404 />} />
-              
+            <Route path="/admin" element={<MainLayout/>}>
+                      <Route index element={<Dashboard />}/>
+                      <Route path="/admin/dashboard" element={<Dashboard />} />
+                      <Route path="/admin/letters" element={<Letters />} />
+                      <Route path="/admin/profile" element={<Profile />} />
+                      <Route path="/admin" element={<Navigate to='/admin/dashboard'/>}/>
+                      <Route path="*" element={<Page404 />} />
             </Route>         
           
             <Route path="*" element={<Page404 />} />

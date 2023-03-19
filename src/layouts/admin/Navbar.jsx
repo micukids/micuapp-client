@@ -1,20 +1,24 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import micuKidsLogo_Horizontal from '../../assets/img/Logo_Micukids_horizontal.png';
 
 function Navbar() {
   return (
     <nav className="sb-topnav navbar navbar-expand navbar-dark bg-dark">
     
-    <Link className="navbar-brand ps-3" to="/admin">micuKids App</Link>
+    <Link className="navbar-brand ps-3" to="/admin">
+    <img
+          src={micuKidsLogo_Horizontal}
+          width="140"
+          height="42"
+          className="d-inline-block align-top"
+          alt="micuKids logo"
+        />
+    </Link>
   
     <button className="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i className="fas fa-bars"></i></button>
    
-    <form className="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
-        <div className="input-group">
-            <input className="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
-            <button className="btn btn-primary" id="btnNavbarSearch" type="button"><i className="fas fa-search"></i></button>
-        </div>
-    </form>
+    <div className="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0"></div>
    
     <ul className="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
         <li className="nav-item dropdown">
