@@ -57,7 +57,7 @@ function RegisterForm() {
           <div className="col-md-4 mx-auto">
 
     <div className='card card-body shadow-lg d-flex flex-column justify-items-center'>
-        <h2 className='mb-3 mt-3 text-center'>Registrate</h2>   
+        <h2 className='mb-3 mt-3 text-center'>REGISTRATE</h2>   
          
         <Form onSubmit={registerSubmit}>
             <Form.Group className="mb-3" controlId="formBasicName">
@@ -103,7 +103,7 @@ function RegisterForm() {
 
             <div className='d-grid col-6 mx-auto'>
                     <Button variant="primary" type="submit" className='btn btn-dark btn-block'>
-                    Registrate
+                    Regístrate
                     </Button>
 
             </div>
