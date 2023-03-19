@@ -23,7 +23,7 @@ const GetVowels = async()=>{
 
 const getLettersName = async()=> {
     const response = await axios.get(`${endPoint}/api/lettersName`);
-    return response.data.vowels;
+    return response.data.lettersName;
    }
 
 export {
