@@ -1,0 +1,8 @@
+.nameCard{
+    background: var(--purple-linear);
+    width: 6rem;
+    height: 6rem;
+    border-radius: 20px;
+    font-weight: bold !important; 
+    font-size: 3rem !important;
+    }

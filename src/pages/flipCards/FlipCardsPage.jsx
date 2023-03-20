@@ -22,7 +22,7 @@ const FlipCardsPage = () => {
     <>
     <Layout>
       <div className= 'bg-vowels-container d-flex justify-content-center align-items-center bg-light' >
-          <NameCont cards={cards} /> 
+          <NameCont/> 
           <div className='text-vowels'>
             <img src={start_2} alt="Estrella de color amarillo" />
             <p>FLIP <span>CARDS</span></p>
