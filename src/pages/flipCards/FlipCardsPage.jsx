@@ -9,7 +9,6 @@ const FlipCardsPage = () => {
   const [cards, setCards] = useState([]);
   const getAllCards = async() =>{
     const allCards = await GetLetters();
-    console.log(allCards);
     setCards(allCards);
   }
 
@@ -17,7 +16,7 @@ const FlipCardsPage = () => {
     getAllCards()
   }, [])
 
-  console.log(cards);
+
   return (
     <>
     <Layout>

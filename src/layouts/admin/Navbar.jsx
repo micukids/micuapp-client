@@ -6,7 +6,7 @@ function Navbar() {
   return (
     <nav className="sb-topnav navbar navbar-expand navbar-dark bg-dark">
     
-    <Link className="navbar-brand ps-3" to="/admin">
+    <Link className="navbar-brand ps-3" to="/">
     <img
           src={micuKidsLogo_Horizontal}
           width="140"

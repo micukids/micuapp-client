@@ -12,6 +12,8 @@ import Page403 from '../components/errors/Page403';
 import AdminPrivateRoute from './AdminPrivateRoute';
 import MainLayout from '../layouts/admin/MainLayout';
 import Letters from '../components/admin/Letters';
+import Suggestions from '../components/admin/Suggestions';
+import Downloads from '../components/admin/Downloads';
 
 
 
@@ -26,15 +28,18 @@ const Router = () => {
             <Route path="/signin" element={localStorage.getItem('auth_token') ? <Navigate to="/" /> : <SignInPage/>} />
             <Route path="/memorycard" element={<MemoryBoard/>}/> 
 
-            <Route path="/admin" element={<MainLayout/>}>
-                      <Route index element={<Dashboard />}/>
-                      <Route path="/admin/dashboard" element={<Dashboard />} />
-                      <Route path="/admin/letters" element={<Letters />} />
-                      <Route path="/admin/profile" element={<Profile />} />
-                      <Route path="/admin" element={<Navigate to='/admin/dashboard'/>}/>
-                      <Route path="*" element={<Page404 />} />
-            </Route>         
-          
+            <Route element={localStorage.getItem('auth_token') ? <AdminPrivateRoute/> : <Navigate to="/login" />}>
+              <Route path="/admin" element={<MainLayout/>}>
+                        <Route index element={<Dashboard />}/>
+                        <Route path="/admin/dashboard" element={<Dashboard />} />
+                        <Route path="/admin/letters" element={<Letters />} />
+                        <Route path="/admin/suggestions" element={<Suggestions />} />
+                        <Route path="/admin/downloads" element={<Downloads />} />
+                        <Route path="/admin/profile" element={<Profile />} />
+                        <Route path="/admin" element={<Navigate to='/admin/dashboard'/>}/>
+                        <Route path="*" element={<Page404 />} />
+              </Route>         
+            </Route>
             <Route path="*" element={<Page404 />} />
             <Route path="/404" element={<Page404 />} />
             <Route path="/403" element={<Page403 />} />

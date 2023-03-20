@@ -16,10 +16,19 @@ function Sidebar() {
                 <div className="sb-nav-link-icon"><i className="fas fa-tachometer-alt"></i></div>
                 Letras
             </Link>
+            <Link className="nav-link" to="/admin/suggestions">
+                <div className="sb-nav-link-icon"><i className="fas fa-tachometer-alt"></i></div>
+                Sugerencias
+            </Link>  
+            <Link className="nav-link" to="/admin/downloads">
+                <div className="sb-nav-link-icon"><i className="fas fa-tachometer-alt"></i></div>
+                Descargables
+            </Link>    
             <Link className="nav-link" to="/admin/profile">
                 <div className="sb-nav-link-icon"><i className="fas fa-tachometer-alt"></i></div>
                 Perfil
-            </Link>            
+            </Link>  
+
 
         </div>
     </div>
