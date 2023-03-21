@@ -2,11 +2,11 @@
     background: linear-gradient(90deg, #6D17F2 26.61%, #D157FF 157.8%) !important;
 }
 
-.nav-link{
+.footer-nav-link{
     color:var(--white-smoke) !important;
 }
 
-.nav-link:hover{
+.footer-nav-link:hover{
     color:var(--white-smoke) !important;
 }
 

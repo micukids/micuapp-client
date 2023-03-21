@@ -17,7 +17,6 @@ function VowelsContainer() {
         vowel.isFlipped = false;
         return vowel;
       })
-      console.log(allVowels)
       setVowels(allVowels);
     }
 

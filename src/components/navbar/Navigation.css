@@ -1,3 +1,11 @@
+.navigation-text-color{
+    color:var(--white-smoke) !important;
+}
+
+.navigation-text-color:hover{
+    color:var(--white-smoke) !important;
+}
+
 @media screen and (min-width: 577px){
 	.display-navigation{
         display: flex;

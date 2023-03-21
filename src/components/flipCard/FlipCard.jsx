@@ -13,6 +13,7 @@ function FlipCard({id, letter, backVideo}) {
     
   return (
     <>
+    
     <div className='m-3'>
       <ReactCardFlip isFlipped={isFlipped}>
         <p className= "text-white text-center p-4 font-weight-bolder display-1 mx-auto d-block frontImage" onClick = { () => handleClick(true)}>{letter}</p>
