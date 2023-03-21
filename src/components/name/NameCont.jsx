@@ -4,10 +4,10 @@ import NameCard from './NameCard';
 
 function NameCont() {
     const userName = window.localStorage.getItem('auth_name');
-    let arrName=userName.split("");
+    let arrName=userName.toUpperCase().split("");
 
   return (
-    <div className='bg-vowels-container d-flex'>
+    <div className='d-flex cont-name'>
 
       <div className='text-vowels'>
         <img src={start_2} alt="Estrella de color amarillo" />
@@ -16,9 +16,9 @@ function NameCont() {
 
       <div className='d-flex flex-wrap justify-content-center align-items-center text-center' >
         {
-          arrName.map((char) => (
-            <NameCard letter = {char} />
-        ))};
+          arrName.map((char, index) => (
+            <NameCard letter={char} key = {index} />
+        ))}
       </div>
 
     </div>
