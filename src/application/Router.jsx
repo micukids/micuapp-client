@@ -44,7 +44,7 @@ const Router = () => {
           }
         />
         <Route path="/memorycard" element={<MemoryBoard />} />
-            <Route path="/parapadres" element={<ParentsPage/>}/> 
+        <Route path="/parapadres" element={<ParentsPage/>}/> 
 
         <Route element={<AdminPrivateRoute />}>
           <Route path="/admin" element={<MainLayout />}>
