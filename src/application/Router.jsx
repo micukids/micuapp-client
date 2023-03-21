@@ -15,6 +15,7 @@ import Letters from "../components/admin/Letters";
 import Suggestions from "../components/admin/Suggestions";
 import Downloads from "../components/admin/Downloads";
 import EditLetter from "../components/admin/EditLetter";
+import SoundGameBoard from "../pages/soundgame/SoundGameBoard";
 
 const Router = () => {
   return (
@@ -43,6 +44,7 @@ const Router = () => {
           }
         />
         <Route path="/memorycard" element={<MemoryBoard />} />
+        <Route path="/soundcard" element={<SoundGameBoard />} />
 
         <Route element={<AdminPrivateRoute />}>
           <Route path="/admin" element={<MainLayout />}>
