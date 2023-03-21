@@ -1,0 +1,32 @@
+.nameCard{
+    background: var(--purple-linear);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 20px;
+    font-weight: bold !important; 
+    font-size: 2.6rem !important;
+    padding-top: 10px;
+    }
+
+.cont-name{
+    background-size:contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 576px) { 
+
+    .nameCard{
+        width: 2rem;
+        height: 2rem;
+        font-size: 1.2rem !important;
+        border-radius: 10px;
+        padding-top: 4.5px;
+    }
+    
+    .cont-name{
+
+    }
+}
