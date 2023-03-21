@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import { getAxiosInstance } from '../../services/functions';
+import { getAxiosInstance} from '../../services/functions';
 import swal from "sweetalert";
 
 const initialData = {
@@ -71,7 +71,7 @@ function LetterForm() {
                 name="type"
                 >
                     <option value="vowel">vowel</option>
-                    <option value="" >consonant</option>
+                    <option value="consonant" >consonant</option>
                 </Form.Select>
               </Form.Group>
               <Form.Group className="mb-3" >

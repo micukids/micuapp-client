@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react'
+/* import React, { useEffect, useState } from 'react'
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useParams } from 'react-router-dom';
 import { getAxiosInstance } from '../../services/functions';
-import swal from "sweetalert";
+import swal from "sweetalert"; */
 
 
 function EditLetter() {
-    const instance = getAxiosInstance();
+   /*  const instance = getAxiosInstance();
     const [editLetterInput, setEditLetterInput] = useState([])
     const {id} = useParams();
 
@@ -34,10 +34,10 @@ function EditLetter() {
         await instance.put(`api/letter/${id}`, data)
           swal("Success","Your quote has been updated","success"); 
     }
-
+ */
   return (
     <div>
- <Form  id="letterForm"  onSubmit={updateLetter}>
+ {/* <Form  id="letterForm"  onSubmit={updateLetter}>
               <Form.Group className="mb-3">
                 <Form.Label>Letra</Form.Label>
                 <Form.Control
@@ -110,7 +110,7 @@ function EditLetter() {
                   Cancelar
                 </Button>
               </div>
-            </Form>
+            </Form> */}
     </div>
   )
 }
