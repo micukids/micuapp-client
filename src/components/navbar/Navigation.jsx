@@ -9,12 +9,6 @@ import Logo from '../logo/Logo';
 const instance = getAxiosInstance();
 const Navigation = () => {
 
-instance.interceptors.request.use(function(config){
-  const token =localStorage.getItem('auth_token');
-  config.headers.Authorization = token ? `Bearer ${token}` : "";
-  return config;
-})
-
 const logoutSubmit = (e) => {
   e.preventDefault();
 
@@ -30,9 +24,9 @@ const logoutSubmit = (e) => {
 
   let LogoutButton = '';
   if (localStorage.getItem('auth_token')){
-    LogoutButton = (<button className="btn  nav-link" onClick={logoutSubmit}>LOGOUT</button>)
+    LogoutButton = (<button className="btn  nav-link navigation-text-color" onClick={logoutSubmit}>LOGOUT</button>)
   }else {
-    LogoutButton = (<Nav.Link href="/login">LOGIN</Nav.Link>);
+    LogoutButton = (<Nav.Link className="navigation-text-color" href="/login">LOGIN</Nav.Link>);
   }
 
   return (
@@ -46,8 +40,8 @@ const logoutSubmit = (e) => {
           <Nav className="me-auto"></Nav>
          <Nav className='d-flex align-items-end'> 
 
-            <Nav.Link href="/">INICIO</Nav.Link>
-            <Nav.Link href="/parapadres">PARA PADRES</Nav.Link>
+            <Nav.Link className="navigation-text-color" href="/">INICIO</Nav.Link>
+            <Nav.Link className="navigation-text-color" href="/parapadres">PARA PADRES</Nav.Link>
             {LogoutButton}
           
       </Nav>

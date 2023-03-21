@@ -8,7 +8,6 @@ import start_2 from '../../assets/img/Star_2.png'
 
 const FlipCardsPage = () => {
   const [cards, setCards] = useState([]);
-
   const getAllCards = async() =>{
     const allCards = await GetLetters();
     setCards(allCards);
