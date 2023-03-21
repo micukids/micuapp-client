@@ -5,6 +5,7 @@ import Swal from 'sweetalert2'
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import LetterForm from './LetterForm';
+import EditLetter from './EditLetter';
 
 
 function Letters() {
@@ -82,7 +83,7 @@ function Letters() {
                                     </video>
                                 </td>
                                 <td className='buttons-table'>
-                                    <Link to={`/editar-letter/${letter.id}`} className='btn btn-warning'>Editar</Link>
+                                    <Link to={`/admin/edit-letter/${letter.id}`} className='btn btn-warning'>Editar</Link>
                                     <button onClick={()=>onDeleteLetter(letter.id)} className='btn btn-danger'>Eliminar</button>
                                 </td>
                             </tr>
@@ -92,6 +93,9 @@ function Letters() {
       </Tab>
       <Tab eventKey="añadir" title="Añadir Letra">
         <LetterForm/>
+      </Tab>
+      <Tab eventKey="editar" title="Editar Letra">
+        <EditLetter/>
       </Tab>
     </Tabs>
     </div>

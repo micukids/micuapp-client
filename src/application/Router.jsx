@@ -14,6 +14,7 @@ import MainLayout from "../layouts/admin/MainLayout";
 import Letters from "../components/admin/Letters";
 import Suggestions from "../components/admin/Suggestions";
 import Downloads from "../components/admin/Downloads";
+import EditLetter from "../components/admin/EditLetter";
 
 const Router = () => {
   return (
@@ -48,6 +49,7 @@ const Router = () => {
             <Route index element={<Dashboard />} />
             <Route path="/admin/dashboard" element={<Dashboard />} />
             <Route path="/admin/letters" element={<Letters />} />
+            <Route path="/admin/edit-letter/:id" element={<EditLetter />} />
             <Route path="/admin/suggestions" element={<Suggestions />} />
             <Route path="/admin/downloads" element={<Downloads />} />
             <Route path="/admin/profile" element={<Profile />} />
