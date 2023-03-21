@@ -6,15 +6,8 @@ import { Outlet, useNavigate } from "react-router-dom";
 function AdminPrivateRoute({ children, redirectPath = "/login" }) {
   const instance = getAxiosInstance();
 
-  instance.interceptors.request.use(function (config) {
-    const token = localStorage.getItem("auth_token");
-    config.headers.Authorization = token ? `Bearer ${token}` : "";
-    return config;
-  });
-
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
-
   useEffect(() => {
     if (!localStorage.getItem("auth_token")) {
       return navigate(redirectPath);

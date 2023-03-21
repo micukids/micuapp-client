@@ -5,10 +5,18 @@ axios.defaults.headers.post['Content-Type']= 'application/json';
 axios.defaults.headers.post['Accept']= 'application/json';
 
 function getAxiosInstance(endpoint = "http://localhost:8000") {
-    return axios.create({
+    const instance = axios.create({
         withCredentials: true,
         baseURL: endpoint
     });
+
+    instance.interceptors.request.use(function (config) {
+        const token = localStorage.getItem("auth_token");
+        config.headers.Authorization = token ? `Bearer ${token}` : "";
+        return config;
+      });
+
+    return instance
 }
 
 const GetLetters = async()=>{
@@ -24,5 +32,5 @@ const GetVowels = async()=>{
 export {
     GetLetters,
     GetVowels,
-    getAxiosInstance
+    getAxiosInstance,
 };

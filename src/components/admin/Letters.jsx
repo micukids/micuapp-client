@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { GetLetters } from '../../services/functions';
+import { getAxiosInstance, GetLetters } from '../../services/functions';
+import Swal from 'sweetalert2'
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
+import LetterForm from './LetterForm';
 
 
 function Letters() {
+    const instance = getAxiosInstance();
     const [letters, setLetters] = useState([]);
-
 
     const getAllLetters = async() =>{
       const allLetters = await GetLetters();
@@ -15,22 +19,43 @@ function Letters() {
     useEffect( () => {
         getAllLetters()
     }, [])
+
+    function onDeleteLetter(id){
+        Swal.fire({
+            title: 'Quieres eliminar esta letra?',
+            text: "Si, has clicado por error, puedes cancelar!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Sí, elimina!',
+            cancelButtonText: 'Cancelar!'
+          }).then(async(result) => {
+            if (result.isConfirmed) {
+              await instance.delete(`/api/letter/${id}`)
+              await  getAllLetters();
+              Swal.fire(
+                'Eliminada!',
+                'La letra ha sido eliminada exitosamente.',
+                'success'
+              )
+            }
+          })
+        }
+    
+
+
   return (
     <div className='container-fluid px-4'>
         <h1 className='mt-4'>Letras del Abecedario</h1>
 
-        <ul className="nav nav-tabs" id="myTab" role="tablist">
-        <li className="nav-item" role="presentation">
-            <button className="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Letras</button>
-        </li>
-        <li className="nav-item" role="presentation">
-            <button className="nav-link" id="letras-tab" data-bs-toggle="tab" data-bs-target="#letras-tab-pane" type="button" role="tab" aria-controls="letras-tab-pane" aria-selected="false">Añadir Letras</button>
-        </li>
-
-        </ul>
-        <div className="tab-content" id="myTabContent">
-            <div className="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabIndex="0">
-                    <table className='table table-striped'>
+        <Tabs
+      defaultActiveKey="vista"
+      id="uncontrolled-tab-example"
+      className="mb-3"
+    >
+      <Tab eventKey="vista" title="Vista">
+      <table className='table table-striped'>
                     <thead className='dash-table'>
                         <tr>
                             <th>Letra</th>
@@ -57,18 +82,18 @@ function Letters() {
                                     </video>
                                 </td>
                                 <td className='buttons-table'>
-                                    <Link to="" className='btn btn-warning'>Editar</Link>
-                                    <button className='btn btn-danger'>Eliminar</button>
+                                    <Link to={`/editar-letter/${letter.id}`} className='btn btn-warning'>Editar</Link>
+                                    <button onClick={()=>onDeleteLetter(letter.id)} className='btn btn-danger'>Eliminar</button>
                                 </td>
                             </tr>
                     )) }
                     </tbody>
                 </table>
-            </div>
-            <div className="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabIndex="0">
-
-            </div>
-    </div>
+      </Tab>
+      <Tab eventKey="añadir" title="Añadir Letra">
+        <LetterForm/>
+      </Tab>
+    </Tabs>
     </div>
 
   )
