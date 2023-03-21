@@ -44,23 +44,8 @@ function RegisterForm() {
             error_list: res.data.validation_errors,
           });
         }
-
-        instance.get('/sanctum/csrf-cookie').then(response => {
-            instance.post('/api/register', data).then(res => {
-                if(res.data.status === 200)
-            {
-                localStorage.setItem('auth_token', res.data.token);
-                localStorage.setItem('auth_name', res.data.name);
-                swal("Success",res.data.message,"success");
-                navigate('/');
-            }
-            else
-            {
-                setRegisterInput({...registerInput, error_list: res.data.validation_errors});
-            }
-
-                })
-        })
+         })
+     })
 
     }
 

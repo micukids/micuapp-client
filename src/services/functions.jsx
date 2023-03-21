@@ -38,4 +38,5 @@ export {
     GetLetters,
     GetVowels,
     getAxiosInstance,
+    getLettersName
 };
