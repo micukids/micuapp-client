@@ -5,6 +5,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import swal from 'sweetalert';
 import { getAxiosInstance } from '../../services/functions';
 import Logo from '../logo/Logo';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faChildReaching} from '@fortawesome/free-solid-svg-icons'
 
 const instance = getAxiosInstance();
 const Navigation = () => {
@@ -23,8 +25,13 @@ const logoutSubmit = (e) => {
 }
 
   let LogoutButton = '';
+  let NameTag = localStorage.getItem('auth_name');
+  let kidsIcon = '';
+
   if (localStorage.getItem('auth_token')){
-    LogoutButton = (<button className="btn  nav-link navigation-text-color" onClick={logoutSubmit}>LOGOUT</button>)
+    LogoutButton = (<button className="btn nav-link navigation-text-color" onClick={logoutSubmit}>LOGOUT</button>);
+    kidsIcon = (<FontAwesomeIcon icon={faChildReaching} className="btn nav-link navigation-text-color" />);
+    NameTag = (<button className="btn nav-link navigation-text-color" >{NameTag}</button>);
   }else {
     LogoutButton = (<Nav.Link className="navigation-text-color" href="/login">LOGIN</Nav.Link>);
   }
@@ -38,13 +45,17 @@ const logoutSubmit = (e) => {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto"></Nav>
-         <Nav className='d-flex align-items-end'> 
-
-            <Nav.Link className="navigation-text-color" href="/">INICIO</Nav.Link>
-            <Nav.Link className="navigation-text-color" href="/parapadres">PARA PADRES</Nav.Link>
-            {LogoutButton}
-          
-      </Nav>
+         <Nav className='d-flex flex-column'> 
+          <div className='d-flex justify-content-end'>
+              {kidsIcon}
+              {NameTag}
+            </div>
+            <div className='d-flex align-items-end'>
+                <Nav.Link className="navigation-text-color" href="/">INICIO</Nav.Link>
+                <Nav.Link className="navigation-text-color" href="/parents">PARA PADRES</Nav.Link>
+                {LogoutButton}
+            </div>
+        </Nav>
       </Navbar.Collapse>
     </Container>
   </Navbar>
