@@ -1,5 +1,4 @@
 .bg-suggestions-container{
-    background-size:contain;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,4 +20,27 @@
     color: var(--purple);
     font-weight: bold;
     font-size: 22px;
+}
+/* 
+.card{
+    border-radius: 10rem !important;
+} */
+
+.bg-card-body{
+    background: var(--purple-linear);
+    color: var(--white-smoke) !important;
+}
+
+.card-text-alignment{
+    text-align: start;
+    font-size: 12px;
+}
+
+.custom-card-title{
+    font-size: 16px; 
+}
+
+.custom-card-img{
+    width: 334.43px;
+    height: 223.27px;
 }
