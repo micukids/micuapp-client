@@ -1,0 +1,39 @@
+@import url(../components/mainButton/MainButton.css);
+@import url(../components/flipCard//FlipCard.css);
+@import url(../components/memory/Memory.css);
+@import url(../components/vowels/VowelsContainer.css);
+@import url(../components/footer/Footer.css);
+@import url(../components/logo/Logo.css);
+@import url(../components//navbar/Navigation.css);
+@import url(../pages/memory/MemoryBoard.css);
+@import url(../components/memory/MemoryCard.css);
+@import url(../pages/signIn/SignInPage.css);
+@import url(../components/login/LoginForm.css);
+@import url(../pages/login/LoginPage.css);
+@import url(../components/navbar/Navigation.css);
+@import url(../components/name/NameCard.css);
+@import url(../pages/parents/ParentsPage.css);
+@import url(../components/mainImage/MainImage.css);
+@import url(../components/mainTitle/MainTitle.css);
+@import url(../components/soundgame/SoundCard.css);
+@import url(../components/suggestions/Suggestions.css);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
+:root{
+    --purple: #6D17F2;
+    --pink: #D157FF;
+    --purple-linear: linear-gradient(90deg, #6D17F2 26.61%, #D157FF 157.8%);
+    --purple-dark: #3D116B;
+    --orange: #FF730E;
+    --yellow: #FFB83E;
+    --orange-linear: linear-gradient(90deg, #FF730E 0%, #FFB83E 111.01%);
+    --green-dark: #048C59;
+    --green-soft: #4FB705;
+    --white-smoke: #ffffff;
+    --letter: 'Roboto', sans-serif;
+}
+
+body, html {
+    font-family: var(--letter) ;
+}
