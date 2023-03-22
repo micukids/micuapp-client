@@ -4,15 +4,13 @@ import start_2 from "../../assets/img/Star_2.png";
 import { GetSuggestions } from '../../services/functions';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode } from 'swiper';
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import SwiperCore, { Navigation, A11y } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/free-mode'
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
 
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
+SwiperCore.use([Navigation, A11y]);
 
 function SuggestionsBoard() {
     const [suggestions, setSuggestions] = useState([]);
@@ -27,7 +25,7 @@ function SuggestionsBoard() {
 
 
   return (
-    <div className= 'bg-suggestions-container d-flex justify-content-center align-items-center bg-light mt-5 mb-4'>
+    <div className= 'bg-suggestions-container d-flex justify-content-center align-items-center  mt-5 mb-4'>
         <div className="text-suggestions">
         <img src={start_2} alt="Estrella de color amarillo" />
         <p>RECOMENDADOS</p>
@@ -39,8 +37,6 @@ function SuggestionsBoard() {
             modules={[FreeMode]}
             className="mySwipper"
             navigation
-            pagination={{ clickable: true }}
-            scrollbar={{ draggable: true }}
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log('slide change')}
             breakpoints={{
@@ -54,7 +50,7 @@ function SuggestionsBoard() {
               },
               992:{
                 slidesPerView:3,
-                spaceBetween:15,
+                spaceBetween:10,
               },
             }}
           >
