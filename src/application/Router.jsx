@@ -15,6 +15,7 @@ import Letters from "../components/admin/Letters";
 import Suggestions from "../components/admin/Suggestions";
 import Downloads from "../components/admin/Downloads";
 import EditLetter from "../components/admin/EditLetter";
+import ParentsPage from '../pages/parents/ParentsPage';
 import SoundGameBoard from "../pages/soundgame/SoundGameBoard";
 
 const Router = () => {
@@ -44,6 +45,7 @@ const Router = () => {
           }
         />
         <Route path="/memorycard" element={<MemoryBoard />} />
+        <Route path="/parapadres" element={<ParentsPage/>}/> 
         <Route path="/soundcard" element={<SoundGameBoard />} />
 
         <Route element={<AdminPrivateRoute />}>

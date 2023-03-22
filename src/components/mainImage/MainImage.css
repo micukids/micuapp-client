@@ -1,0 +1,15 @@
+.image-container {
+width: 270px;
+height: 270px;
+border-radius: 50%;
+border: 20px solid var(--orange);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.image-container img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
