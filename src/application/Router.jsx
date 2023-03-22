@@ -9,7 +9,7 @@ import Dashboard from "../components/admin/Dashboard";
 import Profile from "../components/admin/Profile";
 import Page404 from "../components/errors/Page404";
 import Page403 from "../components/errors/Page403";
-import AdminPrivateRoute from "./AdminPrivateRoute";
+import AdminPrivateRoute from './AdminPrivateRoute'
 import MainLayout from "../layouts/admin/MainLayout";
 import Letters from "../components/admin/Letters";
 import Suggestions from "../components/admin/Suggestions";
