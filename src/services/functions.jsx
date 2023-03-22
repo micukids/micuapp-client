@@ -34,9 +34,15 @@ const getLettersName = async()=> {
     return response.data.lettersName;
    }
 
+const GetSuggestions = async() => {
+    const response = await axios.get(`${endPoint}/api/suggestions`);
+    return response.data.suggestions;
+}
+
 export {
     GetLetters,
     GetVowels,
     getAxiosInstance,
-    getLettersName
+    getLettersName,
+    GetSuggestions,
 };
