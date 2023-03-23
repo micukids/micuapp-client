@@ -1,5 +1,5 @@
 .bg-memory {
-    height: 92vh;
+    height: 100vh;
     margin-top: 2%;
     display: flex;
     flex-direction: column;
@@ -11,18 +11,18 @@
     background-origin: content-box;
     background-position: center;
 }
-.container-games {
+.container-name {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-.container-games img {
+.container-name img {
 width: 50%;
 }
 
-.container-games p {
+.container-name p {
     font-weight: 500;
     color: white;
     font-size: 14px;
@@ -66,17 +66,34 @@ width: 50%;
 }
 
 @media screen and (min-width: 577px){
-    .bg-memory {
-        height: 58vh;
-        margin-top: 1%;
-        background-image: url("../../assets/img/Bg_memory.png");
+.bg-memory {
+    height: 100vh;
+    margin-top: 1%;
+    background-image: url("../../assets/img/Bg_memory.png");
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.container-name img {
+    width: 60%;
+    }
+
+    .container-titles-bt {
+        margin-top: 2%;
     }
 }
 
 @media screen and (min-width: 1024px){
     .bg-memory {
-        height: 50vh;
-        margin-top: 1%;
+        height: 80vh;
+        margin-top: 0.5%;
         background-image: url("../../assets/img/Bg_memory_large.png");
     }
+
 }

@@ -11,7 +11,7 @@ const Memory = () => {
   let memoryAccess = '';
   if (localStorage.getItem('auth_token')){
     memoryAccess = (
-      <div>
+      <div className="main-container">
         <div className="container-titles-bt">
           <div className="text-memory">
             <img src={start_2} alt="Estrella de color amarillo" />
@@ -48,7 +48,7 @@ const Memory = () => {
 
   return (
     <div className="bg-memory">
-      <div className="container-games">
+      <div className="container-name">
         <p>con la voz de</p>
         <img src={LogoMarta} alt="Marta Gómez"/>
       </div>
