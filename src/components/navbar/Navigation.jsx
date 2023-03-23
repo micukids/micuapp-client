@@ -29,11 +29,8 @@ const logoutSubmit = (e) => {
   let kidsIcon = '';
   let nameContainer ='';
 
-  console.log(NameTag);
-  NameTag = NameTag.toUpperCase();
-  console.log(NameTag);
-
   if (localStorage.getItem('auth_token')){
+    NameTag = NameTag.toUpperCase();
     LogoutButton = (<button className="btn nav-link navigation-text-color" onClick={logoutSubmit}>LOGOUT</button>);
     kidsIcon = (<FontAwesomeIcon icon={faChildReaching} className="navigation-text-color p-1" />);
     NameTag = (<p className="navigation-text-color pt-2 pl-1" >{NameTag}</p>);
