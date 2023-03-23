@@ -23,7 +23,5 @@ describe('Footer', () => {
         const { container } = render(<Footer />)
         const elements = container.querySelector('a')
         expect(elements).toBeInTheDocument();
-
     })
-
 })
