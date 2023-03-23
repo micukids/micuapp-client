@@ -10,9 +10,9 @@ function MusicButton(props) {
 
     useEffect(() =>{
         if( props.musicIsPlaying) {
-            setMusicButton(<img src={silenciar} alt="Boton para silenciar" />)
+          setMusicButton(<img src={Boton_Parlante} alt="Boton para musica" />)
         } else{
-            setMusicButton(<img src={Boton_Parlante} alt="Boton para musica" />)
+          setMusicButton(<img src={silenciar} alt="Boton para silenciar" />)
         }
         
     }, [props.musicIsPlaying])
