@@ -27,11 +27,20 @@ const logoutSubmit = (e) => {
   let LogoutButton = '';
   let NameTag = localStorage.getItem('auth_name');
   let kidsIcon = '';
+  let nameContainer ='';
+
+  console.log(NameTag);
+  NameTag = NameTag.toUpperCase();
+  console.log(NameTag);
 
   if (localStorage.getItem('auth_token')){
     LogoutButton = (<button className="btn nav-link navigation-text-color" onClick={logoutSubmit}>LOGOUT</button>);
-    kidsIcon = (<FontAwesomeIcon icon={faChildReaching} className="btn nav-link navigation-text-color" />);
-    NameTag = (<button className="btn nav-link navigation-text-color" >{NameTag}</button>);
+    kidsIcon = (<FontAwesomeIcon icon={faChildReaching} className="navigation-text-color p-1" />);
+    NameTag = (<p className="navigation-text-color pt-2 pl-1" >{NameTag}</p>);
+    nameContainer = (<div className="p-1 d-flex justify-items-center align-items-center navigation-text-color" >
+      {kidsIcon}
+      {NameTag}
+      </div>);
   }else {
     LogoutButton = (<Nav.Link className="navigation-text-color" href="/login">LOGIN</Nav.Link>);
   }
@@ -45,11 +54,11 @@ const logoutSubmit = (e) => {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto"></Nav>
-         <Nav className='d-flex flex-column'> 
-          <div className='d-flex justify-content-end'>
-              {kidsIcon}
-              {NameTag}
-            </div>
+         <Nav className='d-flex flex-row-reverse'> 
+            {/* <div className='d-flex justify-content-center border border-radious-2'> */}
+              {nameContainer}
+            {/* </div> */}
+
             <div className='d-flex align-items-end'>
                 <Nav.Link className="navigation-text-color" href="/">INICIO</Nav.Link>
                 <Nav.Link className="navigation-text-color" href="/parents">PARA PADRES</Nav.Link>
