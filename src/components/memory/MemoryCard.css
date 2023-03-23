@@ -1,8 +1,5 @@
 .memory-card{
-/*     margin: 5px;
-    width: calc(262px - 10px);
-    height: calc(262px - 10px); */
-    cursor: pointer;
+    cursor: grab;
 }
 
 
