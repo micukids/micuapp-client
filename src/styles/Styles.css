@@ -12,6 +12,12 @@
 @import url(../pages/login/LoginPage.css);
 @import url(../components/navbar/Navigation.css);
 @import url(../components/name/NameCard.css);
+@import url(../pages/parents/ParentsPage.css);
+@import url(../components/mainImage/MainImage.css);
+@import url(../components/mainTitle/MainTitle.css);
+@import url(../components/soundgame/SoundCard.css);
+@import url(../components/suggestions/Suggestions.css);
+@import url(../components/musicbutton/MusicButton.css);
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 

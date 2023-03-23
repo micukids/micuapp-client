@@ -3,7 +3,7 @@ import MainButton from "../components/mainButton/MainButton";
 import NameCard from "../components/name/NameCard";
 
 
-describe('MainButton', () => {
+describe('MainButton and NameCard', () => {
 
     test("elemento button existe dentro del documento", () => {
         render(<MainButton/>);
