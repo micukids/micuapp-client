@@ -5,8 +5,11 @@ import { GetLetters } from '../../services/functions';
 import {shuffleArray} from '../../utils/index'
 import MainButton from '../../components/mainButton/MainButton'
 import confetti from 'canvas-confetti';
+import start_2 from '../../assets/img/Star_2.png'
+import MusicButton from '../../components/musicbutton/MusicButton';
 
 function MemoryBoard() {
+  const [musicIsPlaying, setMusicIsPlaying] = useState(false);
   const [cards, setCards] = useState([]);
   const [firstCard, setFirstCard]= useState({})
   const [secondCard, setSecondCard]= useState({})
@@ -69,7 +72,7 @@ function MemoryBoard() {
         } 
       }
     }
-    console.log(gameOver);
+ 
 
     const disableCards = () => {
       setDisabledCards([firstCard.number, secondCard.number]);
@@ -91,9 +94,22 @@ function MemoryBoard() {
      window.location = "/memorycard"
     }
 
+    const handleMusicClick = (audioReference) => {
+      setMusicIsPlaying(audioReference.current.paused);
+      audioReference.current.paused ? audioReference.current.play() : audioReference.current.pause()
+    }
+
+    
   return (
     <Layout>
       <div className='memory-board-container'>
+        <div className='button-position'>
+          <MusicButton onClick={handleMusicClick} musicIsPlaying={musicIsPlaying} />
+        </div>
+          <div className='custom-text-memory'>
+            <img src={start_2} alt="Estrella de color amarillo" />
+            <p>MEMORY  <span>CARDS</span></p>
+          </div>
 
         <div className='memory-card-container'>
           {
@@ -110,7 +126,7 @@ function MemoryBoard() {
               ))
             }
         </div>
-        <MainButton text="Nuevas Cartas" onClick={() => startNewGame()} />
+        <MainButton text="Nuevas Cartas" onClick={() => startNewGame()} className="mb-2 mt-4" />
       </div>
     </Layout>
   )

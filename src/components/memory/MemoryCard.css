@@ -1,8 +1,5 @@
 .memory-card{
-    margin: 5px;
-    width: calc(262px - 10px);
-    height: calc(262px - 10px);
-    cursor: pointer;
+    cursor: grab;
 }
 
 
@@ -12,13 +9,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 127.5px;
+    width: 127.5px;
 }
 
 .backface-image-container img{
-    height: 203.73px;
-    width: 261.53px;
+    height: 100.5px;
+    width: 126px;
 }
 
-.padding-p{
-    padding: 100px 125px !important;
+
+@media screen and (min-width: 577px){
+	.backface-image-container{
+        height: 170px;
+        width: 170px;
+}
+
+.backface-image-container img{
+    height: 134px;
+    width: 168px;
+}
 }
