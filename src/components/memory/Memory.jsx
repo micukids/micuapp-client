@@ -12,12 +12,24 @@ const Memory = () => {
   if (localStorage.getItem('auth_token')){
     memoryAccess = (
       <div>
-        <Link to={"/memorycard"} >
-        <MainButton class="bt" text="¡Vamos a jugar memory!" />
-        </Link>
+        <div>
+          <div className="text-memory">
+            <img src={start_2} alt="Estrella de color amarillo" />
+            <p>MEMORY <span>CARDS</span></p>
+          </div>
+            <Link to={"/memorycard"} >
+            <MainButton class="bt" text="¡Vamos a jugar memory!" />
+            </Link>
+        </div>
+        <div>
+          <div className="text-memory">
+            <img src={start_2} alt="Estrella de color amarillo" />
+            <p>SOUND <span>CARDS</span></p>
+          </div>
         <Link to={"/soundcard"} >
         <MainButton class="bt" text="¡Escucha el sonido de cada letra!"/>
         </Link>
+        </div>
       </div>
     )
   }else{
@@ -41,18 +53,9 @@ const Memory = () => {
         <p>con la voz de</p>
         <img src={LogoMarta} alt="Marta Gómez"/>
       </div>
-      <div className="container-games">
-        <div className="text-memory">
-          <img src={start_2} alt="Estrella de color amarillo" />
-          <p>MEMORY <span>CARDS</span></p>
-        </div>
-        <div className="text-memory">
-          <img src={start_2} alt="Estrella de color amarillo" />
-          <p>SOUND <span>CARDS</span></p>
           {memoryAccess}
-        </div>
       </div>
-    </div>
+
   );
 };
 
