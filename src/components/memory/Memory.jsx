@@ -10,29 +10,51 @@ import { Link } from "react-router-dom";
 const Memory = () => {
   let memoryAccess = '';
   if (localStorage.getItem('auth_token')){
-    memoryAccess = (<Link to={"/memorycard"} >
-    <MainButton class="bt" text="¡Vamos a jugar memory!" />
-    </Link>)
+    memoryAccess = (
+      <div>
+        <Link to={"/memorycard"} >
+        <MainButton class="bt" text="¡Vamos a jugar memory!" />
+        </Link>
+        <Link to={"/soundcard"} >
+        <MainButton class="bt" text="¡Escucha el sonido de cada letra!"/>
+        </Link>
+      </div>
+    )
   }else{
     memoryAccess = 
-    (<Link to={"/login"} >
+    (
+    <div>
+    <Link to={"/login"} >
     <MainButton class="bt" text="¡Vamos a jugar memory!" />
-    </Link>)
+    </Link>
+    <Link to={"/login"} >
+    <MainButton class="bt" text="¡Escucha el sonido de cada letra!"/>
+    </Link>
+    </div>)
   }
+
+  
 
   return (
     <div className="bg-memory">
-      <div className="text-memory">
-        <img src={start_2} alt="Estrella de color amarillo" />
-        <p>MEMORY <span>CARDS</span></p>
-      </div>
-      <div className="text-memory">
+      <div className="container-Marta">
         <p>con la voz de</p>
+        <img src={LogoMarta} alt="Marta Gómez"/>
+      </div>
+      <div className="container-games">
+        <div className="text-memory">
+          <img src={start_2} alt="Estrella de color amarillo" />
+          <p>MEMORY <span>CARDS</span></p>
         </div>
-        <img src={LogoMarta} alt="Marta Gómez" />
-        {memoryAccess}
+        <div className="text-memory">
+          <img src={start_2} alt="Estrella de color amarillo" />
+          <p>SOUND <span>CARDS</span></p>
+          {memoryAccess}
+        </div>
+      </div>
     </div>
   );
 };
 
 export default Memory;
+
