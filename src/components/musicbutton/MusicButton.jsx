@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState} from "react";
 import Boton_Parlante from "../../assets/img/Boton_Parlante.png";
-import marimba from '../../assets/music/marta_abcchd_solo_marimbas.wav'
+import marimba from '../../assets/music/marta_abcchd_marimbas.mp3'
 import silenciar from '../../assets/img/Boton_silenciar.png'
 
 function MusicButton(props) {
@@ -20,7 +20,7 @@ function MusicButton(props) {
   return (
     <div className={`music-button-styles ${props.className}`} onClick={() => props.onClick(audioReference)}>
       <audio ref={audioReference} autoPlay loop>
-        <source  src={marimba} type="audio/wav" />
+        <source  src={marimba} type="audio/mp3" />
       </audio>
         { musicButton}
     </div>
