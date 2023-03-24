@@ -58,7 +58,7 @@ const logoutSubmit = (e) => {
 
             <div className='d-flex align-items-end'>
                 <Nav.Link className="navigation-text-color" href="/">INICIO</Nav.Link>
-                <Nav.Link className="navigation-text-color" href="/parents">PARA PADRES</Nav.Link>
+                <Nav.Link className="navigation-text-color" href="/parapadres">PARA PADRES</Nav.Link>
                 {LogoutButton}
             </div>
         </Nav>
