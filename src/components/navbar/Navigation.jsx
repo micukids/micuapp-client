@@ -32,8 +32,8 @@ const logoutSubmit = (e) => {
   if (localStorage.getItem('auth_token')){
     NameTag = NameTag.toUpperCase();
     LogoutButton = (<button className="btn nav-link navigation-text-color" onClick={logoutSubmit}>LOGOUT</button>);
-    kidsIcon = (<FontAwesomeIcon icon={faChildReaching} className="navigation-text-color p-1" />);
-    NameTag = (<p className="navigation-text-color pt-2 pl-1" >{NameTag}</p>);
+    kidsIcon = (<FontAwesomeIcon icon={faChildReaching} className="navigation-text-color p-1 " />);
+    NameTag = (<p className="navigation-text-color pt-2 pl-1 m-2" >{NameTag}</p>);
     nameContainer = (<div className="p-1 d-flex justify-items-center align-items-center navigation-text-color" >
       {kidsIcon}
       {NameTag}
@@ -52,10 +52,7 @@ const logoutSubmit = (e) => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto"></Nav>
          <Nav className='d-flex flex-row-reverse'> 
-            {/* <div className='d-flex justify-content-center border border-radious-2'> */}
               {nameContainer}
-            {/* </div> */}
-
             <div className='d-flex align-items-end'>
                 <Nav.Link className="navigation-text-color" href="/">INICIO</Nav.Link>
                 <Nav.Link className="navigation-text-color" href="/parapadres">PARA PADRES</Nav.Link>
