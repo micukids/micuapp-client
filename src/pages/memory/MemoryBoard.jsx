@@ -8,6 +8,7 @@ import confetti from 'canvas-confetti';
 import start_2 from '../../assets/img/Star_2.png'
 import MusicButton from '../../components/musicbutton/MusicButton';
 import {Howl, Howler} from 'howler';
+import NameCont from '../../components/name/NameCont'
 
 function MemoryBoard() {
   const [musicIsPlaying, setMusicIsPlaying] = useState(true);
@@ -119,6 +120,7 @@ function MemoryBoard() {
         <div className='button-position'>
           <MusicButton onClick={handleMusicClick} musicIsPlaying={musicIsPlaying} />
         </div>
+      <NameCont/>
           <div className='custom-text-memory'>
             <img src={start_2} alt="Estrella de color amarillo" />
             <p>MEMORY  <span>CARDS</span></p>
