@@ -1,5 +1,6 @@
 # Abecedario Micukids App
-![image](https://www.figma.com/file/2Pv4uqNt5yERWkZO1Y2qsj/MicuKids?node-id=65-368&t=ttLDHuf1mP8LLTJo-4)
+![logoMicuKids](https://user-images.githubusercontent.com/116796010/227530138-e7495657-2221-4971-9c2c-0784ad0814ab.png)
+
 
 ## Tabla de Contenido
 
