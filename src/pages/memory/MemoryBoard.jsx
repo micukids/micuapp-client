@@ -7,6 +7,8 @@ import MainButton from '../../components/mainButton/MainButton'
 import confetti from 'canvas-confetti';
 import start_2 from '../../assets/img/Star_2.png'
 import MusicButton from '../../components/musicbutton/MusicButton';
+import {Howl, Howler} from 'howler';
+import NameCont from '../../components/name/NameCont'
 
 function MemoryBoard() {
   const [musicIsPlaying, setMusicIsPlaying] = useState(true);
@@ -16,6 +18,15 @@ function MemoryBoard() {
   const [unFlippedCards, setUnFlippedCards] = useState([]);
   const [disabledCards, setDisabledCards] =useState([]);
   const [gameOver, setGameOver] =useState([]);
+  const success = new Howl({
+    src: ["sounds/Success_Sound_Effect.mp3"],
+    volume: 0.1,
+  })
+
+  const yaySound = new Howl({
+    src: ["sounds/celebracion.mp3"],
+    volume: 0.1,
+  })
 
   const getAllLetters = async() =>{
       const allLetters = await GetLetters();
@@ -45,6 +56,7 @@ function MemoryBoard() {
           gravity: 1.5,
           origin: {y:0}
         });
+        yaySound.play()
       }
     }, [gameOver])
 
@@ -60,13 +72,15 @@ function MemoryBoard() {
       return 1;
     }
 
+
+
     const checkForMatch = () => {
       if (firstCard.letter && secondCard.letter){
         const match = firstCard.letter === secondCard.letter;
         if (match) {
           setGameOver((currentValue) => [...currentValue, firstCard.number, secondCard.number]);
-          
-          disableCards() 
+          success.play();
+          disableCards(); 
         }else{
           unFlipCards();
         } 
@@ -106,6 +120,7 @@ function MemoryBoard() {
         <div className='button-position'>
           <MusicButton onClick={handleMusicClick} musicIsPlaying={musicIsPlaying} />
         </div>
+      <NameCont/>
           <div className='custom-text-memory'>
             <img src={start_2} alt="Estrella de color amarillo" />
             <p>MEMORY  <span>CARDS</span></p>

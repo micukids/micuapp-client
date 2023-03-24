@@ -1,7 +1,7 @@
 .music-button-styles{
     position: absolute;
     top: 10px;
-    left: 110px;
+    left: 106px;
     cursor: pointer;
 }
 
@@ -21,7 +21,7 @@
 @media screen and (min-width: 577px){
     .music-button-styles{
         top: 25px;
-        left: 180px;
+        left: 230px;
     }
     
     .music-button-styles img{
