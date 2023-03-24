@@ -39,7 +39,6 @@
 
 @media screen and (min-width: 577px){
     .vowel-cards-container {
-        width: 785px;
         flex-direction: row;
         flex-wrap: wrap;
     }

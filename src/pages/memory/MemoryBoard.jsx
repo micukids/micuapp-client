@@ -9,7 +9,7 @@ import start_2 from '../../assets/img/Star_2.png'
 import MusicButton from '../../components/musicbutton/MusicButton';
 
 function MemoryBoard() {
-  const [musicIsPlaying, setMusicIsPlaying] = useState(false);
+  const [musicIsPlaying, setMusicIsPlaying] = useState(true);
   const [cards, setCards] = useState([]);
   const [firstCard, setFirstCard]= useState({})
   const [secondCard, setSecondCard]= useState({})
