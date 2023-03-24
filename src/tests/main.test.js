@@ -18,9 +18,4 @@ describe('MainButton and NameCard', () => {
 
     })
   
-    /*test("Texto abecedario existe dentro del documento", () => {
-        render(<MainButton/>);
-        expect(screen.getByText(/Aprende.*? abecedario/i)).toBeInTheDocument();
-    })*/
-
 })
