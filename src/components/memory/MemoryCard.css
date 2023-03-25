@@ -1,0 +1,32 @@
+.memory-card{
+    cursor: grab;
+}
+
+
+.backface-image-container{
+    background: var(--orange-linear);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 127.5px;
+    width: 127.5px;
+}
+
+.backface-image-container img{
+    height: 100.5px;
+    width: 126px;
+}
+
+
+@media screen and (min-width: 577px){
+	.backface-image-container{
+        height: 170px;
+        width: 170px;
+}
+
+.backface-image-container img{
+    height: 134px;
+    width: 168px;
+}
+}

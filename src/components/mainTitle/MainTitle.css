@@ -1,0 +1,21 @@
+.text-title{
+    margin-top: 2rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.text-title img{
+    width: 30px;
+    height: 30px;
+}
+
+.text-title p{
+    color: var(--purple);
+    font-weight: bold;
+    font-size: 22px;
+}
+.text-title p span{
+    color: var(--purple);
+    font-weight: 500;
+    font-size: 22px;
+}

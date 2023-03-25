@@ -2,10 +2,23 @@
     background: linear-gradient(90deg, #6D17F2 26.61%, #D157FF 157.8%) !important;
 }
 
-.nav-link{
-    color:white;
+.footer-nav-link{
+    color:var(--white-smoke) !important;
 }
 
-.nav-link:hover{
-    color:white;
+.footer-nav-link:hover{
+    color:var(--white-smoke) !important;
 }
+
+.items-order{
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 577px){
+	.items-order {
+		flex-direction: row;
+  }
+}
+
+
