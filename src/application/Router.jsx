@@ -44,9 +44,20 @@ const Router = () => {
             )
           }
         />
-        <Route path="/memorycard" element={<MemoryBoard />} />
+        <Route path="/memorycard" element={
+            !localStorage.getItem("auth_token") ? (
+              <Navigate to="/" />
+            ) : (
+              <MemoryBoard />
+            )
+          } />
         <Route path="/parapadres" element={<ParentsPage/>}/> 
-        <Route path="/soundcard" element={<SoundGameBoard />} />
+        <Route path="/soundcard" element={
+            !localStorage.getItem("auth_token") ? (
+              <Navigate to="/" />
+            ) : (
+              <SoundGameBoard />
+            )}/>
 
         <Route element={<AdminPrivateRoute />}>
           <Route path="/admin" element={<MainLayout />}>
