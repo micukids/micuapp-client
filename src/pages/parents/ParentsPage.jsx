@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Layout from "../../components/layout/Layout";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import MainImage from "../../components/mainImage/MainImage";
 import Img_Marta from "../../assets/img/Img_MartaGomez.png";
 import Img_aprende from "../../assets/img/Img_aprender.png";
@@ -7,12 +9,16 @@ import Img_flash from "../../assets/img/Img_Flashcards.png";
 import Img_video from "../../assets/img/Img_Videoclip.png";
 import MainTitle from "../../components/mainTitle/MainTitle";
 
-function ParentsPage() {
+const ParentsPage = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   return (
     <div className="bg-parents">
       <Layout>
         <div>
-          <section className="section-container">
+          <section data-aos="fade-up" className="section-container">
             <div className="card-parents">
               <MainTitle text="APRENDER " text2="JUGANDO" />
               <h2>
@@ -31,7 +37,7 @@ function ParentsPage() {
             </div>
           </section>
 
-          <section className="section-container-right">
+          <section data-aos="fade-up" className="section-container-right">
             <div>
               <MainImage src={Img_flash} alt={"Nena jugando con flash cards"} />
             </div>
@@ -44,7 +50,7 @@ function ParentsPage() {
             </div>
           </section>
 
-          <section className="section-container">
+          <section data-aos="fade-up" className="section-container">
             <div className="card-parents">
               <MainTitle text="MARTA " text2="GÓMEZ" />
               <h2>
@@ -59,7 +65,7 @@ function ParentsPage() {
             </div>
           </section>
 
-          <section className="section-container-right">
+          <section data-aos="fade-up" className="section-container-right">
             <div>
               <MainImage src={Img_video} alt={"Personaje dinosaurio del videoclip"} />
             </div>
