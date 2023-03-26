@@ -7,7 +7,8 @@ import MainButton from '../../components/mainButton/MainButton'
 import confetti from 'canvas-confetti';
 import start_2 from '../../assets/img/Star_2.png'
 import MusicButton from '../../components/musicbutton/MusicButton';
-import {Howl, Howler} from 'howler';
+import yay_audio from '../../assets/sounds/celebracion.mp3';
+import success_audio from '../../assets/sounds/Success_Sound_Effect.mp3';
 import NameCont from '../../components/name/NameCont'
 
 function MemoryBoard() {
@@ -18,15 +19,9 @@ function MemoryBoard() {
   const [unFlippedCards, setUnFlippedCards] = useState([]);
   const [disabledCards, setDisabledCards] =useState([]);
   const [gameOver, setGameOver] =useState([]);
-  const success = new Howl({
-    src: ["sounds/Success_Sound_Effect.mp3"],
-    volume: 0.1,
-  })
 
-  const yaySound = new Howl({
-    src: ["sounds/celebracion.mp3"],
-    volume: 0.1,
-  })
+  const success = new Audio(success_audio);
+  const yaySound = new Audio(yay_audio);
 
   const getAllLetters = async() =>{
       const allLetters = await GetLetters();
@@ -57,6 +52,7 @@ function MemoryBoard() {
           origin: {y:0}
         });
         yaySound.play()
+        yaySound.volume = 0.2; 
       }
     }, [gameOver])
 
@@ -80,6 +76,7 @@ function MemoryBoard() {
         if (match) {
           setGameOver((currentValue) => [...currentValue, firstCard.number, secondCard.number]);
           success.play();
+          success.volume = 0.2;
           disableCards(); 
         }else{
           unFlipCards();
