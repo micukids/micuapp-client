@@ -23,7 +23,13 @@ const Router = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/flipcard" element={<FlipCardsPage />} />
+        <Route path="/flipcard" element={
+            !localStorage.getItem("auth_token") ? (
+              <Navigate to="/" />
+            ) : (
+              <FlipCardsPage />
+            )
+          } />
         <Route
           path="/login"
           element={
@@ -44,9 +50,20 @@ const Router = () => {
             )
           }
         />
-        <Route path="/memorycard" element={<MemoryBoard />} />
+        <Route path="/memorycard" element={
+            !localStorage.getItem("auth_token") ? (
+              <Navigate to="/" />
+            ) : (
+              <MemoryBoard />
+            )
+          } />
         <Route path="/parapadres" element={<ParentsPage/>}/> 
-        <Route path="/soundcard" element={<SoundGameBoard />} />
+        <Route path="/soundcard" element={
+            !localStorage.getItem("auth_token") ? (
+              <Navigate to="/" />
+            ) : (
+              <SoundGameBoard />
+            )}/>
 
         <Route element={<AdminPrivateRoute />}>
           <Route path="/admin" element={<MainLayout />}>
