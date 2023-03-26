@@ -23,7 +23,13 @@ const Router = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/flipcard" element={<FlipCardsPage />} />
+        <Route path="/flipcard" element={
+            !localStorage.getItem("auth_token") ? (
+              <Navigate to="/" />
+            ) : (
+              <FlipCardsPage />
+            )
+          } />
         <Route
           path="/login"
           element={

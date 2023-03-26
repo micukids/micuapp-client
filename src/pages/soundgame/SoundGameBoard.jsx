@@ -17,10 +17,6 @@ function SoundGameBoard() {
           getAllCards()
         }, [])
 
-        let nameContainer = '';
-        if (localStorage.getItem('auth_token')){
-          nameContainer = (<NameCont/>)
-        }
 
   return (
     <Layout>
@@ -28,7 +24,7 @@ function SoundGameBoard() {
         <div className='mute-button-container'>
               <MuteButton/>
             </div>
-        {nameContainer}
+            <NameCont/>
        <div className='text-vowels'>
             <img src={start_2} alt="Estrella de color amarillo" />
             <p>SOUND <span>CARDS</span></p>
