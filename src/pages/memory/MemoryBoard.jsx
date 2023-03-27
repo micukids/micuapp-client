@@ -83,7 +83,7 @@ function MemoryBoard() {
         } 
       }
     }
- 
+
 
     const disableCards = () => {
       setDisabledCards([firstCard.number, secondCard.number]);
