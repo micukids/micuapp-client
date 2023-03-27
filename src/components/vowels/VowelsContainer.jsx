@@ -5,6 +5,7 @@ import MainButton from '../mainButton/MainButton';
 import VowelCard from './VowelCard';
 import start_2 from '../../assets/img/Star_2.png'
 import confetti from 'canvas-confetti';
+import MuteButton from '../mute/Mute';
 
 
 
@@ -56,8 +57,12 @@ function VowelsContainer() {
           alphabetAccess = (<Link to="/login"><MainButton class='bt' text='Aprende todo el abecedario'/></Link>)
         }
 
+
   return (
     <div className='bg-vowels-container'>
+      <div className='mute-button-container'>
+        <MuteButton/>
+      </div>
       <div className='text-vowels'>
         <img src={start_2} alt="Estrella de color amarillo" />
         <p>FLIP <span>CARDS</span></p>

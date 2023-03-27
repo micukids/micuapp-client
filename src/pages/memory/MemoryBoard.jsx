@@ -5,14 +5,23 @@ import { GetLetters } from '../../services/functions';
 import {shuffleArray} from '../../utils/index'
 import MainButton from '../../components/mainButton/MainButton'
 import confetti from 'canvas-confetti';
+import start_2 from '../../assets/img/Star_2.png'
+import MusicButton from '../../components/musicbutton/MusicButton';
+import yay_audio from '../../assets/sounds/celebracion.mp3';
+import success_audio from '../../assets/sounds/Success_Sound_Effect.mp3';
+import NameCont from '../../components/name/NameCont'
 
 function MemoryBoard() {
+  const [musicIsPlaying, setMusicIsPlaying] = useState(true);
   const [cards, setCards] = useState([]);
   const [firstCard, setFirstCard]= useState({})
   const [secondCard, setSecondCard]= useState({})
   const [unFlippedCards, setUnFlippedCards] = useState([]);
   const [disabledCards, setDisabledCards] =useState([]);
   const [gameOver, setGameOver] =useState([]);
+
+  const success = new Audio(success_audio);
+  const yaySound = new Audio(yay_audio);
 
   const getAllLetters = async() =>{
       const allLetters = await GetLetters();
@@ -42,6 +51,8 @@ function MemoryBoard() {
           gravity: 1.5,
           origin: {y:0}
         });
+        yaySound.play()
+        yaySound.volume = 0.2; 
       }
     }, [gameOver])
 
@@ -57,19 +68,22 @@ function MemoryBoard() {
       return 1;
     }
 
+
+
     const checkForMatch = () => {
       if (firstCard.letter && secondCard.letter){
         const match = firstCard.letter === secondCard.letter;
         if (match) {
           setGameOver((currentValue) => [...currentValue, firstCard.number, secondCard.number]);
-          
-          disableCards() 
+          success.play();
+          success.volume = 0.2;
+          disableCards(); 
         }else{
           unFlipCards();
         } 
       }
     }
-    console.log(gameOver);
+ 
 
     const disableCards = () => {
       setDisabledCards([firstCard.number, secondCard.number]);
@@ -91,9 +105,23 @@ function MemoryBoard() {
      window.location = "/memorycard"
     }
 
+    const handleMusicClick = (audioReference) => {
+      setMusicIsPlaying(audioReference.current.paused);
+      audioReference.current.paused ? audioReference.current.play() : audioReference.current.pause()
+    }
+
+    
   return (
     <Layout>
       <div className='memory-board-container'>
+        <div className='button-position'>
+          <MusicButton onClick={handleMusicClick} musicIsPlaying={musicIsPlaying} />
+        </div>
+      <NameCont/>
+          <div className='custom-text-memory'>
+            <img src={start_2} alt="Estrella de color amarillo" />
+            <p>MEMORY  <span>CARDS</span></p>
+          </div>
 
         <div className='memory-card-container'>
           {
@@ -110,7 +138,7 @@ function MemoryBoard() {
               ))
             }
         </div>
-        <MainButton text="Nuevas Cartas" onClick={() => startNewGame()} />
+        <MainButton text="Nuevas Cartas" onClick={() => startNewGame()} className="mb-2 mt-4" />
       </div>
     </Layout>
   )

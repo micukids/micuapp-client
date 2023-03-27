@@ -31,7 +31,7 @@ function ParentsPage() {
             </div>
           </section>
 
-          <section className="section-container">
+          <section className="section-container-right">
             <div>
               <MainImage src={Img_flash} alt={"Nena jugando con flash cards"} />
             </div>
@@ -39,7 +39,7 @@ function ParentsPage() {
               <MainTitle text="FLASH " text2="CARDS" />
               <h2>
               La experiencia se completa con las tarjetas físicas. Un set de 30 flash cards ilustradas y borrables, en castellano e inglés con las que los más pequeños pueden aprender lenguaje, cantando y trazando las letras. Los niños pueden ordenar y desordenar las tarjetas, dibujarse a ellos mismos, trazar y borrar con el marcador incluido en el set.
-              Puedes adquirir el set de tarjetas aquí  
+              Puedes adquirir el set de tarjetas aquí 
               </h2>
             </div>
           </section>
@@ -59,9 +59,9 @@ function ParentsPage() {
             </div>
           </section>
 
-          <section className="section-container">
+          <section className="section-container-right">
             <div>
-              <MainImage src={Img_video} alt={"Nena jugando con flash cards"} />
+              <MainImage src={Img_video} alt={"Personaje dinosaurio del videoclip"} />
             </div>
             <div className="card-parents">
               <MainTitle text="VIDEOCLIP " text2="ANIMADO" />

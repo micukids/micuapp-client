@@ -7,3 +7,13 @@
     color: var( --white-smoke);
     border-radius: 20px;
 }
+
+@media screen and (max-width: 577px){
+    .bt {
+        width: 240px;
+        height: 42px;
+        left: 236px;
+        top: 552px;
+        font-size: 14px;
+    }
+}
