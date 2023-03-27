@@ -18,6 +18,7 @@ import EditLetter from "../components/admin/EditLetter";
 import ParentsPage from '../pages/parents/ParentsPage';
 import SoundGameBoard from "../pages/soundgame/SoundGameBoard";
 import Contact from "../pages/contact/Contact";
+import Credits from "../pages/credits/Credits";
 
 const Router = () => {
   return (
@@ -66,6 +67,7 @@ const Router = () => {
               <SoundGameBoard />
             )}/>
         <Route path="/contact" element={<Contact/>}/> 
+        <Route path="/credits" element={<Credits/>}/> 
         <Route element={<AdminPrivateRoute />}>
           <Route path="/admin" element={<MainLayout />}>
             <Route index element={<Dashboard />} />

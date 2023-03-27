@@ -1,16 +1,17 @@
 import React from 'react'
-import ContactForm from '../../components/contactForm/contactForm'
+import CreditsComponent from '../../components/credits/CreditsComponent'
 import Footer from '../../components/footer/Footer'
 import Navigation from '../../components/navbar/Navigation'
 
-const Contact = () => {
+
+const Credits = () => {
   return (
     <div>
         <Navigation/>
-        <ContactForm/>
+        <CreditsComponent/>
         <Footer/>
     </div>
   )
 }
 
-export default Contact
+export default Credits
