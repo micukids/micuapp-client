@@ -1,21 +1,23 @@
 # Abecedario Micukids App
-![logoMicuKids](https://user-images.githubusercontent.com/116796010/227530138-e7495657-2221-4971-9c2c-0784ad0814ab.png)
-
+<p align="center"><img alt="logo Micu" src="https://user-images.githubusercontent.com/116796010/227530138-e7495657-2221-4971-9c2c-0784ad0814ab.png"></p>
 
 ## Tabla de Contenido
 
 1. [Información General](#información-general)
 2. [Tecnologías](#tecnologías)
-3. [Herramientas](#herramientas)
-4. [Demo](#demo)
-5. [Prototipo](#prototipo)
-6. [Instalación](#instalación)
+3. [Librerias] (#librerias)
+4. [Herramientas](#herramientas)
+5. [Demo](#demo)
+6. [Prototipo](#prototipo)
+7. [Equipo] (#equipo)
+8. [Instalación](#instalación)
 
 ## :page_facing_up:Información General
 
 Los padres Millennials y Gen-Z que crecieron con alta exposición a Internet, están ávidos de encontrar experiencias híbridas que les permitan emplear estratégicamente la tecnología para estimular el desarrollo de sus hijo(a)s de 2 a 5 años. La oferta de contenido bilingüe de calidad para menores de 5 años integrado con experiencias educativas híbridas (físico - digital), es aún muy reducida.
 
 El cliente necesita desarrollar una experiencia educativa para menores de 5 años. Combinar música, video, personajes ilustrados, materiales didácticos e interacción, para estimular los sentidos y las emociones de los más pequeños. Busca aportar en el desarrollo de su percepción del mundo, a través del aprovechamiento inteligente de la tecnología a su alcance y de la conectividad global multi-cultural / multi-lenguaje propios de internet.
+<p align="center"><img width="200" alt=“captura home” src="https://user-images.githubusercontent.com/116796494/227921674-8ea4bb3e-74ba-4e69-acea-534b49feffbd.png"></p>
 
 ## :computer:Tecnologías
 
@@ -23,6 +25,13 @@ El cliente necesita desarrollar una experiencia educativa para menores de 5 año
 * CSS
 * JavaScript
 * React
+
+## :books: Librerias
+
+* React Bootstrap  
+* Swiper
+* React Flip Card
+* React Router Dom
 
 ## :hammer:Herramientas
 
@@ -37,7 +46,7 @@ El cliente necesita desarrollar una experiencia educativa para menores de 5 año
 
 ## :loop:Prototipo
 
-* [Tablet]()
+* [Tablet](https://www.figma.com/file/2Pv4uqNt5yERWkZO1Y2qsj/MicuKids?node-id=26-2&t=grz98XeQDMD3fU6M-0)
 
 ## :two_women_holding_hands: Equipo
 
