@@ -1,13 +1,14 @@
-import React, {useState, useRef} from 'react'
+import React, {useRef} from 'react'
 import ReactCardFlip from 'react-card-flip'
 import '../../styles/Styles.css';
 
-function FlipCard({id, letter, backVideo}) {
-    const [isFlipped, setIsFlipped] = useState(false);
+function FlipCard({id, letter, backVideo,onFlipped, isFlipped}) {
+    //const [isFlipped, setIsFlipped] = useState(false);
     const videoReference = useRef(null);
 
     const handleClick = (shouldPlay) => {
-          setIsFlipped(!isFlipped);
+          onFlipped(id)
+          //setIsFlipped(!isFlipped);
           shouldPlay ? videoReference.current.play() : videoReference.current.pause()
         }
     
