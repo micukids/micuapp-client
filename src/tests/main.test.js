@@ -1,6 +1,7 @@
 import {screen, render} from '@testing-library/react';
 import MainButton from "../components/mainButton/MainButton";
 import NameCard from "../components/name/NameCard";
+import MusicButton from "../components/musicbutton/MusicButton";
 
 
 describe('MainButton and NameCard', () => {
@@ -15,7 +16,11 @@ describe('MainButton and NameCard', () => {
         const elements = container.querySelector('p')
         expect(elements).toBeInTheDocument();
 
-
+    test("elemento existe una imagen de button parlante existe dentro del documento", () => {
+            render(<MusicButton/>);
+            const elements = screen.getByRole('img');
+            expect(elements).toBeInTheDocument();
+        })
     })
   
 })
