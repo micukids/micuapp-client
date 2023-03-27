@@ -18,7 +18,7 @@ function Sidebar() {
             </Link>
             <Link className="nav-link" to="/admin/suggestions">
                 <div className="sb-nav-link-icon"><i className="fas fa-tachometer-alt"></i></div>
-                Sugerencias
+                Recomendados
             </Link>  
             <Link className="nav-link" to="/admin/downloads">
                 <div className="sb-nav-link-icon"><i className="fas fa-tachometer-alt"></i></div>
