@@ -28,7 +28,7 @@ El cliente necesita desarrollar una experiencia educativa para menores de 5 año
 
 * [Trello](https://trello.com/b/0PCr9sIS/micukids)
 * [Figma](https://www.figma.com/file/2Pv4uqNt5yERWkZO1Y2qsj/MicuKids?node-id=26-2&t=rA3yNeI7rYXOmzSG-0)
-* [GitHub]()
+* [GitHub/Back](https://github.com/micukids/micuapp-server/edit/main/README.md)
 * Visual Studio Code
 
 ## :tv:Demo
@@ -38,7 +38,19 @@ El cliente necesita desarrollar una experiencia educativa para menores de 5 año
 ## :loop:Prototipo
 
 * [Tablet]()
-* [Movil]()
+
+## :two_women_holding_hands: Equipo
+
+Somos un equipo de 5 mujeres, apasionadas por el proyecto web MicuKids:
+
+- Karolina Vilarraga, UX/UI Design y desarrolladora
+- Elvia Benedith, Desarrolladora
+- Gabriela Barajas, Desarrolladora
+- Liliana Dalmarco, Scrum Master y desarrolladora
+- Isabel Gutiérrez, Desarrolladora
+ 
+## :mag: Instalación
+
 
 
 
