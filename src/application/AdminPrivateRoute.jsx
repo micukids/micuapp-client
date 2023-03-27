@@ -36,8 +36,7 @@ function AdminPrivateRoute({ children, redirectPath = "/login" }) {
     },
     function (error) {
       if (error.response.status === 403) {
-        swal("Prohibido", error.response.data.message, "warning");
-        navigate("/403");
+        navigate("/");
       } else if (error.response.status === 404) {
         swal("Error 404", "Url / Página no encontrada", "warning");
         navigate("/404");
