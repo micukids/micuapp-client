@@ -1,5 +1,5 @@
 import React, {useState, useRef} from 'react'
-import ReactCardFlip from 'react-card-flip';
+import ReactCardFlip from 'react-card-flip'
 import '../../styles/Styles.css';
 
 function FlipCard({id, letter, backVideo}) {
@@ -26,8 +26,6 @@ function FlipCard({id, letter, backVideo}) {
           >
             <source src={backVideo} type="video/mp4" />
         </video>
-
-
       </ReactCardFlip>
     </div>
     </>

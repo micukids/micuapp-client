@@ -6,6 +6,10 @@ import Layout from "../../components/layout/Layout";
 import NameCont from '../../components/name/NameCont';
 import start_2 from '../../assets/img/Star_2.png'
 import MuteButton from '../../components/mute/Mute'
+import Micu_cara from '../../assets/img/Micu_cara.png'
+import celebracion from'../../assets/sounds/celebracion.mp3'
+import FlipAlert from '../../components/flipAlert/FlipAlert';
+
 
 const FlipCardsPage = () => {
   const [cards, setCards] = useState([]);
@@ -32,9 +36,9 @@ const FlipCardsPage = () => {
           </div>
           
           <div className = 'd-flex flex-wrap justify-content-center align-items-center text-center'>
-            {cards.map((card, index) => (<FlipCard {...card} key={index} backVideo={card.video} /> ))}   
+            {cards.map((card, index) => (<FlipCard {...card} key={index} backVideo={card.video} /> ))}
+            <FlipAlert front= {Micu_cara} back={celebracion}/>  
           </div>
-
       </div>
     </Layout>
     </>
