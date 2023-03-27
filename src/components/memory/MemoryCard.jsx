@@ -34,7 +34,7 @@ function MemoryCard({letter, image, flipCard, unFlippedCards, disabledCards, num
             <div className='backface-image-container' onClick={hasEvent ? handleClick : null}>
                 <img src={Micu_cara} alt="imagen posterior de la carta" />
             </div>
-            <img src={image} alt={`imagen de la letra ${letter}`} onClick={hasEvent ? handleClick : null} className={disabledCards ? 'shake backface-image-container' : 'backface-image-container'} />
+            <img src={image} alt={`imagen de la letra ${letter}`} onClick={hasEvent ? handleClick : null} className='backface-image-container' />
         </ReactCardFlip>
     </div>
   )
