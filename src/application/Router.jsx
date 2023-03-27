@@ -8,7 +8,6 @@ import LoginPage from "../pages/login/LoginPage";
 import Dashboard from "../components/admin/Dashboard";
 import Profile from "../components/admin/Profile";
 import Page404 from "../components/errors/Page404";
-import Page403 from "../components/errors/Page403";
 import AdminPrivateRoute from './AdminPrivateRoute'
 import MainLayout from "../layouts/admin/MainLayout";
 import Letters from "../components/admin/Letters";
@@ -23,7 +22,13 @@ const Router = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/flipcard" element={<FlipCardsPage />} />
+        <Route path="/flipcard" element={
+            !localStorage.getItem("auth_token") ? (
+              <Navigate to="/" />
+            ) : (
+              <FlipCardsPage />
+            )
+          } />
         <Route
           path="/login"
           element={
@@ -44,9 +49,20 @@ const Router = () => {
             )
           }
         />
-        <Route path="/memorycard" element={<MemoryBoard />} />
+        <Route path="/memorycard" element={
+            !localStorage.getItem("auth_token") ? (
+              <Navigate to="/" />
+            ) : (
+              <MemoryBoard />
+            )
+          } />
         <Route path="/parapadres" element={<ParentsPage/>}/> 
-        <Route path="/soundcard" element={<SoundGameBoard />} />
+        <Route path="/soundcard" element={
+            !localStorage.getItem("auth_token") ? (
+              <Navigate to="/" />
+            ) : (
+              <SoundGameBoard />
+            )}/>
 
         <Route element={<AdminPrivateRoute />}>
           <Route path="/admin" element={<MainLayout />}>
@@ -63,7 +79,6 @@ const Router = () => {
         </Route>
         <Route path="*" element={<Page404 />} />
         <Route path="/404" element={<Page404 />} />
-        <Route path="/403" element={<Page403 />} />
       </Routes>
     </BrowserRouter>
   );

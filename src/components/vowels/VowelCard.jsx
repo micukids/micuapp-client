@@ -11,7 +11,7 @@ function VowelCard({ id, backVideo, letter, onFlipped, isFlipped }) {
 
   return (
     <>
-      <div className="m-3">
+      <div className="m-3 card-cursor">
         <ReactCardFlip isFlipped={isFlipped}>
           <p
             className="text-white text-center p-3 font-weight-bolder display-1 mx-auto d-block frontImage"
