@@ -117,7 +117,7 @@ function MemoryBoard() {
         <div className='button-position'>
           <MusicButton onClick={handleMusicClick} musicIsPlaying={musicIsPlaying} />
         </div>
-      <NameCont/>
+      <NameCont className="text-hola-color" />
           <div className='custom-text-memory'>
             <img src={start_2} alt="Estrella de color amarillo" />
             <p>MEMORY  <span>CARDS</span></p>
