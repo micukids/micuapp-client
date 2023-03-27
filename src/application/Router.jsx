@@ -17,6 +17,7 @@ import Downloads from "../components/admin/Downloads";
 import EditLetter from "../components/admin/EditLetter";
 import ParentsPage from '../pages/parents/ParentsPage';
 import SoundGameBoard from "../pages/soundgame/SoundGameBoard";
+import Contact from "../pages/contact/Contact";
 
 const Router = () => {
   return (
@@ -64,7 +65,7 @@ const Router = () => {
             ) : (
               <SoundGameBoard />
             )}/>
-
+        <Route path="/contact" element={<Contact/>}/> 
         <Route element={<AdminPrivateRoute />}>
           <Route path="/admin" element={<MainLayout />}>
             <Route index element={<Dashboard />} />
