@@ -24,6 +24,10 @@ function Sidebar() {
                 <div className="sb-nav-link-icon"><i className="fas fa-tachometer-alt"></i></div>
                 Descargables
             </Link>    
+            <Link className="nav-link" to="/admin/messages">
+                <div className="sb-nav-link-icon"><i className="fas fa-tachometer-alt"></i></div>
+                Mensajes
+            </Link> 
 
 
         </div>
