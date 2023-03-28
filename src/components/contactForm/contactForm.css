@@ -57,6 +57,7 @@ input[type="submit"]:hover {
 .form-container {
     background-image: url(../../assets/img/Bg_parents.jpg);
     padding-top: 35px;
+    min-height: 85vh;
 }
 
 .form-container-right {
