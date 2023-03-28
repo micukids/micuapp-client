@@ -15,17 +15,12 @@ describe('MainButton and NameCard', () => {
         const { container } = render(<NameCard />)
         const elements = container.querySelector('p')
         expect(elements).toBeInTheDocument();
+    })
 
-    test("elemento existe una imagen de button parlante existe dentro del documento", () => {
+    test("Existe una imagen de botón parlante dentro del documento", () => {
             render(<MusicButton/>);
-            const elements = screen.getByRole('img');
-            expect(elements).toBeInTheDocument();
+            const element = screen.getByRole('img');
+            expect(element).toBeInTheDocument();
         })
     })
   
-    /*test("Texto abecedario existe dentro del documento", () => {
-        render(<MainButton/>);
-        expect(screen.getByText(/Aprende.*? abecedario/i)).toBeInTheDocument();
-    })*/
-
-})

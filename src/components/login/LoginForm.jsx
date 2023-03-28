@@ -49,7 +49,7 @@ function LoginForm() {
   return (
     <div className="container p-4 mt-5 main-height">
       <div className="row">
-        <div className="col-md-4 mx-auto">
+        <div className="col-sx-5 col-lg-5  mx-auto">
           <div className="card card-body shadow-lg d-flex flex-column  justify-items-center">
             <h2 className="mb-3 mt-3 text-center">LOGIN</h2>
 

@@ -35,14 +35,27 @@ const Memory = () => {
   }else{
     memoryAccess = 
     (
-    <div>
-    <Link to={"/login"} >
-    <MainButton class="bt" text="¡Vamos a jugar memory!" />
-    </Link>
-    <Link to={"/login"} >
-    <MainButton class="bt" text="¡Escucha el sonido de cada letra!"/>
-    </Link>
-    </div>)
+      <div className="main-container">
+        <div className="container-titles-bt">
+          <div className="text-memory">
+            <img src={start_2} alt="Estrella de color amarillo" />
+            <p>MEMORY <span>CARDS</span></p>
+          </div>
+            <Link to={"/login"} >
+            <MainButton class="bt" text="¡Vamos a jugar memory!" />
+            </Link>
+        </div>
+        <div className="container-titles-bt">
+          <div className="text-memory">
+            <img src={start_2} alt="Estrella de color amarillo" />
+            <p>SOUND <span>CARDS</span></p>
+          </div>
+        <Link to={"/login"} >
+        <MainButton class="bt" text="¡Escucha el sonido de cada letra!"/>
+        </Link>
+        </div>
+      </div>
+    )
   }
 
 

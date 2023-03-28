@@ -3,6 +3,8 @@ import start_2 from '../../assets/img/Star_2.png'
 import Layout from "../../components/layout/Layout";
 import SoundCard from '../../components/soundgame/SoundCard';
 import { GetLetters } from '../../services/functions';
+import NameCont from '../../components/name/NameCont'
+import MuteButton from '../../components/mute/Mute'
 
 function SoundGameBoard() {
         const [cards, setCards] = useState([]);
@@ -15,9 +17,14 @@ function SoundGameBoard() {
           getAllCards()
         }, [])
 
+
   return (
     <Layout>
     <div className= 'bg-vowels-container d-flex justify-content-center align-items-center bg-light'>
+        <div className='mute-button-container'>
+              <MuteButton/>
+            </div>
+            <NameCont/>
        <div className='text-vowels'>
             <img src={start_2} alt="Estrella de color amarillo" />
             <p>SOUND <span>CARDS</span></p>

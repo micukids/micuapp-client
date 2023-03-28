@@ -1,20 +1,21 @@
-import React, {useState, useRef} from 'react'
-import ReactCardFlip from 'react-card-flip';
+import React, {useRef} from 'react'
+import ReactCardFlip from 'react-card-flip'
 import '../../styles/Styles.css';
 
-function FlipCard({id, letter, backVideo}) {
-    const [isFlipped, setIsFlipped] = useState(false);
+function FlipCard({id, letter, backVideo,onFlipped, isFlipped}) {
+    //const [isFlipped, setIsFlipped] = useState(false);
     const videoReference = useRef(null);
 
     const handleClick = (shouldPlay) => {
-          setIsFlipped(!isFlipped);
+          onFlipped(id)
+          //setIsFlipped(!isFlipped);
           shouldPlay ? videoReference.current.play() : videoReference.current.pause()
         }
     
   return (
     <>
     
-    <div className='m-3'>
+    <div className='m-3 card-cursor'>
       <ReactCardFlip isFlipped={isFlipped}>
         <p className= "text-white text-center p-4 font-weight-bolder display-1 mx-auto d-block frontImage" onClick = { () => handleClick(true)}>{letter}</p>
 
@@ -26,8 +27,6 @@ function FlipCard({id, letter, backVideo}) {
           >
             <source src={backVideo} type="video/mp4" />
         </video>
-
-
       </ReactCardFlip>
     </div>
     </>
