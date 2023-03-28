@@ -7,6 +7,7 @@ import { getAxiosInstance } from '../../services/functions';
 import Logo from '../logo/Logo';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faChildReaching} from '@fortawesome/free-solid-svg-icons'
+import user_logo from '../../assets/img/Icon_peque.png'
 
 const instance = getAxiosInstance();
 const Navigation = () => {
@@ -26,17 +27,14 @@ const logoutSubmit = (e) => {
 
   let LogoutButton = '';
   let NameTag = localStorage.getItem('auth_name');
-  let kidsIcon = '';
   let nameContainer ='';
 
   if (localStorage.getItem('auth_token')){
     NameTag = NameTag.toUpperCase();
     LogoutButton = (<button className="btn nav-link navigation-text-color" onClick={logoutSubmit}>LOGOUT</button>);
-    kidsIcon = (<FontAwesomeIcon icon={faChildReaching} className="navigation-text-color p-1 " />);
-    NameTag = (<p className="navigation-text-color pt-2 pl-1 m-2" >{NameTag}</p>);
-    nameContainer = (<div className="p-1 d-flex justify-items-center align-items-center navigation-text-color" >
-      {kidsIcon}
-      {NameTag}
+    nameContainer = (<div className="d-flex flex-row gap-1 mb-2 left-margin align-content-center align-items-center justify-content-center" >
+          <img className='user-logo' src={user_logo} alt="icono de cartas" />
+          <p className="navigation-text-color" >{NameTag}</p>
       </div>);
   }else {
     LogoutButton = (<Nav.Link className="navigation-text-color" href="/login">LOGIN</Nav.Link>);
