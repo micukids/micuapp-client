@@ -67,7 +67,7 @@ function VowelsContainer() {
         <img src={start_2} alt="Estrella de color amarillo" />
         <p>FLIP <span>CARDS</span></p>
       </div>
-    <div className='vowel-cards-container'>
+    <div className='vowel-cards-container' data-test='vowel-container'>
         {vowels.map((vowel, index) => (
         <VowelCard {...vowel} key={index} backVideo={vowel.video} onFlipped={onFlipped}/>
          ))}   
