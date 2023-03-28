@@ -5,8 +5,6 @@ import Navbar from 'react-bootstrap/Navbar';
 import swal from 'sweetalert';
 import { getAxiosInstance } from '../../services/functions';
 import Logo from '../logo/Logo';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faChildReaching} from '@fortawesome/free-solid-svg-icons'
 import user_logo from '../../assets/img/Icon_peque.png'
 
 const instance = getAxiosInstance();
