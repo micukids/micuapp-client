@@ -45,6 +45,10 @@
     position: relative;
 }
 
+.text-hola-color{
+    color: var(--white-smoke) !important;
+}
+
 @media screen and (min-width: 577px){
 
 	.memory-card-container{

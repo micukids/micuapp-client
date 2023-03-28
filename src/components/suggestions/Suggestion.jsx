@@ -1,10 +1,11 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
 
-function Suggestion({title, image, description}) {
+function Suggestion({title, image, description, url}) {
   return (
-    <div>
-    <Card style={{ width: '18rem' }} className='p-0 overflow-hidden h-100 shadow rounded'>
+    <Link to={url} target='_blank'>
+    <Card className='p-0 overflow-hidden h-100 shadow rounded' id='cardShape'>
       <Card.Img variant="top" src={image} className='custom-card-img' />
       <Card.Body className='bg-card-body d-flex flex-column align-items-start'>
         <Card.Title className='custom-card-title'>{title}</Card.Title>
@@ -14,8 +15,7 @@ function Suggestion({title, image, description}) {
         {/* <Card.Link href="#">Más Información</Card.Link> */}
       </Card.Body>
     </Card>
-
-    </div>
+    </Link>
   )
 }
 
