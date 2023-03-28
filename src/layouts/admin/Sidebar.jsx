@@ -10,7 +10,7 @@ function Sidebar() {
             <div className="sb-sidenav-menu-heading">Menu Principal</div>
             <Link className="nav-link" to="/admin/dashboard">
                 <div className="sb-nav-link-icon"><i className="fas fa-tachometer-alt"></i></div>
-                Dashboard
+                Home
             </Link>
             <Link className="nav-link" to="/admin/letters">
                 <div className="sb-nav-link-icon"><i className="fas fa-tachometer-alt"></i></div>
@@ -24,10 +24,6 @@ function Sidebar() {
                 <div className="sb-nav-link-icon"><i className="fas fa-tachometer-alt"></i></div>
                 Descargables
             </Link>    
-            <Link className="nav-link" to="/admin/profile">
-                <div className="sb-nav-link-icon"><i className="fas fa-tachometer-alt"></i></div>
-                Perfil
-            </Link>  
 
 
         </div>
