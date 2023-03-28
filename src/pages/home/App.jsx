@@ -4,6 +4,7 @@ import Layout from "../../components/layout/Layout";
 import VowelsContainer from "../../components/vowels/VowelsContainer";
 import Memory from "../../components/memory/Memory";
 import SuggestionsBoard from "../../components/suggestions/SuggestionsBoard";
+import DownloadBoard from "../../components/download/DownloadBoard";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <VowelsContainer/>
       <Memory/>
       <SuggestionsBoard/>
+      <DownloadBoard/>
       </Layout>
     </div>
   );
