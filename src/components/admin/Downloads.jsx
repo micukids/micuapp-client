@@ -49,7 +49,7 @@ function Downloads() {
                 </tbody>
             </table>
   </Tab>
-  <Tab eventKey="añadir" title="Añadir Letra">
+  <Tab eventKey="añadir" title="Añadir Descargable">
     gdsgfg
   </Tab>
 </Tabs>
