@@ -30,7 +30,7 @@ function SuggestionsBoard() {
         <img src={start_2} alt="Estrella de color amarillo" />
         <p>RECOMENDADOS</p>
         </div>
-        <div className='container py-4 px-4 justify-content-center ' >
+        <div className='container d-flex py-4 px-4 justify-content-center align-items-center ' >
           <Swiper
             freeMode={true}
             grabCursor={true}
@@ -44,9 +44,9 @@ function SuggestionsBoard() {
                 slidesPerView:1,
                 spaceBetween:30,
               },
-              577:{
+              768:{
                 slidesPerView:2,
-                spaceBetween:30,
+                spaceBetween:10,
               },
               992:{
                 slidesPerView:3,

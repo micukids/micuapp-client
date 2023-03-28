@@ -21,10 +21,12 @@
     font-weight: bold;
     font-size: 22px;
 }
-/* 
-.card{
-    border-radius: 10rem !important;
-} */
+
+#cardShape{
+    border-radius: 20px !important;
+    width: 286px !important;
+    height: 307px;
+} 
 
 .bg-card-body{
     background: var(--purple-linear);
@@ -43,4 +45,8 @@
 .custom-card-img{
     width: 334.43px;
     height: 223.27px;
+}
+
+a{
+    text-decoration: none !important;
 }

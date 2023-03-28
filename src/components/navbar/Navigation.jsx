@@ -52,11 +52,11 @@ const logoutSubmit = (e) => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto"></Nav>
          <Nav className='d-flex flex-row-reverse'> 
-              {nameContainer}
-            <div className='d-flex align-items-end'>
+            <div className='d-flex align-items-end display-navigation'>
                 <Nav.Link className="navigation-text-color" href="/">INICIO</Nav.Link>
                 <Nav.Link className="navigation-text-color" href="/parapadres">PARA PADRES</Nav.Link>
                 {LogoutButton}
+                {nameContainer}
             </div>
         </Nav>
       </Navbar.Collapse>
