@@ -16,14 +16,15 @@ describe ('Micuapp Log In test', () => {
     cy.get('input[name=email]').type(email)
 
     cy.get('input[name=password]').type(`${password}{enter}`)
+    
+    cy.get('.swal-modal').contains('Success')
+    
+    cy.get('.swal-button').click()
 
     cy.url().should('include', 'http://localhost:3000/')
     
     cy.getAllLocalStorage().should('exist')
 
-    cy.get('.swal-modal').contains('Success')
-    
-    cy.get('.swal-button').click()
     })
 
 })

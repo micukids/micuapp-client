@@ -52,9 +52,9 @@ function VowelsContainer() {
     
         let alphabetAccess = '';
         if (localStorage.getItem('auth_token')){
-          alphabetAccess = (<Link to="/flipcard"><MainButton class='bt' data-test = 'buttonflipcard' text='Aprende todo el abecedario'/></Link>)
+          alphabetAccess = (<Link to="/flipcard"><MainButton class='bt' data='test-buttonflipcard' text='Aprende todo el abecedario'/></Link>)
         }else{
-          alphabetAccess = (<Link to="/login"><MainButton class='bt' data-test = 'buttonflipcard' text='Aprende todo el abecedario'/></Link>)
+          alphabetAccess = (<Link to="/login"><MainButton class='bt' data='test-buttonflipcard' text='Aprende todo el abecedario'/></Link>)
         }
 
 
