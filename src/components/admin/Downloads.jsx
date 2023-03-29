@@ -1,9 +1,48 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useEffect } from 'react';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import { Link } from 'react-router-dom';
+import { getAxiosInstance, GetDownloads } from '../../services/functions';
+import Swal from 'sweetalert2'
+import DownloadForm from './DownloadForm';
 
 function Downloads() {
+  const instance = getAxiosInstance();
+  const [downloads, setDownloads] = useState([]);
+
+  const getAllDownloads = async() =>{
+    const allDownloads = await GetDownloads();
+    setDownloads(allDownloads);
+  }
+
+  useEffect( () => {
+      getAllDownloads()
+    }, [])
+
+    function onDeleteDownload(id){
+      Swal.fire({
+          title: 'Quieres eliminar este descargable?',
+          text: "Si, has clicado por error, puedes cancelar!",
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Sí, elimina!',
+          cancelButtonText: 'Cancelar!'
+        }).then(async(result) => {
+          if (result.isConfirmed) {
+            await instance.delete(`/api/download/${id}`)
+            await  getAllDownloads();
+            Swal.fire(
+              'Eliminada!',
+              'El descargable ha sido eliminado exitosamente.',
+              'success'
+            )
+          }
+        })
+      }
+
   return (
     <div className='container-fluid px-4'>
     <h1 className='mt-4'>Descargables</h1>
@@ -17,40 +56,28 @@ function Downloads() {
   <table className='table table-striped'>
                 <thead className='dash-table'>
                     <tr>
-                        <th>Letra</th>
-                        <th>Tipo</th>
-                        <th>Sonido</th>
-                        <th>Imagen</th>
-                        <th>Video</th>
+                        <th>Miniatura</th>
+                        <th>Url</th>
+                        <th>Descripcion</th>
                     </tr>
                 </thead>
                 <tbody>
-              
-                        <tr key='' >
-                            <td>  </td>    
-                            <td></td>  
-                            <td>
-                                <audio controls>
-                                    <source src='' type="audio/mpeg"/>
-                                </audio>
-                            </td>   
-                            <td> <img src='' alt={`Imagen letra `} width="170" height="170" /> </td>    
-                            <td>
-                                <video width="170" height="170" controls>
-                                    <source src='' type="video/mp4"/>
-                                </video>
-                            </td>
+                { downloads.map( (download, index) => (
+                        <tr key={index} >
+                            <td> <img src={download.thumb} alt={`Imagen `} width="170" height="170" /> </td>    
+                            <td>{download.url}</td>    
+                            <td>{download.description}</td>    
                             <td className='buttons-table'>
-                                <Link to='' className='btn btn-warning'>Editar</Link>
-                                <button  className='btn btn-danger'>Eliminar</button>
+                                <Link to={`/admin/download/${download.id}`} className='btn btn-warning'>Editar</Link>
+                                <button onClick={()=>onDeleteDownload(download.id)} className='btn btn-danger'>Eliminar</button>
                             </td>
                         </tr>
-           
+                )) }
                 </tbody>
             </table>
   </Tab>
   <Tab eventKey="añadir" title="Añadir Descargable">
-    gdsgfg
+    <DownloadForm/>
   </Tab>
 </Tabs>
 </div>

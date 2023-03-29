@@ -5,7 +5,6 @@ import Swal from 'sweetalert2'
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import LetterForm from './LetterForm';
-import EditLetter from './EditLetter';
 
 
 function Letters() {

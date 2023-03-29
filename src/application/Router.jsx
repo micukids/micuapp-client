@@ -20,6 +20,7 @@ import Credits from "../pages/credits/Credits";
 import UserProtectedRoute from "./UserProtectedRoute";
 import ContactMessages from "../components/admin/ContactMessages";
 import EditSuggestion from "../components/admin/EditSuggestion";
+import EditDownload from "../components/admin/EditDownload";
 
 
 const Router = () => {
@@ -66,6 +67,7 @@ const Router = () => {
             <Route path="/admin/suggestions" element={<Suggestions />} />
             <Route path="/admin/suggestion/:id" element={<EditSuggestion />} />
             <Route path="/admin/downloads" element={<Downloads />} />
+            <Route path="/admin/download/:id" element={<EditDownload />} />
             <Route path="/admin/messages" element={<ContactMessages />} />
             <Route path="/admin" element={<Navigate to="/admin/dashboard" />} />
             <Route path="*" element={<Page404 />} />
