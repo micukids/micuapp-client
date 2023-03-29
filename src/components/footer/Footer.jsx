@@ -19,10 +19,10 @@ const Footer = () => {
         />
       </Navbar.Brand>
       <Nav>
-            <Nav.Link className="footer-nav-link" href="/creditos">
+            <Nav.Link className="footer-nav-link" href="/credits">
               CRÉDITOS
             </Nav.Link>
-            <Nav.Link className="footer-nav-link" href="/contacto">
+            <Nav.Link className="footer-nav-link" href="/contact">
               CONTACTO
             </Nav.Link>
       </Nav>

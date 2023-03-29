@@ -22,7 +22,8 @@ describe ('Micuapp Log In test', () => {
     cy.getAllLocalStorage().should('exist')
 
     cy.get('.swal-modal').contains('Success')
-
+    
+    cy.get('.swal-button').click()
     })
 
 })
