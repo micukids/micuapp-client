@@ -8,9 +8,9 @@ import Img_aprende from "../../assets/img/Img_aprender.png";
 import Img_flash from "../../assets/img/Img_Flashcards.png";
 import Img_video from "../../assets/img/Img_Videoclip.png";
 import MainTitle from "../../components/mainTitle/MainTitle";
-import Instagram from "../../assets/img/icon _rounded instagram_.svg";
-import Youtube from "../../assets/img/icon_Youtube.svg";
-import Facebook from "../../assets/img/icon _circle facebook_.svg";
+import Instagram from "../../assets/img/i_instagram_white.svg";
+import Youtube from "../../assets/img/i_youtube_white.svg";
+import Facebook from "../../assets/img/i_facebook_white.svg";
 import { Link } from "react-router-dom";
 
 const ParentsPage = () => {
