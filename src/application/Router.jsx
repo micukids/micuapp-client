@@ -6,7 +6,6 @@ import App from "../pages/home/App";
 import MemoryBoard from "../pages/memory/MemoryBoard";
 import LoginPage from "../pages/login/LoginPage";
 import Dashboard from "../components/admin/Dashboard";
-import Profile from "../components/admin/Profile";
 import Page404 from "../components/errors/Page404";
 import AdminPrivateRoute from './AdminPrivateRoute'
 import MainLayout from "../layouts/admin/MainLayout";
@@ -19,6 +18,7 @@ import SoundGameBoard from "../pages/soundgame/SoundGameBoard";
 import Contact from "../pages/contact/Contact";
 import Credits from "../pages/credits/Credits";
 import UserProtectedRoute from "./UserProtectedRoute";
+import ContactMessages from "../components/admin/ContactMessages";
 
 
 const Router = () => {
@@ -64,7 +64,7 @@ const Router = () => {
             <Route path="/admin/edit-letter/:id" element={<EditLetter />} />
             <Route path="/admin/suggestions" element={<Suggestions />} />
             <Route path="/admin/downloads" element={<Downloads />} />
-            <Route path="/admin/profile" element={<Profile />} />
+            <Route path="/admin/messages" element={<ContactMessages />} />
             <Route path="/admin" element={<Navigate to="/admin/dashboard" />} />
             <Route path="*" element={<Page404 />} />
           </Route>
