@@ -9,7 +9,6 @@ function LoginPage() {
         <Layout>
             <div>
                 <LoginForm/>
-
             </div>
         </Layout>
     </div>

@@ -1,9 +1,9 @@
-describe ('Micuapp', () => {
+describe ('Micuapp Log In test', () => {
     beforeEach(() => {
         cy.visit('http://localhost:3000/')
       })
 
-    it('Displays five flipcards micu items by default', () => {
+    it('Displays vowels container by default', () => {
         cy.get('[data-test="vowel-container"]').should('have.length', 1)
       }) 
 
@@ -19,15 +19,11 @@ describe ('Micuapp', () => {
 
     cy.url().should('include', 'http://localhost:3000/')
     
-    //cy.getCookie('auth_token').should('exist')
     cy.getAllLocalStorage().should('exist')
 
-  //cy.get('res.data.status === 200').type(`{enter}`)
-
-
-
-    // UI should reflect this user being logged in
-    //cy.get('h1').should('contain', 'jane.lane')
+    cy.get('.swal-modal').contains('Success')
+    
+    cy.get('.swal-button').click()
     })
 
 })
