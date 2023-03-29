@@ -83,7 +83,7 @@ function Letters() {
                                     </video>
                                 </td>
                                 <td className='buttons-table'>
-                                    <Link to={`/admin/edit-letter/${letter.id}`} className='btn btn-warning'>Editar</Link>
+                                    <Link to={`/admin/letter/${letter.id}`} className='btn btn-warning'>Editar</Link>
                                     <button onClick={()=>onDeleteLetter(letter.id)} className='btn btn-danger'>Eliminar</button>
                                 </td>
                             </tr>
@@ -93,9 +93,6 @@ function Letters() {
       </Tab>
       <Tab eventKey="añadir" title="Añadir Letra">
         <LetterForm/>
-      </Tab>
-      <Tab eventKey="editar" title="Editar Letra">
-        <EditLetter/>
       </Tab>
     </Tabs>
     </div>

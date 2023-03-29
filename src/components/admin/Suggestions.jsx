@@ -68,7 +68,7 @@ function Suggestions() {
                             <td> <img src={suggestion.image} alt={`Imagen de ${suggestion.title}`} width="170" height="170" /> </td>    
                             <td>{suggestion.description}</td>    
                             <td className='buttons-table'>
-                                <Link to={`/admin/edit-suggestion/${suggestion.id}`} className='btn btn-warning'>Editar</Link>
+                                <Link to={`/admin/suggestion/${suggestion.id}`} className='btn btn-warning'>Editar</Link>
                                 <button onClick={()=>onDeleteSuggestion(suggestion.id)} className='btn btn-danger'>Eliminar</button>
                             </td>
                         </tr>
