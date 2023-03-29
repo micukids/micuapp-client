@@ -44,11 +44,17 @@ const GetMessages = async() => {
     return response.data.contacts;
 }
 
+const GetDownloads = async() => {
+    const response = await axios.get(`${endPoint}/api/downloads`);
+    return response.data.downloads;
+}
+
 export {
     GetLetters,
     GetVowels,
     getAxiosInstance,
     getLettersName,
     GetSuggestions,
-    GetMessages
+    GetMessages,
+    GetDownloads
 };
