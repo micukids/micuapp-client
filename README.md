@@ -22,6 +22,8 @@ El cliente necesita desarrollar una experiencia educativa para menores de 5 año
 
 ## :mag: Detalles del Proyecto
 
+Hemos utilizado Arquitetura MVC - Estilo cliente/servidor Tipo API Rest, para conectar el fronted con el backend.
+Tenemos un proyecto en gitHub (micukids) con 2 repositorios: micuapp-client y micuapp-server (https://github.com/micukids/micuapp-server/blob/main/README.md)
 
 ## :computer:Tecnologías
 
