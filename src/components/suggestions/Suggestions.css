@@ -50,3 +50,8 @@
 a{
     text-decoration: none !important;
 }
+
+.link-styles{
+    position: absolute;
+    left: 250px;
+}
