@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getAxiosInstance } from "../services/functions";
 import swal from "sweetalert";
 import { Outlet, useNavigate } from "react-router-dom";
+import Spinner from "../components/spinner/Spinner";
 
 function AdminPrivateRoute({ children, redirectPath = "/login" }) {
   const instance = getAxiosInstance();
@@ -46,7 +47,7 @@ function AdminPrivateRoute({ children, redirectPath = "/login" }) {
   );
 
   if (loading) {
-    return <h1>Loading...</h1>;
+    return <Spinner/>;
   }
 
   return children ? children : <Outlet />;
