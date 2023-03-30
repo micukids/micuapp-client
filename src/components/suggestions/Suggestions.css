@@ -1,0 +1,57 @@
+.bg-suggestions-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-suggestions{
+    margin-top: 0.1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.text-suggestions img{
+    width: 30px;
+    height: 30px;
+}
+
+.text-suggestions p{
+    color: var(--purple);
+    font-weight: bold;
+    font-size: 22px;
+}
+
+#cardShape{
+    border-radius: 20px !important;
+    width: 286px !important;
+    height: 307px;
+} 
+
+.bg-card-body{
+    background: var(--purple-linear);
+    color: var(--white-smoke) !important;
+}
+
+.card-text-alignment{
+    text-align: start;
+    font-size: 12px;
+}
+
+.custom-card-title{
+    font-size: 16px; 
+}
+
+.custom-card-img{
+    width: 334.43px;
+    height: 223.27px;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+.link-styles{
+    position: absolute;
+    left: 250px;
+}

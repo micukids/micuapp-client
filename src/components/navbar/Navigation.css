@@ -1,0 +1,31 @@
+.navigation-text-color{
+    color:var(--white-smoke) !important;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.navigation-text-color:hover{
+    color:var(--white-smoke) !important;
+    font-weight: bold;
+}
+
+.user-logo{
+    width: 28.18px;
+    height: 30.55px;
+    margin-bottom: 0px;
+}
+
+.left-margin{
+    margin-left: 30px;
+}
+
+@media screen and (max-width: 577px){
+	.display-navigation{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}
+
+
+

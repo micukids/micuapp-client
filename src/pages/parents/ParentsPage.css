@@ -1,0 +1,121 @@
+.bg-parents {
+  background-image: url("../../assets/img/Bg_parents.jpg");
+}
+
+.section-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 6%;
+}
+
+.section-container-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 6%;
+}
+
+.card-parents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 4%;
+}
+
+h2 {
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  color: var(--purple-dark);
+  text-align: justify;
+}
+
+h2 a {
+  color: var(--purple);
+}
+
+h2 a:hover {
+  color: var(--orange);
+}
+
+.follow-container {
+  background-image: url("../../assets/img/Bg_redes.png");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.follow-text {
+  margin: 1.6rem 0rem 0rem 0rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.follow-text p {
+  color: var(--white-smoke);
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+.follow-text p span {
+  color: var(---white-smoke);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.icons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 577px) {
+  .section-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .section-container-right {
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+  }
+
+  .bg-parents {
+    background-image: url("../../assets/img/Bg_parents.jpg");
+    background-size: 70vh;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+    .section-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 3%;
+      }
+      
+      .section-container-right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2%;
+      }
+
+      .card-parents {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 40rem;
+        margin: 4%;
+      }
+}

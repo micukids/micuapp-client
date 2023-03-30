@@ -1,0 +1,34 @@
+.credits-container {
+    padding: 96px;
+    background-image: url(../../assets/img/Bg_parents.jpg);
+    padding-top: 35px;
+}
+
+.description {
+    font-size: 16px;
+    color: #661890;
+    font-weight: 500;
+    line-height: 18.75px;
+    width: 345px;
+    height: 60px;
+}
+
+.icon-container {
+    margin-left: 15px;
+}
+
+h6 {
+    color: #661890;
+    font-family: Roboto;
+    font-weight: 900;
+}
+
+.credits-container p {
+    color: #661890;
+    margin-bottom: 5px;;
+}
+
+.credits-sections {
+    padding-bottom: 20px;
+    line-height: 18.75px;
+}

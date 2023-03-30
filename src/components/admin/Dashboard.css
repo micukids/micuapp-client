@@ -1,0 +1,20 @@
+.container-home{
+    background-image: url(../../assets/img/Ambiente.png);
+    min-height: 88vh;
+    background-size: cover;
+    text-align: center;
+    color: var(--orange);
+
+}
+
+.bg-height{
+    min-height: 85vh;
+}
+
+.btn-warning{
+    background-color: var(--yellow) !important;
+}
+.btn-danger{
+    background-color: var(--purple-dark) !important;
+    border-color: var(--purple-dark) !important;
+}

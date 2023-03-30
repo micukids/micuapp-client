@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# Abecedario Micukids App
+<p align="center"><img alt="logo Micu" src="https://user-images.githubusercontent.com/116796010/227530138-e7495657-2221-4971-9c2c-0784ad0814ab.png"></p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Tabla de Contenido
 
-## Available Scripts
+1. [Información General](#información-general)
+2. [Detalles del Proyecto](#detalles-del-proyecto)
+3. [Tecnologías](#tecnologías)
+4. [Librerias](#librerias)
+5. [Herramientas](#herramientas)
+6. [Demo](#demo)
+7. [Prototipo](#prototipo)
+8. [Equipo](#equipo)
+9. [Instalación](#instalación)
 
-In the project directory, you can run:
+## :page_facing_up:Información General
 
-### `npm start`
+Los padres Millennials y Gen-Z que crecieron con alta exposición a Internet, están ávidos de encontrar experiencias híbridas que les permitan emplear estratégicamente la tecnología para estimular el desarrollo de sus hijo(a)s de 2 a 5 años. La oferta de contenido bilingüe de calidad para menores de 5 años integrado con experiencias educativas híbridas (físico - digital), es aún muy reducida.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+El cliente necesita desarrollar una experiencia educativa para menores de 5 años. Combinar música, video, personajes ilustrados, materiales didácticos e interacción, para estimular los sentidos y las emociones de los más pequeños. Busca aportar en el desarrollo de su percepción del mundo, a través del aprovechamiento inteligente de la tecnología a su alcance y de la conectividad global multi-cultural / multi-lenguaje propios de internet.
+<p align="center"><img width="200" alt=“captura home” src="https://user-images.githubusercontent.com/116796494/227921674-8ea4bb3e-74ba-4e69-acea-534b49feffbd.png"></p>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## :mag: Detalles del Proyecto
 
-### `npm test`
+Hemos utilizado Arquitetura MVC - Estilo cliente/servidor Tipo API Rest, para conectar el fronted con el backend.
+Tenemos un proyecto en gitHub (micukids) con 2 repositorios: micuapp-client y micuapp-server (https://github.com/micukids/micuapp-server/blob/main/README.md)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## :computer:Tecnologías
 
-### `npm run build`
+* HTML
+* CSS
+* JavaScript
+* React
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## :books: Librerias
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* React Bootstrap  
+* Swiper
+* React Flip Card
+* React Router Dom
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## :hammer:Herramientas
 
-### `npm run eject`
+* [Trello](https://trello.com/b/0PCr9sIS/micukids)
+* [Figma](https://www.figma.com/file/2Pv4uqNt5yERWkZO1Y2qsj/MicuKids?node-id=26-2&t=LuyHpaBODO5eLfgr-0)
+* [Git/GitHub](https://github.com/orgs/micukids/repositories)
+* Visual Studio Code
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## :tv:Demo
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* [Demo]()
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## :loop:Prototipo
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* [Tablet](https://www.figma.com/file/2Pv4uqNt5yERWkZO1Y2qsj/MicuKids?node-id=26-2&t=grz98XeQDMD3fU6M-0)
 
-## Learn More
+## :two_women_holding_hands: Equipo
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Somos un equipo de 5 mujeres, apasionadas por el proyecto web MicuKids:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Karolina Vilarraga, UX/UI Design y desarrolladora
+- Elvia Benedith, Desarrolladora
+- Gabriela Barajas, Desarrolladora
+- Liliana Dalmarco, Scrum Master y desarrolladora
+- Isabel Gutiérrez, Desarrolladora
+ 
+## :mag: Instalación
 
-### Code Splitting
+1. Clonar el repositorio
+2. Ejecutar el comando npm install
+3. Ejecutar el comando npm start para que se vea la pagina en el navegador
+4. Para los test ejecutar el comando npm run test
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

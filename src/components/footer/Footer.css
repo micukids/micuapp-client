@@ -1,0 +1,24 @@
+.bg-dark{
+    background: linear-gradient(90deg, #6D17F2 26.61%, #D157FF 157.8%) !important;
+}
+
+.footer-nav-link{
+    color:var(--white-smoke) !important;
+}
+
+.footer-nav-link:hover{
+    color:var(--white-smoke) !important;
+}
+
+.items-order{
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 577px){
+	.items-order {
+		flex-direction: row;
+  }
+}
+
+
