@@ -65,7 +65,7 @@ const FlipCardsPage = () => {
             <p>FLIP <span>CARDS</span></p>
           </div>
           
-          <div className = 'd-flex flex-wrap justify-content-center align-items-center text-center'>
+          <div className = 'd-flex flex-wrap justify-content-center align-items-center text-center' data-test="flipcards-container">
             {cards.map((card, index) => (<FlipCard {...card} key={index} backVideo={card.video} onFlipped={onFlipped} /> ))}
             <FlipAlert front={Micu_cara} back={celebracion}/>  
           </div>
