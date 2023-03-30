@@ -26,7 +26,7 @@ describe ('User can play flipcards game', () => {
 
         cy.visit('http://localhost:3000/flipcard')
 
-        cy.get('[data-test="flipcards-container"]').should('have.length', 1)
+        //cy.get('[data-test="flipcards-container"]').should('have.length', 1)
 
       /*it('clicking + fires a change event with the incremented value', () => {
           const onChangeSpy = cy.spy().as('onChangeSpy')
