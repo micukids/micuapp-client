@@ -22,6 +22,7 @@
 @import url(../components/credits/CreditsComponent.css);
 @import url(../components/admin/Dashboard.css);
 @import url(../components/download/Download.css);
+@import url(../components/spinner/Spinner.css);
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 
@@ -42,3 +43,4 @@
 body, html {
     font-family: var(--letter) ;
 }
+

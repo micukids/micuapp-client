@@ -19,6 +19,9 @@ const logoutSubmit = (e) => {
       localStorage.removeItem('auth_name');
       swal("Success",res.data.message,"success");
       window.location = "/";
+    }else {
+      localStorage.removeItem('auth_token');
+      localStorage.removeItem('auth_name');
     }
   })
 }
