@@ -38,6 +38,7 @@ Tenemos un proyecto en gitHub (micukids) con 2 repositorios: micuapp-client y mi
 * Swiper
 * React Flip Card
 * React Router Dom
+* Axios
 
 ## :hammer:Herramientas
 
@@ -67,9 +68,9 @@ Somos un equipo de 5 mujeres, apasionadas por el proyecto web MicuKids:
 ## :mag: Instalación
 
 1. Clonar el repositorio
-2. Ejecutar el comando npm install
-3. Ejecutar el comando npm start para que se vea la pagina en el navegador
-4. Para los test ejecutar el comando npm run test
+2. Ejecutar el comando **npm install**
+3. Ejecutar el comando **npm start** para que se vea la pagina en el navegador
+4. Para los test ejecutar el comando **npm run test**
 
 
 
