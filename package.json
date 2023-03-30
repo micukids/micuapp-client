@@ -43,7 +43,7 @@
       "react-app/jest"
     ],
     "plugins":[
-      "cypress"
+      "cypress/recommended"
     ]
   },
   "browserslist": {

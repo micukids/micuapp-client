@@ -3,9 +3,9 @@ import '../../styles/Styles.css';
 
 
 const MainButton = (props) => {
-  return (
+  return ( 
     <>
-        <button className={`bt border-0 ${props.className}`} onClick={props.onClick} >{props.text}</button>
+        <button className={`bt border-0 ${props.className}`} onClick={props.onClick} data={props.data}>{props.text}</button>
     </>
   )
 }
