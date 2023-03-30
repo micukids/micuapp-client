@@ -26,8 +26,8 @@ function Downloads() {
           text: "Si, has clicado por error, puedes cancelar!",
           icon: 'warning',
           showCancelButton: true,
-          confirmButtonColor: '#3085d6',
-          cancelButtonColor: '#d33',
+          confirmButtonColor: '#3D116B',
+          cancelButtonColor: '#FF730E',
           confirmButtonText: 'Sí, elimina!',
           cancelButtonText: 'Cancelar!'
         }).then(async(result) => {
@@ -67,7 +67,7 @@ function Downloads() {
                             <td> <img src={download.thumb} alt={`Imagen `} width="170" height="170" /> </td>    
                             <td>{download.url}</td>    
                             <td>{download.description}</td>    
-                            <td className='buttons-table'>
+                            <td className='d-flex buttons-table gap-1'>
                                 <Link to={`/admin/download/${download.id}`} className='btn btn-warning'>Editar</Link>
                                 <button onClick={()=>onDeleteDownload(download.id)} className='btn btn-danger'>Eliminar</button>
                             </td>

@@ -2,9 +2,8 @@ import React from 'react'
 
 function Dashboard() {
   return (
-    <div className='container-home'>
-      <h1>Bienvenido a MicuKids</h1>
-      <img src='' alt=''/>
+    <div className='container-home  bg-parents'>
+      <h1>Panel de Administración</h1>
       </div>
   )
 }
