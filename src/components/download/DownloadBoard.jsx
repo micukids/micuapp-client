@@ -7,21 +7,21 @@ import 'swiper/css';
 import 'swiper/css/free-mode'
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { GetVowels } from '../../services/functions';
+import { GetDownloads } from '../../services/functions';
 import Download from './Download';
 
 SwiperCore.use([Navigation, A11y]);
 
 function DownloadBoard() {
-    const [vowels, setVowels] = useState([]);
+    const [downloads, setDownloads] = useState([]);
 
-    const getAllVowels = async() =>{
-      const allVowels = await GetVowels();
-      setVowels(allVowels);
+    const getAllDownloads = async() =>{
+      const allDownloads = await GetDownloads();
+      setDownloads(allDownloads);
     }
 
     useEffect( () => {
-        getAllVowels()
+        getAllDownloads()
       }, [])
 
 
@@ -52,9 +52,9 @@ function DownloadBoard() {
           },
         }}
       >
-        {vowels.map((vowel, index) => (
+        {downloads.map((download, index) => (
         <SwiperSlide key={index}>
-          <Download {...vowel}/>
+          <Download {...download}/>
         </SwiperSlide>
         ))}
       </Swiper>
