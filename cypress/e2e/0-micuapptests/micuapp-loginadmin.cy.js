@@ -10,11 +10,11 @@ describe ('Micuapp Log In test', () => {
     cy.visit('http://localhost:3000/login')
 
     cy.get('input[name=email]').type(email)
-
+    cy.wait(2000)
     cy.get('input[name=password]').type(`${password}{enter}`)
-    
+    cy.wait(2000)
     cy.get('.swal-modal').contains('Success')
-    
+    cy.wait(2000)
     cy.get('.swal-button').click()
 
     cy.url().should('include', 'http://localhost:3000/admin')

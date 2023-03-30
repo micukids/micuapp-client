@@ -12,19 +12,19 @@ describe ('Micuapp Register test', () => {
         cy.visit('http://localhost:3000/signin')
 
         cy.get('input[name=name]').type(newname)
-
+        cy.wait(2000)
         cy.get('input[name=parent]').type(newparent)
-    
+        cy.wait(2000)
         cy.get('input[name=email]').type(newemail)
-    
+        cy.wait(2000)
         cy.get('input[name=password]').type(`${newpassword}{enter}`)
-        
+        cy.wait(2000)
         cy.getAllLocalStorage().should('exist')
-    
+        cy.wait(3000)
         cy.get('.swal-modal').contains('Te has registrado correctamente')
-        
+        cy.wait(3000)
         cy.get('.swal-button').click()
-
+        cy.wait(3000)
         cy.url().should('include', 'http://localhost:3000/')
         })
 
