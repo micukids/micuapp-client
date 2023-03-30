@@ -39,10 +39,22 @@ const GetSuggestions = async() => {
     return response.data.suggestions;
 }
 
+const GetMessages = async() => {
+    const response = await getAxiosInstance().get(`/api/contacts`);
+    return response.data.contacts;
+}
+
+const GetDownloads = async() => {
+    const response = await axios.get(`${endPoint}/api/downloads`);
+    return response.data.downloads;
+}
+
 export {
     GetLetters,
     GetVowels,
     getAxiosInstance,
     getLettersName,
     GetSuggestions,
+    GetMessages,
+    GetDownloads
 };
