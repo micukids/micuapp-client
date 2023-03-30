@@ -52,9 +52,9 @@ function VowelsContainer() {
     
         let alphabetAccess = '';
         if (localStorage.getItem('auth_token')){
-          alphabetAccess = (<Link to="/flipcard"><MainButton class='bt' text='Aprende todo el abecedario'/></Link>)
+          alphabetAccess = (<Link to="/flipcard"><MainButton class='bt' data='test-buttonflipcard' text='Aprende todo el abecedario'/></Link>)
         }else{
-          alphabetAccess = (<Link to="/login"><MainButton class='bt' text='Aprende todo el abecedario'/></Link>)
+          alphabetAccess = (<Link to="/login"><MainButton class='bt' data='test-buttonflipcard' text='Aprende todo el abecedario'/></Link>)
         }
 
 
@@ -67,7 +67,7 @@ function VowelsContainer() {
         <img src={start_2} alt="Estrella de color amarillo" />
         <p>FLIP <span>CARDS</span></p>
       </div>
-    <div className='vowel-cards-container'>
+    <div className='vowel-cards-container' data-test='vowel-container'>
         {vowels.map((vowel, index) => (
         <VowelCard {...vowel} key={index} backVideo={vowel.video} onFlipped={onFlipped}/>
          ))}   

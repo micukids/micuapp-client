@@ -1,63 +1,77 @@
-/* import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import { useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { getAxiosInstance } from '../../services/functions';
-import swal from "sweetalert"; */
+import swal from "sweetalert"; 
 
 
 function EditLetter() {
-   /*  const instance = getAxiosInstance();
-    const [editLetterInput, setEditLetterInput] = useState([])
+    const instance = getAxiosInstance();
+    const navigate = useNavigate();
+    const [letter, setLetter] = useState('');
+    const [type, setType] = useState('');
+    const [sound, setSound] = useState('');
+    const [image, setImage] = useState('');
+    const [video, setVideo] = useState('');
     const {id} = useParams();
+    console.log(id);
 
     useEffect( () =>{
-       
-        instance.get(`/api/edit-letter/${id}`).then(res =>{
-            if(res.data.status === 200){
-                    setEditLetterInput(res.data.theletter)
-                }
-            })
+       const getLetterById = async () =>{
+         const response = await instance.get(`/api/letter/${id}`);
+           setLetter(response.data.theletter.letter);
+           setType(response.data.theletter.type);
+           setSound(response.data.theletter.sound);
+           setImage(response.data.theletter.image);
+           setVideo(response.data.theletter.video);
 
+                    console.log(response.data.theletter);
+          }
+  
+          getLetterById();
       }, [] );
 
-    const handleInput = (e) => {
-        e.persist();
-        setEditLetterInput({...editLetterInput, [e.target.name]:e.target.value})
-    }
+
 
     const updateLetter = async (e) => {
         e.preventDefault()
-
-        const data = editLetterInput;
    
-        await instance.put(`api/letter/${id}`, data)
-          swal("Success","Your quote has been updated","success"); 
+        await instance.put(`api/letter/${id}`, {
+          letter: letter,
+          type: type,
+          sound: sound,
+          image: image,
+          video: video
+        })
+          swal("Success","La letra se ha actualizado exitosamente.","success");
+          navigate('/admin/letters'); 
     }
- */
+ 
   return (
     <div>
- {/* <Form  id="letterForm"  onSubmit={updateLetter}>
+      <h1 className='text-center mt-5 mb-4'>Editar Letra</h1>
+ <Form  id="letterForm"  onSubmit={updateLetter}>
               <Form.Group className="mb-3">
                 <Form.Label>Letra</Form.Label>
                 <Form.Control
                   type="text"
                   placeholder="Letra"
-                  onChange={handleInput}
-                  value={editLetterInput.letter}
+                  onChange={(e) => setLetter(e.target.value)}
+                  value={letter}
                   name="letter"
                 />
               </Form.Group>
-              <span>{editLetterInput.error_list.letter}</span>
+              <span></span>
               <Form.Group className="mb-3">
               <Form.Label>Tipo</Form.Label>
                 <Form.Select 
-                onChange={handleInput}
-                value={editLetterInput.type}
+                onChange={(e) => setType(e.target.value)}
+                value={type}
                 name="type"
                 >
                     <option value="vowel">vowel</option>
-                    <option value="" >consonant</option>
+                    <option value="consonant" >consonant</option>
                 </Form.Select>
               </Form.Group>
               <Form.Group className="mb-3">
@@ -65,33 +79,33 @@ function EditLetter() {
                 <Form.Control
                   type="text"
                   placeholder="Url del audio"
-                  onChange={handleInput}
-                  value={editLetterInput.sound}
+                  onChange={(e) => setSound(e.target.value)}
+                  value={sound}
                   name="sound"
                 />
-                <span>{editLetterInput.error_list.sound}</span>
+                <span></span>
               </Form.Group>
               <Form.Group className="mb-3" >
                 <Form.Label>Imagen</Form.Label>
                 <Form.Control
                   type="text"
                   placeholder="Url de la imagen"
-                  onChange={handleInput}
-                  value={editLetterInput.image}
+                  onChange={(e) => setImage(e.target.value)}
+                  value={image}
                   name="image"
                 />
-                <span>{editLetterInput.error_list.image}</span>
+                <span></span>
               </Form.Group>
               <Form.Group className="mb-3" >
                 <Form.Label>Video</Form.Label>
                 <Form.Control
                   type="text"
                   placeholder="Url del video"
-                  onChange={handleInput}
-                  value={editLetterInput.video}
+                  onChange={(e) => setVideo(e.target.value)}
+                  value={video}
                   name="video"
                 />
-                <span>{editLetterInput.error_list.video}</span>
+                <span></span>
               </Form.Group>
 
               <div className="d-grid col-6 mx-auto gap-1">
@@ -102,15 +116,16 @@ function EditLetter() {
                 >
                   Actualizar
                 </Button>
-                <Button
+                <Link
+                  to="/admin/letters"
                   variant="primary"
                   type="button"
                   className="btn btn-secondary btn-block"
                 >
                   Cancelar
-                </Button>
+                </Link>
               </div>
-            </Form> */}
+            </Form>
     </div>
   )
 }
