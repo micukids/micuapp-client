@@ -24,8 +24,8 @@ function Suggestions() {
         text: "Si, has clicado por error, puedes cancelar!",
         icon: 'warning',
         showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
+        confirmButtonColor: '#3D116B',
+        cancelButtonColor: '#FF730E',
         confirmButtonText: 'Sí, elimina!',
         cancelButtonText: 'Cancelar!'
       }).then(async(result) => {
@@ -67,7 +67,7 @@ function Suggestions() {
                             <td>{suggestion.url}</td>    
                             <td> <img src={suggestion.image} alt={`Imagen de ${suggestion.title}`} width="170" height="170" /> </td>    
                             <td>{suggestion.description}</td>    
-                            <td className='buttons-table'>
+                            <td className='d-flex buttons-table gap-1 '>
                                 <Link to={`/admin/suggestion/${suggestion.id}`} className='btn btn-warning'>Editar</Link>
                                 <button onClick={()=>onDeleteSuggestion(suggestion.id)} className='btn btn-danger'>Eliminar</button>
                             </td>

@@ -3,6 +3,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { getAxiosInstance} from '../../services/functions';
 import swal from "sweetalert";
+import { useNavigate } from 'react-router-dom';
 
 const initialData = {
     letter: '',
@@ -14,6 +15,7 @@ const initialData = {
 }
 
 function LetterForm() {
+  const navigate = useNavigate();
     const instance = getAxiosInstance();
     const [letterinput, setLetterInput] = useState({...initialData})
 
@@ -38,6 +40,7 @@ function LetterForm() {
               if (res.data.status === 200) {      
                 swal("Success", res.data.message, "success");
                 setLetterInput({...initialData})
+                navigate('/admin/letters')
              
               } else if(res.data.status === 400) {
                 setLetterInput({
