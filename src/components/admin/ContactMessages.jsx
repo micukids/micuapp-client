@@ -25,8 +25,8 @@ function ContactMessages() {
         text: "Si, has clicado por error, puedes cancelar!",
         icon: 'warning',
         showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
+        confirmButtonColor: '#3D116B',
+        cancelButtonColor: '#FF730E',
         confirmButtonText: 'Sí, elimina!',
         cancelButtonText: 'Cancelar!'
       }).then(async(result) => {
@@ -44,7 +44,7 @@ function ContactMessages() {
 
 
   return (
-    <div className='d-flex flex-column'>
+    <div className='d-flex flex-column  bg-parents bg-height'>
         <h1 className='mb-5'>Bandeja de entrada</h1>
       <div className='d-flex flex-row gap-2'>
 
