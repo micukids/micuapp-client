@@ -15,7 +15,7 @@
 
 ## :page_facing_up:Información General
 
-Los padres Millennials y Gen-Z que crecieron con alta exposición a Internet, están ávidos de encontrar experiencias híbridas que les permitan emplear estratégicamente la tecnología para estimular el desarrollo de sus hijo(a)s de 2 a 5 años. La oferta de contenido bilingüe de calidad para menores de 5 años integrado con experiencias educativas híbridas (físico - digital), es aún muy reducida.
+Los padres Millennials y Gen-Z que crecieron con alta exposición a Internet, están ávidos de encontrar experiencias híbridas que les permitan emplear estratégicamente la tecnología para estimular el desarrollo de sus hijo(a)s de 2 a 6 años. La oferta de contenido bilingüe de calidad para menores de 5 años integrado con experiencias educativas híbridas (físico - digital), es aún muy reducida.
 
 El cliente necesita desarrollar una experiencia educativa para menores de 5 años. Combinar música, video, personajes ilustrados, materiales didácticos e interacción, para estimular los sentidos y las emociones de los más pequeños. Busca aportar en el desarrollo de su percepción del mundo, a través del aprovechamiento inteligente de la tecnología a su alcance y de la conectividad global multi-cultural / multi-lenguaje propios de internet.
 <p align="center"><img width="200" alt=“captura home” src="https://user-images.githubusercontent.com/116796494/227921674-8ea4bb3e-74ba-4e69-acea-534b49feffbd.png"></p>
@@ -36,8 +36,14 @@ Tenemos un proyecto en gitHub (micukids) con 2 repositorios: micuapp-client y mi
 
 * React Bootstrap  
 * Swiper
-* React Flip Card
+* React-card-flip 
 * React Router Dom
+* react-canvas-confetti (v1.3.0)
+* Axios (v1.3.4)
+* Cypress (v12.8.1)
+* Jest (v5.16)
+* Aos (v2.3.4)
+* Swith alert (v2.1.2)
 
 ## :hammer:Herramientas
 
@@ -67,9 +73,10 @@ Somos un equipo de 5 mujeres, apasionadas por el proyecto web MicuKids:
 ## :mag: Instalación
 
 1. Clonar el repositorio
-2. Ejecutar el comando npm install
-3. Ejecutar el comando npm start para que se vea la pagina en el navegador
-4. Para los test ejecutar el comando npm run test
+2. Ejecutar el comando **npm install**
+3. Ejecutar el comando **npm start** para que se vea la pagina en el navegador
+4. Para los test ejecutar el comando **npm run test**
+5. Para ejecutar los test en cypress **npm run cypress:open
 
 
 
