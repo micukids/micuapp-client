@@ -76,6 +76,7 @@ Somos un equipo de 5 mujeres, apasionadas por el proyecto web MicuKids:
 2. Ejecutar el comando **npm install**
 3. Ejecutar el comando **npm start** para que se vea la pagina en el navegador
 4. Para los test ejecutar el comando **npm run test**
+5. Para ejecutar los test en cypress **npm run cypress:open
 
 
 
