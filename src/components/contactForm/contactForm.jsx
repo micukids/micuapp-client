@@ -58,21 +58,21 @@ function ContactForm() {
       <div className="col-sm-12 col-md-6">
         <form className="form-container-left" onSubmit={handleSubmit}>
           <label htmlFor="name"></label>
-          <input type="text" id="name" name="name" onChange={handleChange} value={contactInput.name} placeholder="¿Cual es tu nombre?" /> 
+          <input className="contact-input" type="text" id="name" name="name" onChange={handleChange} value={contactInput.name} placeholder="¿Cual es tu nombre?" /> 
           <span>{contactInput.error_list.name}</span>
 
           <label htmlFor="email"></label>
-          <input type="email" id="email" name="email" onChange={handleChange} value={contactInput.email} placeholder="¿Cuál es tu correo electrónico?" />
+          <input className="contact-input" type="email" id="email" name="email" onChange={handleChange} value={contactInput.email} placeholder="¿Cuál es tu correo electrónico?" />
           <span>{contactInput.error_list.email}</span>
 
           <label htmlFor="subject"></label>
-          <input type="text" id="subject" name="subject" onChange={handleChange} value={contactInput.subject} placeholder="¿Por qué tema nos contactas?" />
+          <input className="contact-input" type="text" id="subject" name="subject" onChange={handleChange} value={contactInput.subject} placeholder="¿Por qué tema nos contactas?" />
           <span>{contactInput.error_list.subject}</span>
 
           <label htmlFor="message"></label>
           <textarea id="message" name="message" onChange={handleChange} value={contactInput.message}></textarea>
           <span>{contactInput.error_list.message}</span>
-          <input type="submit" value="Enviar"></input>
+          <input className="contact-input" type="submit" value="Enviar"></input>
         </form>
       </div>
       <div className="col-sm-12 col-md-6 form-container-right">

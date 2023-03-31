@@ -9,7 +9,7 @@ label {
     font-weight: bold;
 }
 
-input[type=text], input[type=email],  textarea {
+.contact-input[type=text], .contact-input[type=email],  textarea {
     width: 100%;
     padding: 10px;
     float: left;
@@ -22,7 +22,7 @@ input[type=text], input[type=email],  textarea {
     background-color: #661890
 }
 
-input::placeholder {
+.contact-input::placeholder {
     color: #FFFFFF;
 }
 
@@ -30,7 +30,7 @@ textarea {
     height: 150px;
 }
 
-input[type="submit"] {
+.contact-input[type="submit"] {
     background: linear-gradient(90deg, #6D17F2 26.61%, #D157FF 157.8%);
     border-radius: 10px;
     color: #FFFFFF;
@@ -45,7 +45,7 @@ input[type="submit"] {
     margin: 30px 0;
 }
 
-input[type="submit"]:hover {
+.contact-input[type="submit"]:hover {
     background-color: #45a049;
 }
 
