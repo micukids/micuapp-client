@@ -36,9 +36,14 @@ Tenemos un proyecto en gitHub (micukids) con 2 repositorios: micuapp-client y mi
 
 * React Bootstrap  
 * Swiper
-* React Flip Card
+* React-card-flip 
 * React Router Dom
-* Axios
+* react-canvas-confetti (v1.3.0)
+* Axios (v1.3.4)
+* Cypress (v12.8.1)
+* Jest (v5.16)
+* Aos (v2.3.4)
+* Swith alert (v2.1.2)
 
 ## :hammer:Herramientas
 
