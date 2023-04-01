@@ -55,37 +55,37 @@ function ContactForm() {
         <img className="star-icon" src={star_2} alt="Estrella de color amarillo"/>
         <p className="form-title">CONTÁCTANOS</p>
       </div>
-      <div className="col-sm-12 col-md-6">
+      <div className="col-md-6">
         <form className="form-container-left" onSubmit={handleSubmit}>
           <label htmlFor="name"></label>
-          <input type="text" id="name" name="name" onChange={handleChange} value={contactInput.name} placeholder="¿Cual es tu nombre?" /> 
+          <input className="contact-input" type="text" id="name" name="name" onChange={handleChange} value={contactInput.name} placeholder="¿Cual es tu nombre?" /> 
           <span>{contactInput.error_list.name}</span>
 
           <label htmlFor="email"></label>
-          <input type="email" id="email" name="email" onChange={handleChange} value={contactInput.email} placeholder="¿Cuál es tu correo electrónico?" />
+          <input className="contact-input" type="email" id="email" name="email" onChange={handleChange} value={contactInput.email} placeholder="¿Cuál es tu correo electrónico?" />
           <span>{contactInput.error_list.email}</span>
 
           <label htmlFor="subject"></label>
-          <input type="text" id="subject" name="subject" onChange={handleChange} value={contactInput.subject} placeholder="¿Por qué tema nos contactas?" />
+          <input className="contact-input" type="text" id="subject" name="subject" onChange={handleChange} value={contactInput.subject} placeholder="¿Por qué tema nos contactas?" />
           <span>{contactInput.error_list.subject}</span>
 
           <label htmlFor="message"></label>
           <textarea id="message" name="message" onChange={handleChange} value={contactInput.message}></textarea>
           <span>{contactInput.error_list.message}</span>
-          <input type="submit" value="Enviar"></input>
+          <input className="contact-input" type="submit" value="Enviar"></input>
         </form>
       </div>
-      <div className="col-sm-12 col-md-6 form-container-right">
-        <p>
+      <div className="col-md-5 form-container-right">
+        <h2>
           Si necesitas contactarnos para resolver cualquier duda o simplemente dejarnos un comentario, por favor siéntete libre de hacerlo.
-        </p>
-        <p className="mail-text">
+        </h2>
+        <h2 className="mail-text">
           Nuestro correo electrónico es: 
           <span className="fw-bold"> hola@micukids.com</span> 
-        </p>
-        <p className="social-text">
+        </h2>
+        <h2 className="social-text">
           Síguenos en nuestras redes sociales:
-        </p>
+        </h2>
         <div className="social-icons d-flex justify-content-center">
           <img className="icon-social" src={iconInsta} alt="Icono instagram" />
           <img className="icon-social" src={iconYoutube} alt="Icono Youtube" />
