@@ -37,7 +37,7 @@ function ContactForm() {
     instance.get("/sanctum/csrf-cookie").then((response) => {
       instance.post("/api/contact", data).then((res) => {
         if (res.data.status === 200) {      
-          swal("Success", res.data.message, "success");
+          swal("Genial", res.data.message, "success");
           setContactInput({...initialData})
        
         } else if(res.data.status === 400) {
