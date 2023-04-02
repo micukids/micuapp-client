@@ -38,7 +38,7 @@ function LetterForm() {
        
             instance.post("/api/letter", data).then((res) => {
               if (res.data.status === 200) {      
-                swal("Success", res.data.message, "success");
+                swal("Genial", res.data.message, "success");
                 setLetterInput({...initialData})
                 navigate('/admin/letters')
              

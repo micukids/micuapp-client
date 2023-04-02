@@ -44,7 +44,7 @@ function EditLetter() {
           image: image,
           video: video
         })
-          swal("Success","La letra se ha actualizado exitosamente.","success");
+          swal("Genial","La letra se ha actualizado exitosamente.","success");
           navigate('/admin/letters'); 
     }
  

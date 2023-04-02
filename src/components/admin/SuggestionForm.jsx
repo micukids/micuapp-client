@@ -35,7 +35,7 @@ function SuggestionForm() {
        
             instance.post("/api/suggestion", data).then((res) => {
               if (res.data.status === 200) {      
-                swal("Success", res.data.message, "success");
+                swal("Genial", res.data.message, "success");
                 setSuggestionInput({...initialData})
              
               } else if(res.data.status === 400) {

@@ -36,7 +36,7 @@ function EditDownload() {
         url: url,
         description: description
       })
-        swal("Success","El descargable se ha actualizado exitosamente.","success");
+        swal("Genial","El descargable se ha actualizado exitosamente.","success");
         navigate('/admin/downloads'); 
   }
   return (

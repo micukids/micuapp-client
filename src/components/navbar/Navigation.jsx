@@ -17,11 +17,13 @@ const logoutSubmit = (e) => {
     if(res.data.status){
       localStorage.removeItem('auth_token');
       localStorage.removeItem('auth_name');
-      swal("Success",res.data.message,"success");
+      swal("Genial",res.data.message,"success");
       window.location = "/";
     }else {
       localStorage.removeItem('auth_token');
       localStorage.removeItem('auth_name');
+      swal("Genial",res.data.message,"success");
+      window.location = "/";
     }
   })
 }
