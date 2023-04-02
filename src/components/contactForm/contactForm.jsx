@@ -62,7 +62,7 @@ function ContactForm() {
           <input className="contact-input" type="text" id="name" name="name" onChange={handleChange} value={contactInput.name} placeholder="¿Cual es tu nombre?" /> 
           <span>{contactInput.error_list.name}</span>
 
-          <label htmlFor="email"><h6>email</h6></label>
+          <label htmlFor="email"><h6>Email</h6></label>
           <input className="contact-input" type="email" id="email" name="email" onChange={handleChange} value={contactInput.email} placeholder="¿Cuál es tu correo electrónico?" />
           <span>{contactInput.error_list.email}</span>
 
