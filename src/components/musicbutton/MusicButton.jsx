@@ -1,10 +1,9 @@
 import React, { useEffect, useRef, useState} from "react";
 import Boton_Parlante from "../../assets/img/Boton_Parlante.png";
-import marimba from '../../assets/music/marta_abcchd_marimbas.mp3'
 import silenciar from '../../assets/img/Boton_silenciar.png'
 
 function MusicButton(props) {
-
+    const marimba = 'https://play.micukids.com/play/memorycards/marta_abcchd_marimbas.mp3';
     const audioReference = useRef(null);
     const [musicButton, setMusicButton] = useState(null);
 
