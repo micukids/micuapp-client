@@ -6,6 +6,7 @@ import iconYoutube from '../../assets/img/icon-you.svg';
 import iconInsta from '../../assets/img/insta.svg';
 import { getAxiosInstance } from '../../services/functions';
 import swal from "sweetalert";
+import { Link } from 'react-router-dom';
 
 const initialData = {
   name: '',
@@ -87,9 +88,9 @@ function ContactForm() {
           Síguenos en nuestras redes sociales:
         </h2>
         <div className="social-icons d-flex justify-content-center">
-          <img className="icon-social" src={iconInsta} alt="Icono instagram" />
-          <img className="icon-social" src={iconYoutube} alt="Icono Youtube" />
-          <img className="icon-social" src={iconFacebook} alt="Icono facebook" />
+          <Link to="https://www.instagram.com/micukids/" target="_blank"><img className="icon-social" src={iconInsta} alt="Icono instagram" /></Link>
+          <Link to="https://www.youtube.com/@MicuKids" target="_blank"><img className="icon-social" src={iconYoutube} alt="Icono Youtube" /></Link>
+          <Link to="https://www.facebook.com/micukidsclub/" target="_blank"><img className="icon-social" src={iconFacebook} alt="Icono facebook" /></Link>
         </div>
       </div>
     </div>
