@@ -54,7 +54,8 @@ function LoginForm() {
             <h2 className="mb-3 mt-3 text-center">LOGIN</h2>
 
             <Form onSubmit={logInSubmit}>
-              <Form.Group className="mb-3" controlId="formBasicEmailLogin">
+              <Form.Group className="mb-2" controlId="formBasicEmailLogin">
+              <Form.Label>Email</Form.Label>
                 <Form.Control
                   type="email"
                   placeholder="Email"
@@ -64,7 +65,8 @@ function LoginForm() {
                 />
                 <span>{loginInput.error_list.email}</span>
               </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicPasswordLogin">
+              <Form.Group className="mb-2" controlId="formBasicPasswordLogin">
+                <Form.Label>Password</Form.Label>
                 <Form.Control
                   type="password"
                   placeholder="Password"
