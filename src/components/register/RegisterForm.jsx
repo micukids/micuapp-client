@@ -57,7 +57,8 @@ function RegisterForm() {
             <h2 className="mb-3 mt-3 text-center">REGISTRATE</h2>
 
             <Form onSubmit={registerSubmit}>
-              <Form.Group className="mb-3" controlId="formBasicName">
+              <Form.Group className="mb-2" controlId="formBasicName">
+              <Form.Label>Nombre</Form.Label>
                 <Form.Control
                   type="text"
                   placeholder="Nombre del peque"
@@ -67,7 +68,8 @@ function RegisterForm() {
                 />
               </Form.Group>
               <span>{registerInput.error_list.name}</span>
-              <Form.Group className="mb-3" controlId="formBasicParent">
+              <Form.Group className="mb-2" controlId="formBasicParent">
+                <Form.Label>Responsable</Form.Label>
                 <Form.Control
                   type="text"
                   placeholder="Responsable"
@@ -77,7 +79,8 @@ function RegisterForm() {
                 />
                 <span>{registerInput.error_list.parent}</span>
               </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Group className="mb-2" controlId="formBasicEmail">
+                <Form.Label>Email</Form.Label>
                 <Form.Control
                   type="email"
                   placeholder="Email"
@@ -87,7 +90,8 @@ function RegisterForm() {
                 />
                 <span>{registerInput.error_list.email}</span>
               </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicPassword">
+              <Form.Group className="mb-2" controlId="formBasicPassword">
+                <Form.Label>Password</Form.Label>
                 <Form.Control
                   type="password"
                   placeholder="Password"
