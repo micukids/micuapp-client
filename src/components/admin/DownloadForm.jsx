@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { getAxiosInstance } from '../../services/functions';
 import swal from "sweetalert";
-import { useNavigate } from 'react-router-dom';
+
 
 const initialData = {
     thumb: '',
@@ -34,7 +34,7 @@ function DownloadForm() {
        
             instance.post("/api/download", data).then((res) => {
               if (res.data.status === 200) {      
-                swal("Success", res.data.message, "success");
+                swal("Genial", res.data.message, "success");
                 setDownloadInput({...initialData})
              
               } else if(res.data.status === 400) {
