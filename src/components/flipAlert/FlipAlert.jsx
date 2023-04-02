@@ -17,7 +17,7 @@ function FlipAlert({front}) {
     <>
     <div className='m-3 card-cursor'>
       <ReactCardFlip isFlipped={isFlipped}>
-      <img src={front} alt="micu face" className= "text-white text-center p-4 font-weight-bolder display-1 mx-auto d-block frontImage" onClick = { () => handleClick(true)}/>
+      <img src={front} alt="micu face" className= "flip-alert-mb text-white text-center p-4 font-weight-bolder display-1 mx-auto d-block frontImage" onClick = { () => handleClick(true)}/>
       <video
           className="backVideo"
           ref={videoReference}

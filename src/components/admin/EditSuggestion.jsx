@@ -40,7 +40,7 @@ function EditSuggestion() {
           image: image,
           description: description
         })
-          swal("Success","Tu Reomendado se ha actualizado exitosamente.","success");
+          swal("Genial","Tu Reomendado se ha actualizado exitosamente.","success");
           navigate('/admin/suggestions'); 
     }
   return (

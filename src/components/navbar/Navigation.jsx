@@ -17,11 +17,13 @@ const logoutSubmit = (e) => {
     if(res.data.status){
       localStorage.removeItem('auth_token');
       localStorage.removeItem('auth_name');
-      swal("Success",res.data.message,"success");
+      swal("Genial",res.data.message,"success");
       window.location = "/";
     }else {
       localStorage.removeItem('auth_token');
       localStorage.removeItem('auth_name');
+      swal("Genial",res.data.message,"success");
+      window.location = "/";
     }
   })
 }
@@ -33,7 +35,7 @@ const logoutSubmit = (e) => {
   if (localStorage.getItem('auth_token')){
     NameTag = NameTag.toUpperCase();
     LogoutButton = (<button className="btn nav-link navigation-text-color" onClick={logoutSubmit}>LOGOUT</button>);
-    nameContainer = (<div className="d-flex flex-row gap-1 mb-2 left-margin align-content-center align-items-center justify-content-center" >
+    nameContainer = (<div className="d-flex flex-row gap-1 left-margin align-content-center align-items-center justify-content-center" >
           <img className='user-logo' src={user_logo} alt="icono de cartas" />
           <p className="navigation-text-color" >{NameTag}</p>
       </div>);
