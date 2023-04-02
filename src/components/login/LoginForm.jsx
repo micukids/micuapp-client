@@ -32,10 +32,10 @@ function LoginForm() {
         if (res.data.status === 200) {
           localStorage.setItem("auth_token", res.data.token);
           localStorage.setItem("auth_name", res.data.username);
-          swal("Success", res.data.message, "success");
+          swal("Genial", res.data.message, "success");
           res.data.role === "admin" ? navigate("/admin") : navigate("/");
         } else if (res.data.status === 401) {
-          swal("Warning", res.data.message, "warning");
+          swal("Atención", res.data.message, "warning");
         } else {
           setLoginInput({
             ...loginInput,
