@@ -95,7 +95,7 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
   .bg-memory {
     height: 70vh;
     margin-top: 0.5%;

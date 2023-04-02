@@ -58,19 +58,19 @@ function ContactForm() {
       </div>
       <div className="col-md-6">
         <form className="form-container-left" onSubmit={handleSubmit}>
-          <label htmlFor="name"></label>
+          <label htmlFor="name"><h6>Nombre</h6></label>
           <input className="contact-input" type="text" id="name" name="name" onChange={handleChange} value={contactInput.name} placeholder="¿Cual es tu nombre?" /> 
           <span>{contactInput.error_list.name}</span>
 
-          <label htmlFor="email"></label>
+          <label htmlFor="email"><h6>email</h6></label>
           <input className="contact-input" type="email" id="email" name="email" onChange={handleChange} value={contactInput.email} placeholder="¿Cuál es tu correo electrónico?" />
           <span>{contactInput.error_list.email}</span>
 
-          <label htmlFor="subject"></label>
+          <label htmlFor="subject"><h6>Tema</h6></label>
           <input className="contact-input" type="text" id="subject" name="subject" onChange={handleChange} value={contactInput.subject} placeholder="¿Por qué tema nos contactas?" />
           <span>{contactInput.error_list.subject}</span>
 
-          <label htmlFor="message"></label>
+          <label htmlFor="message"><h6>Mensaje</h6></label>
           <textarea id="message" name="message" onChange={handleChange} value={contactInput.message}></textarea>
           <span>{contactInput.error_list.message}</span>
           <input className="contact-input" type="submit" value="Enviar"></input>
