@@ -45,7 +45,7 @@ function Downloads() {
 
   return (
     <div className='container-fluid px-4'>
-    <h1 className='mt-4'>Descargables</h1>
+    <h1 className='mt-4'>Área de Descargables</h1>
 
     <Tabs
   defaultActiveKey="vista"
