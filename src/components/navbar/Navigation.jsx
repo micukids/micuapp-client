@@ -6,6 +6,7 @@ import swal from 'sweetalert';
 import { getAxiosInstance } from '../../services/functions';
 import Logo from '../logo/Logo';
 import user_logo from '../../assets/img/Icon_peque.png'
+import { Link } from 'react-router-dom';
 
 const instance = getAxiosInstance();
 const Navigation = () => {
@@ -40,7 +41,7 @@ const logoutSubmit = (e) => {
           <p className="navigation-text-color" >{NameTag}</p>
       </div>);
   }else {
-    LogoutButton = (<Nav.Link className="navigation-text-color" href="/login">LOGIN</Nav.Link>);
+    LogoutButton = (<Link className="nav-link navigation-text-color" to="/login">LOGIN</Link>);
   }
 
   return (
@@ -54,8 +55,8 @@ const logoutSubmit = (e) => {
           <Nav className="me-auto"></Nav>
          <Nav className='d-flex flex-row-reverse'> 
             <div className='d-flex align-items-end display-navigation'>
-                <Nav.Link className="navigation-text-color" href="/">INICIO</Nav.Link>
-                <Nav.Link className="navigation-text-color" data-test = "padres" href="/parapadres">PARA PADRES</Nav.Link>
+                <Link className="nav-link navigation-text-color" to="/">INICIO</Link>
+                <Link className="nav-link navigation-text-color" data-test = "padres" to="/parapadres">PARA PADRES</Link>
                 {LogoutButton}
                 {nameContainer}
             </div>

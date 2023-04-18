@@ -4,6 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import micuKidsLogo_Horizontal from '../../assets/img/Logo_Micukids_horizontal.png';
 import './Footer.css';
+import { Link } from 'react-router-dom';
  
 const Footer = () => {
   return (
@@ -19,12 +20,12 @@ const Footer = () => {
         />
       </Navbar.Brand>
       <Nav>
-            <Nav.Link className="footer-nav-link" href="/credits">
+            <Link className="nav-link footer-link navigation-text-color" to="/credits">
               CRÉDITOS
-            </Nav.Link>
-            <Nav.Link className="footer-nav-link" href="/contact">
+            </Link>
+            <Link className="nav-link footer-link navigation-text-color" to="/contact">
               CONTACTO
-            </Nav.Link>
+            </Link>
       </Nav>
     </Container>
   </Navbar>
