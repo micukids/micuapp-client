@@ -101,10 +101,6 @@ function MemoryBoard() {
       setSecondCard({});
     }
 
-    const startNewGame = () => {
-     window.location = "/memorycard"
-    }
-
     const handleMusicClick = (audioReference) => {
       setMusicIsPlaying(audioReference.current.paused);
       audioReference.current.paused ? audioReference.current.play() : audioReference.current.pause()
@@ -138,7 +134,6 @@ function MemoryBoard() {
               ))
             }
         </div>
-        <MainButton text="Nuevas Cartas" onClick={() => startNewGame()} className="mb-2 mt-4" />
       </div>
     </Layout>
   )
