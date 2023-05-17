@@ -1,10 +1,10 @@
 import axios from "axios";
-const endPoint = "http://127.0.0.1:8000"
+const endPoint = "http://apirasp.micukids.com:8000"
 
 axios.defaults.headers.post['Content-Type']= 'application/json';
 axios.defaults.headers.post['Accept']= 'application/json';
 
-function getAxiosInstance(endpoint = "http://localhost:8000") {
+function getAxiosInstance(endpoint = "http://apirasp.micukids.com:8000") {
     const instance = axios.create({
         withCredentials: true,
         baseURL: endpoint
