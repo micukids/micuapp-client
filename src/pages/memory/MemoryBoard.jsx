@@ -102,7 +102,7 @@ function MemoryBoard() {
     }
 
     const startNewGame = () => {
-     window.location = "/memorycard"
+     //window.location = "/memorycard"
     }
 
     const handleMusicClick = (audioReference) => {
