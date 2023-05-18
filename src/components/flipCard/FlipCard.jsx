@@ -3,12 +3,10 @@ import ReactCardFlip from 'react-card-flip'
 import '../../styles/Styles.css';
 
 function FlipCard({id, letter, backVideo,onFlipped, isFlipped}) {
-    //const [isFlipped, setIsFlipped] = useState(false);
     const videoReference = useRef(null);
 
     const handleClick = (shouldPlay) => {
           onFlipped(id)
-          //setIsFlipped(!isFlipped);
           shouldPlay ? videoReference.current.play() : videoReference.current.pause()
         }
     
